@@ -6,7 +6,7 @@
 
 echoerr() { echo "$@" 1>&2; }
 
-APP_BUNDLE_PATH="/Users/legoless/Applications/FauxPas.app/Contents/MacOS"
+APP_BUNDLE_PATH="/Users/legoless/Applications/FauxPas.app/Contents/MacOS/Fauxpas"
 
 if [ ! -e "$APP_BUNDLE_PATH" ]; then
     echoerr "Error: Cannot find Faux Pas at: $APP_BUNDLE_PATH"
