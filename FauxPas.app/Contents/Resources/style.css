@@ -1,0 +1,260 @@
+@charset "UTF-8";
+body {
+  background: #4c4c4c;
+  color: white;
+  font-family: "Lucida Grande", Helvetica, sans;
+  font-size: 15px;
+  margin: 0; }
+  body > * {
+    padding: 5px 10px; }
+
+codesymbol, cfunction, objcmethod, objcclass, objccategory, objcproperty, filename, filepath, resourcepath, string, docs, cmacro, typedef {
+  font-family: Menlo, Monaco, monospace;
+  font-size: 13px;
+  word-wrap: break-word; }
+
+div.description codesymbol, div.description cfunction, div.description objcmethod, div.description objcclass, div.description objccategory, div.description objcproperty, div.description filename, div.description filepath, div.description resourcepath, div.description string, div.description docs, div.description cmacro, div.description typedef, .instance-info codesymbol, .instance-info cfunction, .instance-info objcmethod, .instance-info objcclass, .instance-info objccategory, .instance-info objcproperty, .instance-info filename, .instance-info filepath, .instance-info resourcepath, .instance-info string, .instance-info docs, .instance-info cmacro, .instance-info typedef {
+  padding: 0 3px;
+  background: #333333;
+  border-radius: 3px; }
+div.description string, .instance-info string {
+  color: #e6f7e6;
+  background: #0a630a; }
+  div.description string:before, .instance-info string:before {
+    content: "“"; }
+  div.description string:after, .instance-info string:after {
+    content: "”"; }
+div.description resourcepath, .instance-info resourcepath {
+  color: #eadaf2;
+  background: #460a63; }
+div.description filename, div.description filepath, .instance-info filename, .instance-info filepath {
+  color: #dfe6f7;
+  background: #0a2563; }
+
+button.subtle-button {
+  font-size: 12px;
+  color: #cccccc;
+  border: 1px solid #333333;
+  border-top: 1px solid #777777;
+  border-radius: 3px;
+  text-shadow: black 0 1px 0;
+  background: -webkit-linear-gradient(top, #4f4f4f, #575757);
+  padding: 4px 10px;
+  margin: 10px 0 0 0; }
+  button.subtle-button:active {
+    background: -webkit-linear-gradient(top, #363636, #3e3e3e);
+    color: #999999; }
+
+div.description div.warning {
+  margin-top: 10px;
+  font-size: 10pt;
+  color: #f0e27d; }
+  div.description div.warning:before {
+    content: "Warning: ";
+    font-weight: bold; }
+
+body.ruleinfo {
+  margin-bottom: 10px; }
+  body.ruleinfo p {
+    margin: 0 0 10px 0; }
+  body.ruleinfo h1 {
+    margin: 0;
+    background: #666666;
+    font-size: 18px;
+    text-shadow: #111111 0 1px 0; }
+    body.ruleinfo h1 .shortname {
+      display: block;
+      font-size: 12px;
+      font-family: Menlo, Monaco, monospace;
+      font-weight: normal;
+      color: #b2b2b2; }
+      body.ruleinfo h1 .shortname:before {
+        content: "["; }
+      body.ruleinfo h1 .shortname:after {
+        content: "]"; }
+  body.ruleinfo .tags {
+    background: #333333; }
+    body.ruleinfo .tags h3 {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: normal; }
+    body.ruleinfo .tags .tag {
+      color: #e6e6e6;
+      display: inline-block;
+      padding: 3px 5px;
+      font-size: 13px;
+      background: #777777;
+      border-radius: 6px; }
+  body.ruleinfo div.conditional-application {
+    background: #333333;
+    font-size: 12px;
+    color: #cccccc; }
+  body.ruleinfo div.description {
+    padding: 10px; }
+  body.ruleinfo .external-links h3 {
+    margin-top: 0;
+    color: #b3b3b3;
+    font-size: 15px;
+    font-weight: normal; }
+  body.ruleinfo .external-links a {
+    color: #bbb4d6; }
+  body.ruleinfo .options {
+    color: #cccccc; }
+    body.ruleinfo .options h3 {
+      color: #b3b3b3;
+      font-size: 15px;
+      font-weight: normal; }
+    body.ruleinfo .options ul {
+      margin: 0;
+      padding: 0 0 0 1.5em; }
+      body.ruleinfo .options ul .name {
+        font-family: Menlo, Monaco, monospace;
+        font-weight: bold;
+        font-size: 14px;
+        color: #999999; }
+        body.ruleinfo .options ul .name:before {
+          content: "["; }
+        body.ruleinfo .options ul .name:after {
+          content: "]"; }
+      body.ruleinfo .options ul .info {
+        display: block;
+        font-size: 13px;
+        font-style: italic;
+        color: #999999; }
+      body.ruleinfo .options ul .type, body.ruleinfo .options ul .defaultvalue {
+        font-size: 12px;
+        color: gray; }
+      body.ruleinfo .options ul .type {
+        font-family: Menlo, Monaco, monospace; }
+        body.ruleinfo .options ul .type:after {
+          content: "."; }
+      body.ruleinfo .options ul .defaultvalue {
+        font-family: Menlo, Monaco, monospace;
+        display: block; }
+
+body.diagnosticsinfo[data-severity="error"] .heading {
+  color: #f4dbdc; }
+body.diagnosticsinfo[data-severity="warning"] .heading {
+  color: #f5f3db; }
+body.diagnosticsinfo[data-severity="concern"] .heading {
+  color: #ddecf5; }
+body.diagnosticsinfo .heading {
+  background-color: #666666;
+  background-size: 38px 38px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  padding: 10px;
+  padding-left: 58px;
+  text-shadow: #111111 0 1px 0; }
+  body.diagnosticsinfo .heading h1 {
+    font-size: 18px;
+    margin: 0 0 5px 0; }
+    body.diagnosticsinfo .heading h1 .shortname {
+      display: block;
+      font-size: 12px;
+      font-family: Menlo, Monaco, monospace;
+      font-weight: normal;
+      color: #b3b3b3; }
+      body.diagnosticsinfo .heading h1 .shortname:before {
+        content: "["; }
+      body.diagnosticsinfo .heading h1 .shortname:after {
+        content: "]"; }
+  body.diagnosticsinfo .heading button.toggle {
+    background: #dddddd;
+    border-radius: 6px; }
+  body.diagnosticsinfo .heading .rule-description {
+    font-size: 12px;
+    color: #e6e6e6; }
+    body.diagnosticsinfo .heading .rule-description .warning {
+      margin-top: 10px;
+      color: #f0e27d; }
+body.diagnosticsinfo .instance-info {
+  padding: 10px; }
+  body.diagnosticsinfo .instance-info p {
+    margin: 0 0 10px 0; }
+  body.diagnosticsinfo .instance-info note {
+    font-size: 12px;
+    color: #b3b3b3; }
+body.diagnosticsinfo .meta-info {
+  font-size: 13px;
+  margin-bottom: 10px; }
+  body.diagnosticsinfo .meta-info > span {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: white;
+    opacity: 0.6;
+    margin-bottom: 3px; }
+    body.diagnosticsinfo .meta-info > span.impact {
+      background: #3f3f3f;
+      background-size: 22px 22px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      padding-right: 24px; }
+    body.diagnosticsinfo .meta-info > span.confidence {
+      cursor: help;
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: 97% center;
+      padding-right: 24px; }
+body.diagnosticsinfo .external-links {
+  color: #b3b3b3;
+  font-size: 13px;
+  margin-bottom: 10px; }
+  body.diagnosticsinfo .external-links h3 {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0 0 10px 0; }
+  body.diagnosticsinfo .external-links ul {
+    padding: 0 0 0 1.5em; }
+    body.diagnosticsinfo .external-links ul a {
+      color: #bbb4d6; }
+body.diagnosticsinfo h3.instancesheader {
+  font-size: 15px;
+  margin: 0 0 10px 0;
+  color: #b3b3b3; }
+body.diagnosticsinfo .diagnostic {
+  border-top: 1px solid #191919;
+  padding: 10px; }
+  body.diagnosticsinfo .diagnostic .instance-info {
+    padding-top: 0;
+    padding-left: 0; }
+  body.diagnosticsinfo .diagnostic .context {
+    font-size: 14px; }
+    body.diagnosticsinfo .diagnostic .context * {
+      display: inline; }
+    body.diagnosticsinfo .diagnostic .context filepath {
+      font-family: Menlo, Monaco, monospace;
+      font-size: 15px;
+      color: #bbb4d6; }
+    body.diagnosticsinfo .diagnostic .context .filepositions {
+      font-family: Menlo, Monaco, monospace;
+      color: #b3b3b3; }
+      body.diagnosticsinfo .diagnostic .context .filepositions:before {
+        content: "["; }
+      body.diagnosticsinfo .diagnostic .context .filepositions:after {
+        content: "]"; }
+      body.diagnosticsinfo .diagnostic .context .filepositions .fileposition .line:after {
+        content: ":"; }
+      body.diagnosticsinfo .diagnostic .context .filepositions .fileposition.start:after {
+        content: " – "; }
+    body.diagnosticsinfo .diagnostic .context .positioncontext {
+      font-family: Menlo, Monaco, monospace;
+      color: #b3b3b3; }
+      body.diagnosticsinfo .diagnostic .context .positioncontext:before {
+        content: "("; }
+      body.diagnosticsinfo .diagnostic .context .positioncontext:after {
+        content: ")"; }
+  body.diagnosticsinfo .diagnostic .snippet .content {
+    font-family: Menlo, Monaco, monospace;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background: #333333;
+    color: gray;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    body.diagnosticsinfo .diagnostic .snippet .content marker {
+      color: #b3b3b3;
+      border-bottom: 2px dotted #eb6a6a; }

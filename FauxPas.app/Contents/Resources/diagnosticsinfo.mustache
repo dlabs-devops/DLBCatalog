@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="diagnosticsinfo enablelinks"
+      data-severity="{{representative.severityString.lowercaseString}}"
+      data-impact="{{representative.impactString.lowercaseString}}"
+      data-confidence="{{representative.confidenceString.lowercaseString}}">
+
+<div class="heading">
+    <h1>{{{representative.ruleName}}} <span class="shortname">{{representative.ruleShortName}}</span></h1>
+    <div class="rule-description">
+    {{{representative.ruleDescription}}}
+    {{#representative.ruleWarning}}
+        <div class="warning">
+        {{{representative.ruleWarning}}}
+        </div>
+    {{/representative.ruleWarning}}
+    </div>
+    {{#commonRule.optionGroups.xa_isNotEmpty}}
+    <button class="subtle-button action-button" data-action="configure-rule" data-param="{{commonRule.ruleShortName}}">Configure this rule</button>
+    {{/commonRule.optionGroups.xa_isNotEmpty}}
+</div>
+
+<div class="instance-info">
+{{{groupInstanceInfo}}}
+</div>
+
+<div class="meta-info">
+    <span class="impact">
+        Impact: {{representative.impactString}}
+    </span>
+    <span class="severity" style="background-color:{{representative.severityColor.xa_darkDesaturatedColor.xa_cssColor}}">
+        Severity: {{representative.severityString}}
+    </span>
+    <span class="confidence" style="background-color:{{representative.confidenceColor.xa_darkDesaturatedColor.xa_cssColor}}"
+          title="{{representative.confidenceDescription}}">
+        Confidence: {{representative.confidenceString}}
+    </span>
+</div>
+
+{{#representative.ruleExternalLinks.xa_isNotEmpty}}
+<div class="external-links">
+    <h3>Read more:</h3>
+    {{#representative.ruleExternalLinks}}
+    <ul class="links">
+        <li><a href="{{URL}}">{{linkTitle}}</a></li>
+    </ul>
+    {{/representative.ruleExternalLinks}}
+</div>
+{{/representative.ruleExternalLinks.xa_isNotEmpty}}
+
+{{#diagnostics.xa_moreThanOne}}
+<h3 class="instancesheader">{{diagnostics.count}} instances:</h3>
+{{/diagnostics.xa_moreThanOne}}
+
+{{#diagnostics}}
+<div class="diagnostic">
+    {{^allDiagnosticsHaveSameInstanceInfo}}
+    <div class="instance-info">
+        {{{instanceInfo}}}
+    </div>
+    {{/allDiagnosticsHaveSameInstanceInfo}}
+    <div class="context">
+        <filepath data-content="{{filePath}}" data-line="{{startPositionCodePoints.line}}" data-column="{{startPositionCodePoints.column}}" title="{{filePath}}">{{fileDisplayName}}</filepath>
+        {{#hasFilePositionInfo}}
+        <div class="filepositions"><!--
+         --><div class="fileposition start"><!--
+             --><span class="line">{{startPositionCodePoints.line}}</span><!--
+             --><span class="column">{{startPositionCodePoints.column}}</span><!--
+         --></div><!--
+         --><div class="fileposition end"><!--
+             --><span class="line">{{endPositionCodePoints.line}}</span><!--
+             --><span class="column">{{endPositionCodePoints.column}}</span><!--
+         --></div><!--
+     --></div>
+        {{/hasFilePositionInfo}}
+        {{#positionContext}}
+        <div class="positioncontext"><!--
+         -->in: <span>{{{positionContext}}}</span><!--
+     --></div>
+        {{/positionContext}}
+    </div>
+    {{#fileSnippet}}
+    <div class="snippet"><div class="content" style="tab-size:{{{presentation.indentTabWidth}}};">{{{fileSnippetHTML}}}</div></div>
+    {{/fileSnippet}}
+</div>
+{{/diagnostics}}
+
+</body>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script src="fauxpas.js"></script>
