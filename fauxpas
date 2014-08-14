@@ -6,7 +6,7 @@
 
 echoerr() { echo "$@" 1>&2; }
 
-FAUXPAS_PATH=`find .. -iname FauxPass.app | head -n1`
+FAUXPAS_PATH=`find .. -iname FauxPas.app | head -n1`
 
 APP_BUNDLE_PATH="$FAUXPAS_PATH/Contents/MacOS/Fauxpas"
 
