@@ -44,15 +44,15 @@ Faux Pas can be configured via:
 - The GUI
 - Configuration files
 
-The configuration files may be written in JSON or Property List formats. Regardless of this choice, the structure of the file remains the same. To see a full example configuration file in the JSON format, run `fauxpas exampleConfig` in the terminal _(note that this requires the [CLI tools](#using-the-command-line-interface) to be installed)_.
+Configuration files may be written in JSON. To see a full example configuration file, run `fauxpas exampleConfig` in the terminal _(note that this requires the [CLI tools](#using-the-command-line-interface) to be installed)_.
 
 When using the command-line interface, a configuration file may be selected using the `-c` / `--configFile` argument.
 
 ### Project-specific Configuration Files
 
-A project-specific configuration file may be used by adding it into a folder named `FauxPasConfig` in the project root folder (the same folder where the `.xcodeproj` folder resides) with the file extension `.fauxpas.json` (or `.fauxpas.plist`). The file may also reside elsewhere, as long as the file extension is one of these two and the Xcode project contains a reference to it.
+A project-specific configuration file may be used by adding it into a folder named `FauxPasConfig` in the project root folder (the same folder where the `.xcodeproj` folder resides) with the file extension `.fauxpas.json`. The file may also reside elsewhere, as long as the file extension is one of these two and the Xcode project contains a reference to it.
 
-If there are multiple configuration files in the `FauxPasConfig` folder, the default is the one named `main.fauxpas.json` (or `.plist`).
+If there are multiple configuration files in the `FauxPasConfig` folder, the default is the one named `main.fauxpas.json`.
 
 Project-specific configuration files will be automatically picked up, for both CLI and GUI invocations of the application.
 

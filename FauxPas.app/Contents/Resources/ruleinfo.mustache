@@ -5,7 +5,7 @@
 </head>
 <body class="ruleinfo enablelinks">
 
-<h1>{{{ruleName}}} <span class="shortname">{{ruleShortName}}</span></h1>
+<h1>{{{ruleName.xmlString}}} <span class="shortname">{{ruleShortName}}</span></h1>
 
 {{#isConditionallyApplied}}
 <div class="conditional-application">
@@ -21,10 +21,10 @@
 </div>
 
 <div class="description">
-{{{ruleDescription}}}
+{{{ruleDescription.xmlString}}}
 {{#ruleWarning}}
     <div class="warning">
-    {{{ruleWarning}}}
+    {{{ruleWarning.xmlString}}}
     </div>
 {{/ruleWarning}}
 </div>

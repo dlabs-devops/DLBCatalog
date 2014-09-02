@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Docs/main.md</key>
 		<data>
-		QKeW7eQmPDum19lFjue3DguFIdo=
+		gknLowqDknTANgId81stSlOL1/M=
 		</data>
 		<key>Resources/FauxPasAnnotations.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Resources/XAAboutWindowController.nib</key>
 		<data>
-		BDGRl4pRBNDamfk1Nl5rjCCBG5s=
+		U8ZPdhCV0eFTGzlsJBes4pg89To=
 		</data>
 		<key>Resources/XABetaRegistrationWindowController.nib</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Resources/XADiagnosticsViewController.nib</key>
 		<data>
-		SFMh35eLIyy6RD2N9m+WUujoABQ=
+		lbAOVs6Mq5sJyTRgW3kLCimputw=
 		</data>
 		<key>Resources/XAGeneralPrefsViewController.nib</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Resources/XAHTMLWindowController.nib</key>
 		<data>
-		DZuDcpazhL9M9oTPCIetX/z8Cro=
+		whdicHs97C+xkam2CkreHW+pWwE=
 		</data>
 		<key>Resources/XAInfoPopoverViewController.nib</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Resources/XALicenseFormWindowController.nib</key>
 		<data>
-		2ViAF4TRvS63xWDwy8tc0wraaQU=
+		j5i+i4MowmpAWN23Fr0lHcw2yAc=
 		</data>
 		<key>Resources/XALicensingWindowController.nib</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Resources/XAStringArrayEditorWindowController.nib</key>
 		<data>
-		K8ECj/gvfvTczkV4aY3ssPcn+ds=
+		FnhmQ0S05MhU92PPMEH3ufx+Rcs=
 		</data>
 		<key>Resources/XAWrapperWindowController.nib</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Resources/appversion.json</key>
 		<data>
-		PAh0t0TRnbuWddwIWv1mX61R/8c=
+		oInzSzSxk6pQgKY7PYcJUss0gPE=
 		</data>
 		<key>Resources/clitools.png</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Resources/diagnosticsinfo.mustache</key>
 		<data>
-		SnMJS7hM8JLHKqZ7dklZs48kEmQ=
+		G6AX790Hmlpq1aDVboY8bI3zFS8=
 		</data>
 		<key>Resources/docs.css</key>
 		<data>
@@ -221,7 +221,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			78/E8TGZvDlIH1s+4NcEaV/8avU=
+			vK84UsfgVWvAP/8cxK+OVTrM2c4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -312,7 +312,7 @@
 		</data>
 		<key>Resources/ruleinfo.mustache</key>
 		<data>
-		L30J7cLC8wPNnYc8be3FswAwnTY=
+		lyNgkz2Nmcm7guWens2XLr+MLMQ=
 		</data>
 		<key>Resources/severity_concern@2x.png</key>
 		<data>
@@ -336,7 +336,7 @@
 		</data>
 		<key>Resources/style.css</key>
 		<data>
-		AFUVFfkwupTyJ3+9tQ7s7IfLMPE=
+		Nm36/Iz2EcvEWbXU7mhk06tGRO4=
 		</data>
 		<key>Resources/trial.tiff</key>
 		<data>
@@ -367,7 +367,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			04bY3WvCZr8lI0vXb0r/NFRTwUs=
+			wh9aXBe9Z4pC4O2PKtsu87rUSxg=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "org.andymatuschak.Sparkle" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = P69DMSDJ78)</string>
@@ -387,7 +387,7 @@
 		</data>
 		<key>Resources/Docs/main.md</key>
 		<data>
-		QKeW7eQmPDum19lFjue3DguFIdo=
+		gknLowqDknTANgId81stSlOL1/M=
 		</data>
 		<key>Resources/FauxPasAnnotations.h</key>
 		<data>
@@ -471,7 +471,7 @@
 		</data>
 		<key>Resources/XAAboutWindowController.nib</key>
 		<data>
-		BDGRl4pRBNDamfk1Nl5rjCCBG5s=
+		U8ZPdhCV0eFTGzlsJBes4pg89To=
 		</data>
 		<key>Resources/XABetaRegistrationWindowController.nib</key>
 		<data>
@@ -487,7 +487,7 @@
 		</data>
 		<key>Resources/XADiagnosticsViewController.nib</key>
 		<data>
-		SFMh35eLIyy6RD2N9m+WUujoABQ=
+		lbAOVs6Mq5sJyTRgW3kLCimputw=
 		</data>
 		<key>Resources/XAGeneralPrefsViewController.nib</key>
 		<data>
@@ -495,7 +495,7 @@
 		</data>
 		<key>Resources/XAHTMLWindowController.nib</key>
 		<data>
-		DZuDcpazhL9M9oTPCIetX/z8Cro=
+		whdicHs97C+xkam2CkreHW+pWwE=
 		</data>
 		<key>Resources/XAInfoPopoverViewController.nib</key>
 		<data>
@@ -507,7 +507,7 @@
 		</data>
 		<key>Resources/XALicenseFormWindowController.nib</key>
 		<data>
-		2ViAF4TRvS63xWDwy8tc0wraaQU=
+		j5i+i4MowmpAWN23Fr0lHcw2yAc=
 		</data>
 		<key>Resources/XALicensingWindowController.nib</key>
 		<data>
@@ -543,7 +543,7 @@
 		</data>
 		<key>Resources/XAStringArrayEditorWindowController.nib</key>
 		<data>
-		K8ECj/gvfvTczkV4aY3ssPcn+ds=
+		FnhmQ0S05MhU92PPMEH3ufx+Rcs=
 		</data>
 		<key>Resources/XAWrapperWindowController.nib</key>
 		<data>
@@ -555,7 +555,7 @@
 		</data>
 		<key>Resources/appversion.json</key>
 		<data>
-		PAh0t0TRnbuWddwIWv1mX61R/8c=
+		oInzSzSxk6pQgKY7PYcJUss0gPE=
 		</data>
 		<key>Resources/clitools.png</key>
 		<data>
@@ -579,7 +579,7 @@
 		</data>
 		<key>Resources/diagnosticsinfo.mustache</key>
 		<data>
-		SnMJS7hM8JLHKqZ7dklZs48kEmQ=
+		G6AX790Hmlpq1aDVboY8bI3zFS8=
 		</data>
 		<key>Resources/docs.css</key>
 		<data>
@@ -598,7 +598,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			78/E8TGZvDlIH1s+4NcEaV/8avU=
+			vK84UsfgVWvAP/8cxK+OVTrM2c4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -689,7 +689,7 @@
 		</data>
 		<key>Resources/ruleinfo.mustache</key>
 		<data>
-		L30J7cLC8wPNnYc8be3FswAwnTY=
+		lyNgkz2Nmcm7guWens2XLr+MLMQ=
 		</data>
 		<key>Resources/severity_concern@2x.png</key>
 		<data>
@@ -713,7 +713,7 @@
 		</data>
 		<key>Resources/style.css</key>
 		<data>
-		AFUVFfkwupTyJ3+9tQ7s7IfLMPE=
+		Nm36/Iz2EcvEWbXU7mhk06tGRO4=
 		</data>
 		<key>Resources/trial.tiff</key>
 		<data>

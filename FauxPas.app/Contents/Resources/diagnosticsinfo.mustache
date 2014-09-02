@@ -9,12 +9,12 @@
       data-confidence="{{representative.confidenceString.lowercaseString}}">
 
 <div class="heading">
-    <h1>{{{representative.ruleName}}} <span class="shortname">{{representative.ruleShortName}}</span></h1>
+    <h1>{{{representative.ruleName.xmlString}}} <span class="shortname">{{representative.ruleShortName}}</span></h1>
     <div class="rule-description">
-    {{{representative.ruleDescription}}}
+    {{{representative.ruleDescription.xmlString}}}
     {{#representative.ruleWarning}}
         <div class="warning">
-        {{{representative.ruleWarning}}}
+        {{{representative.ruleWarning.xmlString}}}
         </div>
     {{/representative.ruleWarning}}
     </div>
@@ -59,7 +59,7 @@
 <div class="diagnostic">
     {{^allDiagnosticsHaveSameInstanceInfo}}
     <div class="instance-info">
-        {{{instanceInfo}}}
+        {{{instanceInfo.xmlString}}}
     </div>
     {{/allDiagnosticsHaveSameInstanceInfo}}
     <div class="context">
