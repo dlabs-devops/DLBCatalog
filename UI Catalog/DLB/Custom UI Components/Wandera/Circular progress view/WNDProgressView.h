@@ -19,5 +19,10 @@
  *  Background color of circle line behind progress circle
  */
 @property (nonatomic, strong) UIColor *backgroundCircleLineColor;
+//
+// Image used to overlay the indicator
+// If nil default will be used as wandera_indicator_gradient
+//
+@property (nonatomic, strong) UIImage *indicatorOverlayImage;
 
 @end
