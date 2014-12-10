@@ -11,7 +11,6 @@
 		21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CF1A30699F00BC8F73 /* AppDelegate.m */; };
 		21D095D31A30699F00BC8F73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095D21A30699F00BC8F73 /* ViewController.m */; };
 		21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D41A30699F00BC8F73 /* Main.storyboard */; };
-		21D095D81A30699F00BC8F73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D71A30699F00BC8F73 /* Images.xcassets */; };
 		21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D91A30699F00BC8F73 /* LaunchScreen.xib */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
 		21D095FC1A306F1B00BC8F73 /* DLBAnimatable.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095FB1A306F1B00BC8F73 /* DLBAnimatable.m */; };
@@ -21,6 +20,7 @@
 		21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */; };
 		21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */; };
 		21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0960E1A307F2000BC8F73 /* WNDProgressView.m */; };
+		E2E67A481A389019006F8C6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E67A471A389019006F8C6C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		21D095D11A30699F00BC8F73 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		21D095D21A30699F00BC8F73 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21D095D51A30699F00BC8F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		21D095D71A30699F00BC8F73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		21D095DA1A30699F00BC8F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
 		21D0960D1A307F2000BC8F73 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
 		21D0960E1A307F2000BC8F73 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
+		E2E67A471A389019006F8C6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				21D095D21A30699F00BC8F73 /* ViewController.m */,
 				21D096031A307C7100BC8F73 /* WanderaVC.h */,
 				21D096041A307C7100BC8F73 /* WanderaVC.m */,
+				E2E67A471A389019006F8C6C /* Images.xcassets */,
 				21D095D41A30699F00BC8F73 /* Main.storyboard */,
-				21D095D71A30699F00BC8F73 /* Images.xcassets */,
 				21D095D91A30699F00BC8F73 /* LaunchScreen.xib */,
 				21D095CA1A30699F00BC8F73 /* Supporting Files */,
 			);
@@ -290,9 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */,
+				E2E67A481A389019006F8C6C /* Images.xcassets in Resources */,
 				21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */,
 				21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */,
-				21D095D81A30699F00BC8F73 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +511,7 @@
 				21D095EC1A30699F00BC8F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21D095ED1A30699F00BC8F73 /* Build configuration list for PBXNativeTarget "DLBTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +520,7 @@
 				21D095EF1A30699F00BC8F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

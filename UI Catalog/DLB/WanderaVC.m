@@ -8,9 +8,10 @@
 
 #import "WanderaVC.h"
 #import "DLBCircularProgressView.h"
+#import "WNDProgressView.h"
 
 @interface WanderaVC ()
-@property (weak, nonatomic) IBOutlet DLBCircularProgressView *progressView;
+@property (weak, nonatomic) IBOutlet WNDProgressView *progressView;
 @property BOOL animate;
 @end
 
@@ -39,7 +40,11 @@
 {
     self.progressView.indicatorColor = [UIColor redColor];
     self.progressView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:.1f];
+    self.progressView.indicatorLineWidth = 10.0f;
+    self.progressView.backgroundCircleLineColor = [UIColor colorWithRed:35.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1];
+    self.progressView.backgroundCircleLineWidth = 14;
     self.animate = YES;
+    
     [self setRandomScale];
 }
 - (void)viewWillDisappear:(BOOL)animated
