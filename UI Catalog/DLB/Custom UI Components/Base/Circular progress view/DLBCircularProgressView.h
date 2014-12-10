@@ -26,4 +26,5 @@
 @property (nonatomic) CGFloat indicatorLineWidth;
 
 - (void)setValue:(CGFloat)value animated:(BOOL)animated;
+
 @end

@@ -10,4 +10,14 @@
 
 @interface WNDProgressView : DLBCircularProgressView
 
+/**
+ *  Line widths of circle line behind progress circle
+ */
+@property (nonatomic) float backgroundCircleLineWidth;
+
+/**
+ *  Background color of circle line behind progress circle
+ */
+@property (nonatomic, strong) UIColor *backgroundCircleLineColor;
+
 @end
