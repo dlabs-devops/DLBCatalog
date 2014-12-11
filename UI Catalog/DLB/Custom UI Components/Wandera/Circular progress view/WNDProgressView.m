@@ -9,17 +9,16 @@
 #import "WNDProgressView.h"
 
 @interface WNDProgressView()
+@property (nonatomic, strong) UIImage *colorWheel;
 @end
 
 @implementation WNDProgressView
 
-- (UIImage *)indicatorOverlayImage
+- (void)awakeFromNib
 {
-    if(_indicatorOverlayImage == nil)
-    {
-        _indicatorOverlayImage = [UIImage imageNamed:@"wandera_indicator_gradient"];
-    }
-    return _indicatorOverlayImage;
+    [super awakeFromNib];
+
+    self.colorWheel = [UIImage imageNamed:@"wandera_indicator_gradient"];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -67,7 +66,7 @@
     [indicatorPath addClip];
     
     // draw image
-    [self.indicatorOverlayImage drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
+    [self.colorWheel drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
 }
 
 - (CGFloat)scale

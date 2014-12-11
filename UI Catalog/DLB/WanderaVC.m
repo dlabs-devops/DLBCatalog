@@ -57,10 +57,12 @@
     int rnd = rand()%100;
     CGFloat scale = ((CGFloat)rnd)/100.0f;
     [self.progressView setValue:scale animated:YES];
+    /*
     if(self.animate == YES)
     {
         [self performSelector:@selector(setRandomScale) withObject:nil afterDelay:1.0];
     }
+    */
 }
 
 
