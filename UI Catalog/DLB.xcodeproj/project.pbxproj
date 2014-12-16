@@ -20,6 +20,11 @@
 		21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */; };
 		21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */; };
 		21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0960E1A307F2000BC8F73 /* WNDProgressView.m */; };
+		E28A0F981A39D62000FC3F77 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0F971A39D62000FC3F77 /* WNDPieChart.m */; };
+		E28A0F9D1A39D63000FC3F77 /* DLBPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0F9B1A39D63000FC3F77 /* DLBPieChartView.m */; };
+		E28A0F9E1A39D63000FC3F77 /* DLBPieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28A0F9C1A39D63000FC3F77 /* DLBPieChartView.xib */; };
+		E28A0FA11A39D75C00FC3F77 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0FA01A39D75C00FC3F77 /* DLBPieChartSector.m */; };
+		E2D39B451A3AD7DF0092F22D /* DLBPieChartNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D39B441A3AD7DF0092F22D /* DLBPieChartNode.m */; };
 		E2E67A481A389019006F8C6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E67A471A389019006F8C6C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,15 @@
 		21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
 		21D0960D1A307F2000BC8F73 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
 		21D0960E1A307F2000BC8F73 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
+		E28A0F961A39D62000FC3F77 /* WNDPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPieChart.h; sourceTree = "<group>"; };
+		E28A0F971A39D62000FC3F77 /* WNDPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChart.m; sourceTree = "<group>"; };
+		E28A0F9A1A39D63000FC3F77 /* DLBPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartView.h; sourceTree = "<group>"; };
+		E28A0F9B1A39D63000FC3F77 /* DLBPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartView.m; sourceTree = "<group>"; };
+		E28A0F9C1A39D63000FC3F77 /* DLBPieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBPieChartView.xib; sourceTree = "<group>"; };
+		E28A0F9F1A39D75C00FC3F77 /* DLBPieChartSector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartSector.h; sourceTree = "<group>"; };
+		E28A0FA01A39D75C00FC3F77 /* DLBPieChartSector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartSector.m; sourceTree = "<group>"; };
+		E2D39B431A3AD7DF0092F22D /* DLBPieChartNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartNode.h; sourceTree = "<group>"; };
+		E2D39B441A3AD7DF0092F22D /* DLBPieChartNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartNode.m; sourceTree = "<group>"; };
 		E2E67A471A389019006F8C6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +169,7 @@
 		21D095F11A3069D700BC8F73 /* Wandera */ = {
 			isa = PBXGroup;
 			children = (
+				E28A0F951A39D62000FC3F77 /* Pie chart view */,
 				21D095F21A3069E900BC8F73 /* Circular progress view */,
 			);
 			path = Wandera;
@@ -193,6 +208,7 @@
 		21D096061A307EF400BC8F73 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E28A0F991A39D63000FC3F77 /* Pie chart view */,
 				21D096071A307EF400BC8F73 /* Circular progress view */,
 			);
 			name = Base;
@@ -207,6 +223,37 @@
 				21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */,
 			);
 			path = "Circular progress view";
+			sourceTree = "<group>";
+		};
+		E28A0F951A39D62000FC3F77 /* Pie chart view */ = {
+			isa = PBXGroup;
+			children = (
+				E28A0F961A39D62000FC3F77 /* WNDPieChart.h */,
+				E28A0F971A39D62000FC3F77 /* WNDPieChart.m */,
+			);
+			path = "Pie chart view";
+			sourceTree = "<group>";
+		};
+		E28A0F991A39D63000FC3F77 /* Pie chart view */ = {
+			isa = PBXGroup;
+			children = (
+				E2D39B421A3AD73C0092F22D /* Draw */,
+				E28A0F9F1A39D75C00FC3F77 /* DLBPieChartSector.h */,
+				E28A0FA01A39D75C00FC3F77 /* DLBPieChartSector.m */,
+				E28A0F9A1A39D63000FC3F77 /* DLBPieChartView.h */,
+				E28A0F9B1A39D63000FC3F77 /* DLBPieChartView.m */,
+				E28A0F9C1A39D63000FC3F77 /* DLBPieChartView.xib */,
+			);
+			path = "Pie chart view";
+			sourceTree = "<group>";
+		};
+		E2D39B421A3AD73C0092F22D /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				E2D39B431A3AD7DF0092F22D /* DLBPieChartNode.h */,
+				E2D39B441A3AD7DF0092F22D /* DLBPieChartNode.m */,
+			);
+			path = Draw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +339,7 @@
 				21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */,
 				E2E67A481A389019006F8C6C /* Images.xcassets in Resources */,
 				21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */,
+				E28A0F9E1A39D63000FC3F77 /* DLBPieChartView.xib in Resources */,
 				21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,11 +362,15 @@
 				21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */,
 				21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */,
 				21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */,
+				E28A0FA11A39D75C00FC3F77 /* DLBPieChartSector.m in Sources */,
 				21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */,
+				E2D39B451A3AD7DF0092F22D /* DLBPieChartNode.m in Sources */,
+				E28A0F9D1A39D63000FC3F77 /* DLBPieChartView.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21D096021A3072CA00BC8F73 /* DLBAnimations.m in Sources */,
 				21D095FC1A306F1B00BC8F73 /* DLBAnimatable.m in Sources */,
 				21D095FF1A306F2800BC8F73 /* DLBAnimatableFloat.m in Sources */,
+				E28A0F981A39D62000FC3F77 /* WNDPieChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
