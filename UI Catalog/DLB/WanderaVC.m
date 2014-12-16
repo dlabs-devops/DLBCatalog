@@ -9,6 +9,7 @@
 #import "WanderaVC.h"
 #import "DLBCircularProgressView.h"
 #import "WNDProgressView.h"
+#import "WNDPulseGraphView.h"
 
 @interface WanderaVC ()
 @property (weak, nonatomic) IBOutlet WNDProgressView *progressView;
@@ -43,9 +44,16 @@
     self.progressView.indicatorLineWidth = 10.0f;
     self.progressView.backgroundCircleLineColor = [UIColor colorWithRed:35.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1];
     self.progressView.backgroundCircleLineWidth = 14;
+    self.progressView.hidden = YES;
     self.animate = YES;
     
     [self setRandomScale];
+    
+    WNDPulseGraphView *view = [[WNDPulseGraphView alloc] initWithFrame:CGRectMake(.0f, 80.0f, self.view.frame.size.width, self.view.frame.size.width*.6f)];
+    [view startAnimating];
+    [self.view addSubview:view];
+    [view setNeedsDisplay];
+    
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
