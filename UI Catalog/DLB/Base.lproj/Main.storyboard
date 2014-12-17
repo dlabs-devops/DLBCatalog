@@ -37,8 +37,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-bi-LUc" userLabel="Pie chart View" customClass="WNDPieChart">
+                                <rect key="frame" x="150" y="260" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="rqk-mO-U1g"/>
+                                    <constraint firstAttribute="height" constant="300" id="tDB-Ig-ccP"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-aS-IpJ" customClass="WNDProgressView">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <rect key="frame" x="250" y="140" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bah-Rq-te1"/>
@@ -49,10 +57,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="uOH-aS-IpJ" secondAttribute="centerX" id="1cE-vt-wLx"/>
-                            <constraint firstAttribute="centerY" secondItem="uOH-aS-IpJ" secondAttribute="centerY" id="S0R-Fp-gf6"/>
+                            <constraint firstItem="4i5-bi-LUc" firstAttribute="centerX" secondItem="Ier-wL-OnP" secondAttribute="centerX" id="6KR-7E-gjb"/>
+                            <constraint firstItem="uOH-aS-IpJ" firstAttribute="centerY" secondItem="Ier-wL-OnP" secondAttribute="centerY" constant="-110" id="S0R-Fp-gf6"/>
+                            <constraint firstItem="4i5-bi-LUc" firstAttribute="centerY" secondItem="Ier-wL-OnP" secondAttribute="centerY" constant="110" id="oph-AA-Be7"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pieChartView" destination="4i5-bi-LUc" id="Mgm-tk-VmL"/>
                         <outlet property="progressView" destination="uOH-aS-IpJ" id="7RK-nP-6rA"/>
                     </connections>
                 </viewController>

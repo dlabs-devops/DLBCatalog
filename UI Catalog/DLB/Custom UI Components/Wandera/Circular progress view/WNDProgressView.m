@@ -9,24 +9,23 @@
 #import "WNDProgressView.h"
 
 @interface WNDProgressView()
+@property (nonatomic, strong) UIImage *colorWheel;
 @end
 
 @implementation WNDProgressView
 
-- (UIImage *)indicatorOverlayImage
+- (void)awakeFromNib
 {
-    if(_indicatorOverlayImage == nil)
-    {
-        _indicatorOverlayImage = [UIImage imageNamed:@"wandera_indicator_gradient"];
-    }
-    return _indicatorOverlayImage;
+    [super awakeFromNib];
+
+    self.colorWheel = [UIImage imageNamed:@"wandera_indicator_gradient"];
 }
 
 - (void)drawRect:(CGRect)rect
 {
-    if (self.backgroundCircleLineWidth == 0)
+    if (self.backgroundCircleStrokeWidth == 0)
     {
-        self.backgroundCircleLineWidth = self.indicatorLineWidth;
+        self.backgroundCircleStrokeWidth = self.indicatorLineWidth;
     }
     
     float viewWidth = self.frame.size.width;
@@ -35,29 +34,29 @@
     CGFloat startAngle = (CGFloat)(-M_PI_2);
     CGFloat endAngle = startAngle + ((CGFloat)(M_PI*2.0)) * self.scale;
     
-    float backgroundCircleRadious = viewWidth*0.5f - self.backgroundCircleLineWidth*0.5f;
+    float backgroundCircleRadius = viewWidth*0.5f - self.backgroundCircleStrokeWidth*0.5f;
     
     // background
     // Create circle with bezier for background
     UIBezierPath *backgroundCircle = [UIBezierPath bezierPath];
     [backgroundCircle addArcWithCenter:center
-                             radius:backgroundCircleRadious
+                             radius:backgroundCircleRadius
                          startAngle:0
-                           endAngle:2*M_PI
+                           endAngle:2.0f*M_PI
                           clockwise:YES];
-    backgroundCircle.lineWidth = self.backgroundCircleLineWidth;
-    [self.backgroundCircleLineColor setStroke];
+    backgroundCircle.lineWidth = self.backgroundCircleStrokeWidth;
+    [self.backgroundCircleStrokeColor setStroke];
     [backgroundCircle stroke];
     
     // Create circular bezier path for moving indicator
     UIBezierPath *indicatorPath = [UIBezierPath bezierPath];
     [indicatorPath addArcWithCenter:center
-                          radius:backgroundCircleRadious + self.indicatorLineWidth*.5f
+                          radius:backgroundCircleRadius + self.indicatorLineWidth*.5f
                       startAngle:startAngle
                         endAngle:endAngle
                        clockwise:YES];
     [indicatorPath addArcWithCenter:center
-                             radius:backgroundCircleRadious - self.indicatorLineWidth*.5f
+                             radius:backgroundCircleRadius - self.indicatorLineWidth*.5f
                          startAngle:endAngle
                            endAngle:startAngle
                           clockwise:NO];
@@ -67,7 +66,7 @@
     [indicatorPath addClip];
     
     // draw image
-    [self.indicatorOverlayImage drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
+    [self.colorWheel drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
 }
 
 - (CGFloat)scale

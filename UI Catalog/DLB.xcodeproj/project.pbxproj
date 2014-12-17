@@ -7,22 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212B70311A3F272300FCBBC8 /* DLBPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */; };
+		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
+		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
+		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
+		21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E701A419233000ADCA2 /* DLBPieChartView.m */; };
+		21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E711A419233000ADCA2 /* DLBPieChartView.xib */; };
+		21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E741A419233000ADCA2 /* DLBPieChartNode.m */; };
+		21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E771A419233000ADCA2 /* DLBPulseGraphView.m */; };
+		21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E7C1A419233000ADCA2 /* DLBAnimatable.m */; };
+		21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */; };
+		21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E801A419233000ADCA2 /* DLBAnimations.m */; };
+		21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E831A419233000ADCA2 /* DLBFloatingRange.m */; };
+		21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E871A419233000ADCA2 /* WNDProgressView.m */; };
+		21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8A1A419233000ADCA2 /* WNDPieChart.m */; };
+		21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CF1A30699F00BC8F73 /* AppDelegate.m */; };
 		21D095D31A30699F00BC8F73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095D21A30699F00BC8F73 /* ViewController.m */; };
 		21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D41A30699F00BC8F73 /* Main.storyboard */; };
 		21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D91A30699F00BC8F73 /* LaunchScreen.xib */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
-		21D095FC1A306F1B00BC8F73 /* DLBAnimatable.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095FB1A306F1B00BC8F73 /* DLBAnimatable.m */; };
-		21D095FF1A306F2800BC8F73 /* DLBAnimatableFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095FE1A306F2800BC8F73 /* DLBAnimatableFloat.m */; };
-		21D096021A3072CA00BC8F73 /* DLBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096011A3072CA00BC8F73 /* DLBAnimations.m */; };
 		21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096041A307C7100BC8F73 /* WanderaVC.m */; };
-		21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */; };
-		21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */; };
-		21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0960E1A307F2000BC8F73 /* WNDProgressView.m */; };
-		21D3887B1A40182800665D51 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3887A1A40182800665D51 /* WNDPulseGraphView.m */; };
-		21D3887F1A40278000665D51 /* DLBFloatingRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3887E1A40278000665D51 /* DLBFloatingRange.m */; };
 		E2E67A481A389019006F8C6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E67A471A389019006F8C6C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +42,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		212B702F1A3F272300FCBBC8 /* DLBPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphView.h; sourceTree = "<group>"; };
-		212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphView.m; sourceTree = "<group>"; };
+		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
+		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
+		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
+		21326E6D1A419233000ADCA2 /* DLBPieChartSector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartSector.h; sourceTree = "<group>"; };
+		21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartSector.m; sourceTree = "<group>"; };
+		21326E6F1A419233000ADCA2 /* DLBPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartView.h; sourceTree = "<group>"; };
+		21326E701A419233000ADCA2 /* DLBPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartView.m; sourceTree = "<group>"; };
+		21326E711A419233000ADCA2 /* DLBPieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBPieChartView.xib; sourceTree = "<group>"; };
+		21326E731A419233000ADCA2 /* DLBPieChartNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartNode.h; sourceTree = "<group>"; };
+		21326E741A419233000ADCA2 /* DLBPieChartNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartNode.m; sourceTree = "<group>"; };
+		21326E761A419233000ADCA2 /* DLBPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphView.h; sourceTree = "<group>"; };
+		21326E771A419233000ADCA2 /* DLBPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphView.m; sourceTree = "<group>"; };
+		21326E7B1A419233000ADCA2 /* DLBAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatable.h; sourceTree = "<group>"; };
+		21326E7C1A419233000ADCA2 /* DLBAnimatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatable.m; sourceTree = "<group>"; };
+		21326E7D1A419233000ADCA2 /* DLBAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatableFloat.h; sourceTree = "<group>"; };
+		21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatableFloat.m; sourceTree = "<group>"; };
+		21326E7F1A419233000ADCA2 /* DLBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimations.h; sourceTree = "<group>"; };
+		21326E801A419233000ADCA2 /* DLBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimations.m; sourceTree = "<group>"; };
+		21326E821A419233000ADCA2 /* DLBFloatingRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBFloatingRange.h; sourceTree = "<group>"; };
+		21326E831A419233000ADCA2 /* DLBFloatingRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBFloatingRange.m; sourceTree = "<group>"; };
+		21326E861A419233000ADCA2 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
+		21326E871A419233000ADCA2 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
+		21326E891A419233000ADCA2 /* WNDPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPieChart.h; sourceTree = "<group>"; };
+		21326E8A1A419233000ADCA2 /* WNDPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChart.m; sourceTree = "<group>"; };
+		21326E8C1A419233000ADCA2 /* WNDPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphView.h; sourceTree = "<group>"; };
+		21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
 		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,23 +80,8 @@
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
-		21D095FA1A306F1B00BC8F73 /* DLBAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatable.h; sourceTree = "<group>"; };
-		21D095FB1A306F1B00BC8F73 /* DLBAnimatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatable.m; sourceTree = "<group>"; };
-		21D095FD1A306F2800BC8F73 /* DLBAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatableFloat.h; sourceTree = "<group>"; };
-		21D095FE1A306F2800BC8F73 /* DLBAnimatableFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatableFloat.m; sourceTree = "<group>"; };
-		21D096001A3072CA00BC8F73 /* DLBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimations.h; sourceTree = "<group>"; };
-		21D096011A3072CA00BC8F73 /* DLBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimations.m; sourceTree = "<group>"; };
 		21D096031A307C7100BC8F73 /* WanderaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaVC.h; sourceTree = "<group>"; };
 		21D096041A307C7100BC8F73 /* WanderaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaVC.m; sourceTree = "<group>"; };
-		21D096081A307EF400BC8F73 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
-		21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
-		21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
-		21D0960D1A307F2000BC8F73 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
-		21D0960E1A307F2000BC8F73 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
-		21D388791A40182800665D51 /* WNDPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphView.h; sourceTree = "<group>"; };
-		21D3887A1A40182800665D51 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
-		21D3887D1A40278000665D51 /* DLBFloatingRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBFloatingRange.h; sourceTree = "<group>"; };
-		21D3887E1A40278000665D51 /* DLBFloatingRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBFloatingRange.m; sourceTree = "<group>"; };
 		E2E67A471A389019006F8C6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,11 +103,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		212B702E1A3F270C00FCBBC8 /* Pulse graph view */ = {
+		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				212B702F1A3F272300FCBBC8 /* DLBPulseGraphView.h */,
-				212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */,
+				21326E681A419233000ADCA2 /* Circular progress view */,
+				21326E6C1A419233000ADCA2 /* Pie chart view */,
+				21326E751A419233000ADCA2 /* Pulse graph view */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		21326E681A419233000ADCA2 /* Circular progress view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E691A419233000ADCA2 /* DLBCircularProgressView.h */,
+				21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */,
+				21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */,
+			);
+			path = "Circular progress view";
+			sourceTree = "<group>";
+		};
+		21326E6C1A419233000ADCA2 /* Pie chart view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E6D1A419233000ADCA2 /* DLBPieChartSector.h */,
+				21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */,
+				21326E6F1A419233000ADCA2 /* DLBPieChartView.h */,
+				21326E701A419233000ADCA2 /* DLBPieChartView.m */,
+				21326E711A419233000ADCA2 /* DLBPieChartView.xib */,
+				21326E721A419233000ADCA2 /* Draw */,
+			);
+			path = "Pie chart view";
+			sourceTree = "<group>";
+		};
+		21326E721A419233000ADCA2 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				21326E731A419233000ADCA2 /* DLBPieChartNode.h */,
+				21326E741A419233000ADCA2 /* DLBPieChartNode.m */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		21326E751A419233000ADCA2 /* Pulse graph view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E761A419233000ADCA2 /* DLBPulseGraphView.h */,
+				21326E771A419233000ADCA2 /* DLBPulseGraphView.m */,
+				21326E781A419233000ADCA2 /* untitled folder */,
+			);
+			path = "Pulse graph view";
+			sourceTree = "<group>";
+		};
+		21326E781A419233000ADCA2 /* untitled folder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "untitled folder";
+			sourceTree = "<group>";
+		};
+		21326E791A419233000ADCA2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				21326E7A1A419233000ADCA2 /* Animations */,
+				21326E811A419233000ADCA2 /* Components */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		21326E7A1A419233000ADCA2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				21326E7B1A419233000ADCA2 /* DLBAnimatable.h */,
+				21326E7C1A419233000ADCA2 /* DLBAnimatable.m */,
+				21326E7D1A419233000ADCA2 /* DLBAnimatableFloat.h */,
+				21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */,
+				21326E7F1A419233000ADCA2 /* DLBAnimations.h */,
+				21326E801A419233000ADCA2 /* DLBAnimations.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		21326E811A419233000ADCA2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				21326E821A419233000ADCA2 /* DLBFloatingRange.h */,
+				21326E831A419233000ADCA2 /* DLBFloatingRange.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		21326E841A419233000ADCA2 /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21326E851A419233000ADCA2 /* Circular progress view */,
+				21326E881A419233000ADCA2 /* Pie chart view */,
+				21326E8B1A419233000ADCA2 /* Pulse graph view */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21326E851A419233000ADCA2 /* Circular progress view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E861A419233000ADCA2 /* WNDProgressView.h */,
+				21326E871A419233000ADCA2 /* WNDProgressView.m */,
+			);
+			path = "Circular progress view";
+			sourceTree = "<group>";
+		};
+		21326E881A419233000ADCA2 /* Pie chart view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E891A419233000ADCA2 /* WNDPieChart.h */,
+				21326E8A1A419233000ADCA2 /* WNDPieChart.m */,
+			);
+			path = "Pie chart view";
+			sourceTree = "<group>";
+		};
+		21326E8B1A419233000ADCA2 /* Pulse graph view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E8C1A419233000ADCA2 /* WNDPulseGraphView.h */,
+				21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */,
 			);
 			path = "Pulse graph view";
 			sourceTree = "<group>";
@@ -163,89 +295,11 @@
 		21D095F01A3069C100BC8F73 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				21D095F81A306EF700BC8F73 /* Tools */,
-				21D096061A307EF400BC8F73 /* Base */,
-				21D095F11A3069D700BC8F73 /* Wandera */,
+				21326E671A419233000ADCA2 /* Base */,
+				21326E791A419233000ADCA2 /* Tools */,
+				21326E841A419233000ADCA2 /* Wandera */,
 			);
 			path = "Custom UI Components";
-			sourceTree = "<group>";
-		};
-		21D095F11A3069D700BC8F73 /* Wandera */ = {
-			isa = PBXGroup;
-			children = (
-				21D388781A40181900665D51 /* Pulse graph view */,
-				21D095F21A3069E900BC8F73 /* Circular progress view */,
-			);
-			path = Wandera;
-			sourceTree = "<group>";
-		};
-		21D095F21A3069E900BC8F73 /* Circular progress view */ = {
-			isa = PBXGroup;
-			children = (
-				21D0960D1A307F2000BC8F73 /* WNDProgressView.h */,
-				21D0960E1A307F2000BC8F73 /* WNDProgressView.m */,
-			);
-			path = "Circular progress view";
-			sourceTree = "<group>";
-		};
-		21D095F81A306EF700BC8F73 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				21D3887C1A40276D00665D51 /* Components */,
-				21D095F91A306EF700BC8F73 /* Animations */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		21D095F91A306EF700BC8F73 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				21D096001A3072CA00BC8F73 /* DLBAnimations.h */,
-				21D096011A3072CA00BC8F73 /* DLBAnimations.m */,
-				21D095FA1A306F1B00BC8F73 /* DLBAnimatable.h */,
-				21D095FB1A306F1B00BC8F73 /* DLBAnimatable.m */,
-				21D095FD1A306F2800BC8F73 /* DLBAnimatableFloat.h */,
-				21D095FE1A306F2800BC8F73 /* DLBAnimatableFloat.m */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		21D096061A307EF400BC8F73 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				212B702E1A3F270C00FCBBC8 /* Pulse graph view */,
-				21D096071A307EF400BC8F73 /* Circular progress view */,
-			);
-			name = Base;
-			path = "DLB/Custom UI Components/Base";
-			sourceTree = SOURCE_ROOT;
-		};
-		21D096071A307EF400BC8F73 /* Circular progress view */ = {
-			isa = PBXGroup;
-			children = (
-				21D096081A307EF400BC8F73 /* DLBCircularProgressView.h */,
-				21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */,
-				21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */,
-			);
-			path = "Circular progress view";
-			sourceTree = "<group>";
-		};
-		21D388781A40181900665D51 /* Pulse graph view */ = {
-			isa = PBXGroup;
-			children = (
-				21D388791A40182800665D51 /* WNDPulseGraphView.h */,
-				21D3887A1A40182800665D51 /* WNDPulseGraphView.m */,
-			);
-			path = "Pulse graph view";
-			sourceTree = "<group>";
-		};
-		21D3887C1A40276D00665D51 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				21D3887D1A40278000665D51 /* DLBFloatingRange.h */,
-				21D3887E1A40278000665D51 /* DLBFloatingRange.m */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,7 +385,8 @@
 				21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */,
 				E2E67A481A389019006F8C6C /* Images.xcassets in Resources */,
 				21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */,
-				21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */,
+				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
+				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,18 +404,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
+				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
 				21D095D31A30699F00BC8F73 /* ViewController.m in Sources */,
 				21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */,
-				21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */,
+				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
+				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
 				21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */,
-				212B70311A3F272300FCBBC8 /* DLBPulseGraphView.m in Sources */,
-				21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */,
+				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
+				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
+				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
+				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
-				21D3887B1A40182800665D51 /* WNDPulseGraphView.m in Sources */,
-				21D3887F1A40278000665D51 /* DLBFloatingRange.m in Sources */,
-				21D096021A3072CA00BC8F73 /* DLBAnimations.m in Sources */,
-				21D095FC1A306F1B00BC8F73 /* DLBAnimatable.m in Sources */,
-				21D095FF1A306F2800BC8F73 /* DLBAnimatableFloat.m in Sources */,
+				21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */,
+				21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */,
+				21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */,
+				21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
