@@ -38,11 +38,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-bi-LUc" userLabel="Pie chart View" customClass="WNDPieChart">
-                                <rect key="frame" x="250" y="360" width="100" height="100"/>
+                                <rect key="frame" x="150" y="260" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="rqk-mO-U1g"/>
-                                    <constraint firstAttribute="height" constant="100" id="tDB-Ig-ccP"/>
+                                    <constraint firstAttribute="width" constant="300" id="rqk-mO-U1g"/>
+                                    <constraint firstAttribute="height" constant="300" id="tDB-Ig-ccP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-aS-IpJ" customClass="WNDProgressView">

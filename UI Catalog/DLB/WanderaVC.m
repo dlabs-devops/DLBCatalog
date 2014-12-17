@@ -75,8 +75,6 @@
     */
     
     /* tests */
-    self.pieChartView.radius = 40;
-    self.pieChartView.shadowColor = [UIColor whiteColor];
     NSLog(@"*** [initial insert]:");
     [self.pieChartView setChartSectors:sectors animated:YES];
     [self.pieChartView setStrokeWidth:10.0f];

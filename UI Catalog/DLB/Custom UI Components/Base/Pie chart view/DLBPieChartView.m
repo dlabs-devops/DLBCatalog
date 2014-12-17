@@ -67,7 +67,7 @@
 {
     if (_radius <= 0)
     {
-        return self.frame.size.width/2.0f;
+        return self.frame.size.width/2.0f-self.shadowWidth;
     }
     else
     {
@@ -177,7 +177,10 @@
                           clockwise:YES];
      
     backgroundCircle.usesEvenOddFillRule = YES;
-    CGContextSetShadowWithColor(context, CGSizeMake(0.0f, 0.0f), 20.0, self.shadowColor.CGColor);
+    if(self.shadowWidth > .0f)
+    {
+        CGContextSetShadowWithColor(context, CGSizeMake(0.0f, 0.0f), self.shadowWidth, self.shadowColor.CGColor);
+    }
     [backgroundCircle fill];
     CGContextRestoreGState(context);
     

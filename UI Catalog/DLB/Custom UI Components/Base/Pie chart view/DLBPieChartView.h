@@ -33,6 +33,8 @@
 
 @property (nonatomic) float strokeWidth;
 
+@property (nonatomic) CGFloat shadowWidth;
+
 /**
  *  Sets pie chart sectors.
  *
