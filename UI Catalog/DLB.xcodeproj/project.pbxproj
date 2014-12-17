@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212B70311A3F272300FCBBC8 /* DLBPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CF1A30699F00BC8F73 /* AppDelegate.m */; };
 		21D095D31A30699F00BC8F73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095D21A30699F00BC8F73 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 		21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096091A307EF400BC8F73 /* DLBCircularProgressView.m */; };
 		21D0960C1A307EF400BC8F73 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */; };
 		21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0960E1A307F2000BC8F73 /* WNDProgressView.m */; };
+		21D3887B1A40182800665D51 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3887A1A40182800665D51 /* WNDPulseGraphView.m */; };
+		21D3887F1A40278000665D51 /* DLBFloatingRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3887E1A40278000665D51 /* DLBFloatingRange.m */; };
 		E2E67A481A389019006F8C6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E67A471A389019006F8C6C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212B702F1A3F272300FCBBC8 /* DLBPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphView.h; sourceTree = "<group>"; };
+		212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphView.m; sourceTree = "<group>"; };
 		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +64,10 @@
 		21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
 		21D0960D1A307F2000BC8F73 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
 		21D0960E1A307F2000BC8F73 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
+		21D388791A40182800665D51 /* WNDPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphView.h; sourceTree = "<group>"; };
+		21D3887A1A40182800665D51 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
+		21D3887D1A40278000665D51 /* DLBFloatingRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBFloatingRange.h; sourceTree = "<group>"; };
+		21D3887E1A40278000665D51 /* DLBFloatingRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBFloatingRange.m; sourceTree = "<group>"; };
 		E2E67A471A389019006F8C6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212B702E1A3F270C00FCBBC8 /* Pulse graph view */ = {
+			isa = PBXGroup;
+			children = (
+				212B702F1A3F272300FCBBC8 /* DLBPulseGraphView.h */,
+				212B70301A3F272300FCBBC8 /* DLBPulseGraphView.m */,
+			);
+			path = "Pulse graph view";
+			sourceTree = "<group>";
+		};
 		21D095BE1A30699F00BC8F73 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,7 @@
 		21D095F11A3069D700BC8F73 /* Wandera */ = {
 			isa = PBXGroup;
 			children = (
+				21D388781A40181900665D51 /* Pulse graph view */,
 				21D095F21A3069E900BC8F73 /* Circular progress view */,
 			);
 			path = Wandera;
@@ -172,6 +191,7 @@
 		21D095F81A306EF700BC8F73 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				21D3887C1A40276D00665D51 /* Components */,
 				21D095F91A306EF700BC8F73 /* Animations */,
 			);
 			path = Tools;
@@ -193,6 +213,7 @@
 		21D096061A307EF400BC8F73 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				212B702E1A3F270C00FCBBC8 /* Pulse graph view */,
 				21D096071A307EF400BC8F73 /* Circular progress view */,
 			);
 			name = Base;
@@ -207,6 +228,24 @@
 				21D0960A1A307EF400BC8F73 /* DLBCircularProgressView.xib */,
 			);
 			path = "Circular progress view";
+			sourceTree = "<group>";
+		};
+		21D388781A40181900665D51 /* Pulse graph view */ = {
+			isa = PBXGroup;
+			children = (
+				21D388791A40182800665D51 /* WNDPulseGraphView.h */,
+				21D3887A1A40182800665D51 /* WNDPulseGraphView.m */,
+			);
+			path = "Pulse graph view";
+			sourceTree = "<group>";
+		};
+		21D3887C1A40276D00665D51 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				21D3887D1A40278000665D51 /* DLBFloatingRange.h */,
+				21D3887E1A40278000665D51 /* DLBFloatingRange.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,8 +353,11 @@
 				21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */,
 				21D0960F1A307F2000BC8F73 /* WNDProgressView.m in Sources */,
 				21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */,
+				212B70311A3F272300FCBBC8 /* DLBPulseGraphView.m in Sources */,
 				21D0960B1A307EF400BC8F73 /* DLBCircularProgressView.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
+				21D3887B1A40182800665D51 /* WNDPulseGraphView.m in Sources */,
+				21D3887F1A40278000665D51 /* DLBFloatingRange.m in Sources */,
 				21D096021A3072CA00BC8F73 /* DLBAnimations.m in Sources */,
 				21D095FC1A306F1B00BC8F73 /* DLBAnimatable.m in Sources */,
 				21D095FF1A306F2800BC8F73 /* DLBAnimatableFloat.m in Sources */,
