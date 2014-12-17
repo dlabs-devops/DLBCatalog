@@ -13,7 +13,8 @@
 - (instancetype)initWithSector:(DLBPieChartSector *)sector
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.pieChartSector = sector;
     }
     return self;

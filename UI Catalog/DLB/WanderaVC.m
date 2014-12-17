@@ -44,12 +44,9 @@
     self.progressView.indicatorColor = [UIColor redColor];
     self.progressView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:.1f];
     self.progressView.indicatorLineWidth = 10.0f;
-    self.progressView.backgroundCircleLineColor = [UIColor colorWithRed:35.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1];
-    self.progressView.backgroundCircleLineWidth = 14;
+    self.progressView.backgroundCircleStrokeColor = [UIColor colorWithRed:35.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1];
+    self.progressView.backgroundCircleStrokeWidth = 14;
     self.animate = YES;
-    
-    //NSArray *pieChartSectors =
-    //self.pieChartView
     
     [self setRandomScale];
 }
@@ -78,13 +75,15 @@
     */
     
     /* tests */
-    self.pieChartView.radious = 50;
+    self.pieChartView.radius = 40;
+    self.pieChartView.shadowColor = [UIColor whiteColor];
     NSLog(@"*** [initial insert]:");
     [self.pieChartView setChartSectors:sectors animated:YES];
+    [self.pieChartView setStrokeWidth:10.0f];
     
     
     // Delay execution of my block for 10 seconds.
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         NSLog(@"*** [remove sector]:");
         [sectors removeObjectAtIndex:0];
         [sectors removeObjectAtIndex:0];
@@ -93,7 +92,7 @@
         [self.pieChartView setChartSectors:sectors animated:YES];
     });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         NSLog(@"*** [sector moved to diferent index]:");
         DLBPieChartSector *sectorChanged = sectors[1];
         [sectors removeObject:sectorChanged];
@@ -106,7 +105,7 @@
         [self.pieChartView setChartSectors:sectors animated:YES];
     });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 15 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 6 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         NSLog(@"*** [sector value changed]:");
         DLBPieChartSector *sectorChanged = sectors[2];
         sectorChanged.sectorValue = 15;
@@ -118,7 +117,7 @@
 
     });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 20 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 8 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         NSLog(@"*** [add new sector]:");
         [sectors insertObject:[[DLBPieChartSector alloc] initWithSectorValue:6 sectorColor:[UIColor purpleColor]] atIndex:2];
         [sectors addObject:[[DLBPieChartSector alloc] initWithSectorValue:6 sectorColor:[UIColor orangeColor]]];

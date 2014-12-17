@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) DLBPieChartSector *pieChartSector;
 
-// angle is interpolated from current value to "new" value. From currentStartAngle to newStartAngle
+// angle is interpolated from "current" value to "new" value. i.e. From currentStartAngle to newStartAngle
 @property (nonatomic) float newStartAngle;
 @property (nonatomic) float newEndAngle;
 @property (nonatomic) float currentStartAngle;
@@ -23,6 +23,6 @@
 @property (nonatomic) BOOL removeOnNextUpdate;
 @property (nonatomic) BOOL newThisUpdate;
 
--(id) initWithSector:(DLBPieChartSector *)sector;
+- (id)initWithSector:(DLBPieChartSector *)sector;
 
 @end

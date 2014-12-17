@@ -17,14 +17,21 @@
 @interface DLBPieChartView : UIView
 
 /**
- *  Radious of pie chart
+ *  Radius of pie chart
  */
-@property (nonatomic) float radious;
+@property (nonatomic) float radius;
 
 /**
  *  Current scale for animation
  */
 @property (nonatomic) float scale;
+
+/**
+ *  Inner and outer shadow color
+ */
+@property (nonatomic, retain) UIColor *shadowColor;
+
+@property (nonatomic) float strokeWidth;
 
 /**
  *  Sets pie chart sectors.
@@ -33,6 +40,7 @@
  *  @param animate - is animatable
  */
 - (void)setChartSectors:(NSArray *)sectors animated:(BOOL)animate;
+
 
 
 @end

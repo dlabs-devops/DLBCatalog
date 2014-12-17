@@ -13,7 +13,8 @@
 - (instancetype)initWithSectorValue:(float)value sectorColor:(UIColor *)color
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.sectorValue = value;
         self.sectorColor = color;
     }
