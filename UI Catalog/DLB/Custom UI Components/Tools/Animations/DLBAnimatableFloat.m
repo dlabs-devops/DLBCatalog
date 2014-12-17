@@ -47,8 +47,8 @@
 
 - (void)onFrame
 {
-    [super onFrame];
     self.floatValue = self.startValue + (self.endValue-self.startValue)*self.currentInterpolator;
+    [super onFrame];
 }
 
 @end

@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="circularViewCell" rowHeight="100" id="Oaq-qn-yhP" userLabel="Circular progress view cell" customClass="WNDCircularViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="circularViewCell" rowHeight="100" id="Oaq-qn-yhP" userLabel="Circular progress view cell" customClass="WNDCircularViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oaq-qn-yhP" id="7mH-wb-Wg7">
@@ -101,7 +101,7 @@
                                             <outlet property="circularView" destination="3T5-EJ-3np" id="jXV-tb-lqP"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pulseGraphCell" rowHeight="100" id="p4k-94-HDK" userLabel="Pulse graph view cell" customClass="WNDPulseGraphCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pulseGraphCell" rowHeight="100" id="p4k-94-HDK" userLabel="Pulse graph view cell" customClass="WNDPulseGraphCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p4k-94-HDK" id="aGf-LJ-PMg">
@@ -163,7 +163,7 @@
                                             <outlet property="pulseGraph" destination="k3L-xj-bnY" id="Yrf-7T-so9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="VWB-WC-xEP" userLabel="Pie chart view cell" customClass="WNDPieChartCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="VWB-WC-xEP" userLabel="Pie chart view cell" customClass="WNDPieChartCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VWB-WC-xEP" id="nNE-sQ-2Ys">

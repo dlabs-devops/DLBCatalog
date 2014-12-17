@@ -50,13 +50,16 @@
     BOOL willEnd = NO;
     if([self currentScale] >= 1.0f)
     {
-        [self performSelector:@selector(invalidateAnimation) withObject:nil];
         willEnd = YES;
     }
     
     if(self.onFrameBlock)
     {
         self.onFrameBlock(willEnd);
+    }
+    if(willEnd)
+    {
+        [self performSelector:@selector(invalidateAnimation) withObject:nil];
     }
 }
 
