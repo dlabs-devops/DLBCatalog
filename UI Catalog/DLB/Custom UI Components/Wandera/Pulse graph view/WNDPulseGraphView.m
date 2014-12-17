@@ -49,6 +49,8 @@
 
 - (void)setIndicatorCount:(NSInteger)indicatorCount
 {
+    self.currentScale = -1.0f;
+    
     _indicatorCount = indicatorCount;
     CGFloat length = 1.8f/self.indicatorCount;
     
@@ -93,7 +95,7 @@
     for(NSInteger i=0; i<self.indicatorCount; i++)
     {
         DLBFloatingRange *range = self.pulseRanges[i];
-        range.location = self.currentScale-1.0f + stepSize*(i+1);
+        range.location = self.currentScale - 1.0f + stepSize*(i+1);
     }
     
     [self setNeedsDisplay];

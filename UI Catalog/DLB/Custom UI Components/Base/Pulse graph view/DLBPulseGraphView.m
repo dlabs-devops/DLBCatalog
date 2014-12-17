@@ -204,7 +204,7 @@
     CGGradientRelease(gradient), gradient = NULL;
     CGContextRestoreGState(context);
     CGPathRelease(path);
-    
+
     if(self.pulseHeadRadius > .0f)
     {
         for(DLBFloatingRange *value in self.pulseRanges)
