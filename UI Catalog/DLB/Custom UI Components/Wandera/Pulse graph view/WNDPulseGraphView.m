@@ -17,34 +17,45 @@
 @implementation WNDPulseGraphView
 
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self setDefaults];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if((self = [super initWithFrame:frame]))
     {
         self.backgroundColor = [UIColor clearColor];
-        self.speed = .003f;
-        self.lineDimmedColor = [[UIColor redColor] colorWithAlphaComponent:.1f];
-        self.pulseHeadRadius = 10.0f;
         
-        self.linePoints = @[
-                            [NSNumber valueWithCGPoint:CGPointMake(0 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(74.36 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(79.43 / 320.0, ((74.66 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(82.92 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(86.42 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(87.82 / 320.0, ((90.34 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(91.31 / 320.0, ((37.33 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(96.91 / 320.0, ((110 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(100.41 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(109.15 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(117.89 / 320.0, ((80.06 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(124.88 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                            [NSNumber valueWithCGPoint:CGPointMake(320 / 320.0, ((85.36 / 70.0) - 1.0) * -1.0)]
-                            ];
-        self.indicatorCount = 4;
-        
+        [self setDefaults];
     }
     return self;
+}
+
+- (void)setDefaults
+{
+    self.speed = .003f;
+    self.lineDimmedColor = [[UIColor redColor] colorWithAlphaComponent:.1f];
+    self.pulseHeadRadius = 10.0f;
+    
+    self.linePoints = @[
+                        [NSNumber valueWithCGPoint:CGPointMake(0 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(74.36 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(79.43 / 320.0, ((74.66 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(82.92 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(86.42 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(87.82 / 320.0, ((90.34 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(91.31 / 320.0, ((37.33 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(96.91 / 320.0, ((110 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(100.41 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(109.15 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(117.89 / 320.0, ((80.06 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(124.88 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
+                        [NSNumber valueWithCGPoint:CGPointMake(320 / 320.0, ((85.36 / 70.0) - 1.0) * -1.0)]
+                        ];
+    self.indicatorCount = 4;
 }
 
 - (void)setIndicatorCount:(NSInteger)indicatorCount
@@ -99,6 +110,12 @@
     }
     
     [self setNeedsDisplay];
+}
+
+- (void)removeFromSuperview
+{
+    [super removeFromSuperview];
+    [self stopAnimating];
 }
 
 @end
