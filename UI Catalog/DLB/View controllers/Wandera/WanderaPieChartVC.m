@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet WNDPieChart *pieChart;
 @property (weak, nonatomic) IBOutlet UISwitch *randomSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *removeSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *removeRandomSwitch;
 
 @property (nonatomic, strong) NSArray *sectors;
 
@@ -44,17 +45,34 @@
     {
         UIColor *rndColor = [UIColor colorWithRed:((CGFloat)(rand()%1000))/1000.0f green:((CGFloat)(rand()%1000))/1000.0f blue:((CGFloat)(rand()%1000))/1000.0f alpha:1.0f];
         DLBPieChartSector *sector = [[DLBPieChartSector alloc] initWithSectorValue:((CGFloat)(rand()%1000)) + 10.0f sectorColor:rndColor];
-        [newSectors addObject:sector];
+        if(newSectors.count > 1)
+        {
+            [newSectors insertObject:sector atIndex:rand()%newSectors.count];
+        }
+        else
+        {
+            [newSectors addObject:sector];
+        }
     }
     
     self.sectors = [newSectors copy];
     
-    [self.pieChart setChartSectors:self.sectors animated:self.randomSwitch.enabled];
+    [self.pieChart setChartSectors:self.sectors animated:self.randomSwitch.on];
 }
 - (IBAction)removeAllPressed:(id)sender {
     self.sectors = nil;
-    [self.pieChart setChartSectors:self.sectors animated:self.removeSwitch.enabled];
+    [self.pieChart setChartSectors:self.sectors animated:self.removeSwitch.on];
     [self.pieChart setNeedsDisplay];
+}
+- (IBAction)removeRandomPressed:(id)sender {
+    if(self.sectors.count > 0)
+    {
+        NSInteger index = rand()%self.sectors.count;
+        NSMutableArray *newSectors = [self.sectors mutableCopy];
+        [newSectors removeObjectAtIndex:index];
+        self.sectors = [newSectors copy];
+        [self.pieChart setChartSectors:newSectors animated:self.removeRandomSwitch.on];
+    }
 }
 
 /*

@@ -46,31 +46,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdw-t3-suV" userLabel="BottomPannel">
                                 <rect key="frame" x="0.0" y="310" width="600" height="290"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Qt-tKz" userLabel="Add few random">
-                                        <rect key="frame" x="22" y="30" width="120" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="0Pg-77-ngx"/>
-                                            <constraint firstAttribute="height" constant="30" id="1mA-iC-ctx"/>
-                                            <constraint firstAttribute="height" constant="44" id="Y7u-Cf-QmJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Add random items">
-                                            <color key="titleColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="1mA-iC-ctx"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="addFewPressed:" destination="bmQ-hz-IH2" eventType="touchUpInside" id="7vI-yH-twH"/>
-                                        </connections>
-                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-aX-8YJ">
+                                        <rect key="frame" x="150" y="36" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a11-z4-mzh" userLabel="Remove all">
                                         <rect key="frame" x="22" y="86" width="120" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jwB-hr-DCj"/>
                                             <constraint firstAttribute="width" constant="120" id="kcU-wm-Eet"/>
@@ -81,6 +63,11 @@
                                             <color key="titleColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="yIs-D2-FkK"/>
@@ -90,12 +77,39 @@
                                             <action selector="removeAllPressed:" destination="bmQ-hz-IH2" eventType="touchUpInside" id="uE6-BF-WaS"/>
                                         </connections>
                                     </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-aX-8YJ">
-                                        <rect key="frame" x="150" y="36" width="51" height="31"/>
-                                        <color key="onTintColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydx-vt-OtO">
                                         <rect key="frame" x="150" y="92" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-7d-OlN">
+                                        <rect key="frame" x="22" y="142" width="120" height="44"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="8B5-Oe-Fbs"/>
+                                            <constraint firstAttribute="height" constant="30" id="Glv-Tg-M6i"/>
+                                            <constraint firstAttribute="height" constant="44" id="zj2-io-JOu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Remove random">
+                                            <color key="titleColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Glv-Tg-M6i"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="removeRandomPressed:" destination="bmQ-hz-IH2" eventType="touchUpInside" id="YPs-73-0H0"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-ve-0dA">
+                                        <rect key="frame" x="150" y="148" width="51" height="31"/>
                                         <color key="onTintColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Animate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-Pe-IDf">
@@ -112,12 +126,43 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Qt-tKz" userLabel="Add few random">
+                                        <rect key="frame" x="22" y="30" width="120" height="44"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="0Pg-77-ngx"/>
+                                            <constraint firstAttribute="height" constant="30" id="1mA-iC-ctx"/>
+                                            <constraint firstAttribute="height" constant="44" id="Y7u-Cf-QmJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Add random items">
+                                            <color key="titleColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1mA-iC-ctx"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="addFewPressed:" destination="bmQ-hz-IH2" eventType="touchUpInside" id="7vI-yH-twH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="J9l-Qt-tKz" firstAttribute="top" secondItem="qdw-t3-suV" secondAttribute="top" constant="30" id="4O7-wH-DhR"/>
+                                    <constraint firstItem="FnE-7d-OlN" firstAttribute="centerY" secondItem="Uqf-ve-0dA" secondAttribute="centerY" constant="0.5" id="9O5-9Q-RhX"/>
+                                    <constraint firstItem="FnE-7d-OlN" firstAttribute="leading" secondItem="a11-z4-mzh" secondAttribute="leading" id="Lt5-oR-cYx"/>
                                     <constraint firstItem="RbO-Pe-IDf" firstAttribute="trailing" secondItem="fM9-aX-8YJ" secondAttribute="trailing" id="OFB-G1-NqG"/>
+                                    <constraint firstItem="FnE-7d-OlN" firstAttribute="top" secondItem="a11-z4-mzh" secondAttribute="bottom" constant="12" id="SZR-r6-nor"/>
                                     <constraint firstItem="RbO-Pe-IDf" firstAttribute="leading" secondItem="fM9-aX-8YJ" secondAttribute="leading" id="WM4-hD-Cmp"/>
+                                    <constraint firstItem="Uqf-ve-0dA" firstAttribute="leading" secondItem="FnE-7d-OlN" secondAttribute="trailing" constant="8" id="YAD-ZT-qQz"/>
                                     <constraint firstItem="RbO-Pe-IDf" firstAttribute="bottom" secondItem="fM9-aX-8YJ" secondAttribute="top" constant="-8" id="bhs-EQ-V4V"/>
                                     <constraint firstItem="a11-z4-mzh" firstAttribute="leading" secondItem="J9l-Qt-tKz" secondAttribute="leading" id="cbz-4v-nKi"/>
                                     <constraint firstItem="a11-z4-mzh" firstAttribute="top" secondItem="J9l-Qt-tKz" secondAttribute="bottom" constant="12" id="dB9-rr-0tv"/>
@@ -150,6 +195,7 @@
                     <connections>
                         <outlet property="pieChart" destination="LEd-H7-v0M" id="DK0-T3-tBa"/>
                         <outlet property="randomSwitch" destination="fM9-aX-8YJ" id="H39-s2-7Um"/>
+                        <outlet property="removeRandomSwitch" destination="Uqf-ve-0dA" id="Lee-Eh-bMp"/>
                         <outlet property="removeSwitch" destination="Ydx-vt-OtO" id="M1f-1t-DRa"/>
                     </connections>
                 </viewController>

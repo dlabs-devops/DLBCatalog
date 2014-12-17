@@ -144,6 +144,7 @@
     else
     {
         [self.animatableScale invalidateAnimation];
+        self.scale = 1.0f;
     }
 }
 
