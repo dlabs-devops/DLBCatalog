@@ -23,18 +23,18 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    if (self.backgroundCircleStrokeWidth == 0)
+    if (self.backgroundCircleStrokeWidth <= (CGFloat).0f)
     {
-        self.backgroundCircleStrokeWidth = self.indicatorLineWidth;
+        self.backgroundCircleStrokeWidth = (float)self.indicatorLineWidth;
     }
     
-    float viewWidth = self.frame.size.width;
-    float viewHeight = self.frame.size.height;
+    CGFloat viewWidth = self.frame.size.width;
+    CGFloat viewHeight = self.frame.size.height;
     CGPoint center = CGPointMake(viewWidth/2.0f , viewHeight/2.0f);
     CGFloat startAngle = (CGFloat)(-M_PI_2);
     CGFloat endAngle = startAngle + ((CGFloat)(M_PI*2.0)) * self.scale;
     
-    float backgroundCircleRadius = viewWidth*0.5f - self.backgroundCircleStrokeWidth*0.5f;
+    CGFloat backgroundCircleRadius = viewWidth*0.5f - self.backgroundCircleStrokeWidth*0.5f;
     
     // background
     // Create circle with bezier for background
@@ -42,7 +42,7 @@
     [backgroundCircle addArcWithCenter:center
                              radius:backgroundCircleRadius
                          startAngle:0
-                           endAngle:2.0f*M_PI
+                           endAngle:2.0f*(CGFloat)M_PI
                           clockwise:YES];
     backgroundCircle.lineWidth = self.backgroundCircleStrokeWidth;
     [self.backgroundCircleStrokeColor setStroke];
