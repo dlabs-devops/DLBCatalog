@@ -24,6 +24,13 @@ static NSString * __baseTableViewCellID = @"basicCell";
 
 @implementation MainViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(.0f, .0f, self.view.frame.size.width, 50.0f)];
+}
+
 - (NSString *)nameForCategory:(eEntryCategory)category
 {
     NSString *name = @"Unknown";
@@ -39,6 +46,23 @@ static NSString * __baseTableViewCellID = @"basicCell";
     }
     return name;
 }
+
+- (NSString *)descriptionForCategory:(eEntryCategory)category
+{
+    NSString *name = @"Unknown";
+    switch (category) {
+        case entryCategoryBase:
+            name = @"Base graphical comonents";
+            break;
+        case entryCategoryWandera:
+            name = @"Wandera V4 UI components";
+            break;
+        case entryCategoryCount:
+            break;
+    }
+    return name;
+}
+
 
 - (UIViewController *)controllerForCategory:(eEntryCategory)category
 {
@@ -71,6 +95,8 @@ static NSString * __baseTableViewCellID = @"basicCell";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:__baseTableViewCellID forIndexPath:indexPath];
     cell.textLabel.text = [self nameForCategory:(eEntryCategory)indexPath.row];
+    cell.detailTextLabel.text = [self descriptionForCategory:(eEntryCategory)indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
