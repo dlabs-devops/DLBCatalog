@@ -22,13 +22,24 @@
 		21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8A1A419233000ADCA2 /* WNDPieChart.m */; };
 		21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
-		21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CF1A30699F00BC8F73 /* AppDelegate.m */; };
-		21D095D31A30699F00BC8F73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095D21A30699F00BC8F73 /* ViewController.m */; };
-		21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D41A30699F00BC8F73 /* Main.storyboard */; };
-		21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D095D91A30699F00BC8F73 /* LaunchScreen.xib */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
-		21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D096041A307C7100BC8F73 /* WanderaVC.m */; };
-		E2E67A481A389019006F8C6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E67A471A389019006F8C6C /* Images.xcassets */; };
+		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
+		21EEE9191A419E7F000600FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9121A419E7F000600FD /* Images.xcassets */; };
+		21EEE9201A419ECE000600FD /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91C1A419ECE000600FD /* Base.storyboard */; };
+		21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91D1A419ECE000600FD /* LaunchScreen.xib */; };
+		21EEE9221A419ECE000600FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91E1A419ECE000600FD /* Main.storyboard */; };
+		21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91F1A419ECE000600FD /* Wandera.storyboard */; };
+		21EEE9261A419EE4000600FD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9251A419EE4000600FD /* MainViewController.m */; };
+		21EEE9291A41A164000600FD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9281A41A164000600FD /* BaseViewController.m */; };
+		21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */; };
+		21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9391A41B09C000600FD /* DLBPieChartCell.m */; };
+		21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */; };
+		21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */; };
+		21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */; };
+		21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */; };
+		21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE94A1A41B1C0000600FD /* WanderaViewController.m */; };
+		21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */; };
+		21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,18 +82,37 @@
 		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		21D095CE1A30699F00BC8F73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		21D095CF1A30699F00BC8F73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21D095D11A30699F00BC8F73 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		21D095D21A30699F00BC8F73 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		21D095D51A30699F00BC8F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		21D095DA1A30699F00BC8F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
-		21D096031A307C7100BC8F73 /* WanderaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaVC.h; sourceTree = "<group>"; };
-		21D096041A307C7100BC8F73 /* WanderaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaVC.m; sourceTree = "<group>"; };
-		E2E67A471A389019006F8C6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		21EEE90F1A419E7F000600FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21EEE9101A419E7F000600FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21EEE9121A419E7F000600FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		21EEE91C1A419ECE000600FD /* Base.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
+		21EEE91D1A419ECE000600FD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		21EEE91E1A419ECE000600FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		21EEE91F1A419ECE000600FD /* Wandera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wandera.storyboard; sourceTree = "<group>"; };
+		21EEE9241A419EE4000600FD /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		21EEE9251A419EE4000600FD /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		21EEE9271A41A164000600FD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		21EEE9281A41A164000600FD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		21EEE9361A41B09C000600FD /* DLBBaseCircularViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBaseCircularViewCell.h; sourceTree = "<group>"; };
+		21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBaseCircularViewCell.m; sourceTree = "<group>"; };
+		21EEE9381A41B09C000600FD /* DLBPieChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartCell.h; sourceTree = "<group>"; };
+		21EEE9391A41B09C000600FD /* DLBPieChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartCell.m; sourceTree = "<group>"; };
+		21EEE93A1A41B09C000600FD /* DLBPulseGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphCell.h; sourceTree = "<group>"; };
+		21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphCell.m; sourceTree = "<group>"; };
+		21EEE9401A41B0C2000600FD /* WNDCircularViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDCircularViewCell.h; sourceTree = "<group>"; };
+		21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDCircularViewCell.m; sourceTree = "<group>"; };
+		21EEE9421A41B0C2000600FD /* WNDPieChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPieChartCell.h; sourceTree = "<group>"; };
+		21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChartCell.m; sourceTree = "<group>"; };
+		21EEE9441A41B0C2000600FD /* WNDPulseGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphCell.h; sourceTree = "<group>"; };
+		21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphCell.m; sourceTree = "<group>"; };
+		21EEE9491A41B1C0000600FD /* WanderaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaViewController.h; sourceTree = "<group>"; };
+		21EEE94A1A41B1C0000600FD /* WanderaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaViewController.m; sourceTree = "<group>"; };
+		21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaPieChart.storyboard; sourceTree = "<group>"; };
+		21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaPieChartVC.h; sourceTree = "<group>"; };
+		21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaPieChartVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,15 +282,10 @@
 			isa = PBXGroup;
 			children = (
 				21D095F01A3069C100BC8F73 /* Custom UI Components */,
-				21D095CE1A30699F00BC8F73 /* AppDelegate.h */,
-				21D095CF1A30699F00BC8F73 /* AppDelegate.m */,
-				21D095D11A30699F00BC8F73 /* ViewController.h */,
-				21D095D21A30699F00BC8F73 /* ViewController.m */,
-				21D096031A307C7100BC8F73 /* WanderaVC.h */,
-				21D096041A307C7100BC8F73 /* WanderaVC.m */,
-				E2E67A471A389019006F8C6C /* Images.xcassets */,
-				21D095D41A30699F00BC8F73 /* Main.storyboard */,
-				21D095D91A30699F00BC8F73 /* LaunchScreen.xib */,
+				21EEE90E1A419E7F000600FD /* Application delegate */,
+				21EEE9111A419E7F000600FD /* Resources */,
+				21EEE9131A419E7F000600FD /* View controllers */,
+				21EEE92A1A41A3EB000600FD /* Custom views */,
 				21D095CA1A30699F00BC8F73 /* Supporting Files */,
 			);
 			path = DLB;
@@ -300,6 +325,102 @@
 				21326E841A419233000ADCA2 /* Wandera */,
 			);
 			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		21EEE90E1A419E7F000600FD /* Application delegate */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE90F1A419E7F000600FD /* AppDelegate.h */,
+				21EEE9101A419E7F000600FD /* AppDelegate.m */,
+			);
+			path = "Application delegate";
+			sourceTree = "<group>";
+		};
+		21EEE9111A419E7F000600FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE94C1A41B85A000600FD /* Wandera */,
+				21EEE91E1A419ECE000600FD /* Main.storyboard */,
+				21EEE91C1A419ECE000600FD /* Base.storyboard */,
+				21EEE91F1A419ECE000600FD /* Wandera.storyboard */,
+				21EEE91D1A419ECE000600FD /* LaunchScreen.xib */,
+				21EEE9121A419E7F000600FD /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21EEE9131A419E7F000600FD /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE94F1A41B890000600FD /* Wandera */,
+				21EEE9241A419EE4000600FD /* MainViewController.h */,
+				21EEE9251A419EE4000600FD /* MainViewController.m */,
+				21EEE9271A41A164000600FD /* BaseViewController.h */,
+				21EEE9281A41A164000600FD /* BaseViewController.m */,
+				21EEE9491A41B1C0000600FD /* WanderaViewController.h */,
+				21EEE94A1A41B1C0000600FD /* WanderaViewController.m */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		21EEE92A1A41A3EB000600FD /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE92B1A41A3EB000600FD /* Cells */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		21EEE92B1A41A3EB000600FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9351A41B09C000600FD /* Base */,
+				21EEE93F1A41B0C2000600FD /* Wandera */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		21EEE9351A41B09C000600FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9361A41B09C000600FD /* DLBBaseCircularViewCell.h */,
+				21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */,
+				21EEE9381A41B09C000600FD /* DLBPieChartCell.h */,
+				21EEE9391A41B09C000600FD /* DLBPieChartCell.m */,
+				21EEE93A1A41B09C000600FD /* DLBPulseGraphCell.h */,
+				21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		21EEE93F1A41B0C2000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9401A41B0C2000600FD /* WNDCircularViewCell.h */,
+				21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */,
+				21EEE9421A41B0C2000600FD /* WNDPieChartCell.h */,
+				21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */,
+				21EEE9441A41B0C2000600FD /* WNDPulseGraphCell.h */,
+				21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21EEE94C1A41B85A000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21EEE94F1A41B890000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */,
+				21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */,
+			);
+			path = Wandera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,9 +503,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D095D61A30699F00BC8F73 /* Main.storyboard in Resources */,
-				E2E67A481A389019006F8C6C /* Images.xcassets in Resources */,
-				21D095DB1A30699F00BC8F73 /* LaunchScreen.xib in Resources */,
+				21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */,
+				21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */,
+				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
+				21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */,
+				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
+				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
 				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
 				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
 			);
@@ -405,17 +529,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
+				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
-				21D095D31A30699F00BC8F73 /* ViewController.m in Sources */,
-				21D096051A307C7100BC8F73 /* WanderaVC.m in Sources */,
 				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
 				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
-				21D095D01A30699F00BC8F73 /* AppDelegate.m in Sources */,
 				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
 				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
+				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
+				21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */,
+				21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */,
+				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
+				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
+				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
+				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
+				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
+				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
+				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
 				21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */,
 				21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */,
 				21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */,
@@ -440,25 +572,6 @@
 			targetProxy = 21D095E11A30699F00BC8F73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		21D095D41A30699F00BC8F73 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21D095D51A30699F00BC8F73 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		21D095D91A30699F00BC8F73 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21D095DA1A30699F00BC8F73 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		21D095E81A30699F00BC8F73 /* Debug */ = {

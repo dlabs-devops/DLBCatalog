@@ -153,6 +153,15 @@
     [self setNeedsDisplay];
 }
 
+- (float)strokeWidth
+{
+    if(_strokeWidth <= .0f)
+    {
+        return self.frame.size.width*(44.0f/500.0f);
+    }
+    return _strokeWidth;
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -169,13 +178,12 @@
                             startAngle:0.0f
                               endAngle:2.0f * M_PI
                              clockwise:NO];
-    
     [backgroundCircle addArcWithCenter:center
-                             radius:self.radius - self.strokeWidth
-                         startAngle:0.0f
-                           endAngle:2.0f * M_PI
-                          clockwise:YES];
-     
+                                radius:self.radius - self.strokeWidth
+                            startAngle:0.0f
+                              endAngle:2.0f * M_PI
+                             clockwise:YES];
+    
     backgroundCircle.usesEvenOddFillRule = YES;
     if(self.shadowWidth > .0f)
     {
