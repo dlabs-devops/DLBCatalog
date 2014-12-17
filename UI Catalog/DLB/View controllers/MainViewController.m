@@ -91,6 +91,11 @@ static NSString * __baseTableViewCellID = @"basicCell";
     return entryCategoryCount;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:__baseTableViewCellID forIndexPath:indexPath];

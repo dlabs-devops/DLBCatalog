@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Matic Oblak. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DLBAnimatable.h"
 
 @interface DLBAnimatableFloat : DLBAnimatable

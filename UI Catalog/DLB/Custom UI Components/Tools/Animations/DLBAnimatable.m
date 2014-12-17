@@ -72,24 +72,22 @@
 
 - (CGFloat)currentInterpolator
 {
+    CGFloat toReturn = 1.0f;
     switch (self.animationStyle) {
         case DLBAnimationStyleLinear:
-            return [self currentLinearInterpolator];
+            toReturn = [self currentLinearInterpolator];
             break;
         case DLBAnimationStyleEaseIn:
-            return [self currentEaseInInterpolator];
+            toReturn = [self currentEaseInInterpolator];
             break;
         case DLBAnimationStyleEaseOut:
-            return [self currentEaseOutInterpolator];
+            toReturn = [self currentEaseOutInterpolator];
             break;
         case DLBAnimationStyleEaseInOut:
-            return [self currentEaseInOutInterpolator];
-            break;
-            
-        default:
+            toReturn = [self currentEaseInOutInterpolator];
             break;
     }
-    return 1.0f;
+    return toReturn;
 }
 
 - (CGFloat)currentScale
@@ -106,7 +104,7 @@
     }
     else
     {
-        return scale;
+        return (CGFloat)scale;
     }
 }
 
@@ -117,12 +115,12 @@
 
 - (CGFloat)currentEaseInInterpolator
 {
-    return powf([self currentScale], 1.0/.7);
+    return (CGFloat)pow([self currentScale], 1.0/.7);
 }
 
 - (CGFloat)currentEaseOutInterpolator
 {
-    return powf([self currentScale], .7);
+    return (CGFloat)pow([self currentScale], .7);
 }
 
 - (CGFloat)currentEaseInOutInterpolator
@@ -132,7 +130,7 @@
     
     double ratio = 1.0f;
     
-    return x + (y-x)*ratio;
+    return (CGFloat)(x + (y-x)*ratio);
 }
 
 @end
