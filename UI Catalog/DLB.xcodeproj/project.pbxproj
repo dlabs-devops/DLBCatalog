@@ -21,6 +21,9 @@
 		21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E871A419233000ADCA2 /* WNDProgressView.m */; };
 		21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8A1A419233000ADCA2 /* WNDPieChart.m */; };
 		21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */; };
+		2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */; };
+		2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */; };
+		2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
 		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
@@ -79,6 +82,12 @@
 		21326E8A1A419233000ADCA2 /* WNDPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChart.m; sourceTree = "<group>"; };
 		21326E8C1A419233000ADCA2 /* WNDPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphView.h; sourceTree = "<group>"; };
 		21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
+		2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphView.h; sourceTree = "<group>"; };
+		2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphView.m; sourceTree = "<group>"; };
+		2187BF6E1A43033D00E3FD37 /* DLBBarGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphNode.h; sourceTree = "<group>"; };
+		2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphNode.m; sourceTree = "<group>"; };
+		2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphCell.h; sourceTree = "<group>"; };
+		2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphCell.m; sourceTree = "<group>"; };
 		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -136,6 +145,7 @@
 		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2187BF691A43029400E3FD37 /* Bar graph */,
 				21326E681A419233000ADCA2 /* Circular progress view */,
 				21326E6C1A419233000ADCA2 /* Pie chart view */,
 				21326E751A419233000ADCA2 /* Pulse graph view */,
@@ -258,6 +268,25 @@
 				21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */,
 			);
 			path = "Pulse graph view";
+			sourceTree = "<group>";
+		};
+		2187BF691A43029400E3FD37 /* Bar graph */ = {
+			isa = PBXGroup;
+			children = (
+				2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */,
+				2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */,
+				2187BF6D1A43032600E3FD37 /* Graph components */,
+			);
+			path = "Bar graph";
+			sourceTree = "<group>";
+		};
+		2187BF6D1A43032600E3FD37 /* Graph components */ = {
+			isa = PBXGroup;
+			children = (
+				2187BF6E1A43033D00E3FD37 /* DLBBarGraphNode.h */,
+				2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */,
+			);
+			path = "Graph components";
 			sourceTree = "<group>";
 		};
 		21D095BE1A30699F00BC8F73 = {
@@ -389,6 +418,8 @@
 				21EEE9391A41B09C000600FD /* DLBPieChartCell.m */,
 				21EEE93A1A41B09C000600FD /* DLBPulseGraphCell.h */,
 				21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */,
+				2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */,
+				2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -531,9 +562,11 @@
 				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
 				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
+				2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */,
 				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
 				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
 				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
+				2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */,
 				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
 				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
 				21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */,
@@ -544,6 +577,7 @@
 				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
+				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
 				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,

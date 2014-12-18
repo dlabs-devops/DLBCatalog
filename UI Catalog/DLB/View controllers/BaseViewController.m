@@ -12,6 +12,7 @@ typedef enum : NSUInteger {
     baseComponentCircularProgressView,
     baseComponentPulseGraph,
     baseComponentPieChart,
+    baseComponentBarGraph,
     baseComponentCount
 } eBaseComponent;
 
@@ -78,6 +79,12 @@ typedef enum : NSUInteger {
         case baseComponentPieChart:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"pieChartViewCell"];
+            toReturn = cell;
+            break;
+        }
+        case baseComponentBarGraph:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"barGraphViewCell"];
             toReturn = cell;
             break;
         }
