@@ -30,5 +30,6 @@
 @property (nonatomic, weak) id<DLBBarGraphNodeDrawing> drawDelegate;
 
 - (void)drawInContext:(CGContextRef)context;
+- (void)drawDefaultInContext:(CGContextRef)context;
 
 @end

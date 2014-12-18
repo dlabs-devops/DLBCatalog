@@ -37,16 +37,21 @@
     }
     else
     {
-        CGRect rect = self.frame;
-        
-        // Draw background
-        CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
-        CGContextFillRect(context, rect);
-        
-        CGContextSetFillColorWithColor(context, self.foregroundColor.CGColor);
-        
-        CGContextFillRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0-self.scale), rect.size.width, rect.size.height*self.scale));
+        [self drawDefaultInContext:context];
     }
+}
+
+- (void)drawDefaultInContext:(CGContextRef)context
+{
+    CGRect rect = self.frame;
+    
+    // Draw background
+    CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
+    CGContextFillRect(context, rect);
+    
+    CGContextSetFillColorWithColor(context, self.foregroundColor.CGColor);
+    
+    CGContextFillRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0-self.scale), rect.size.width, rect.size.height*self.scale));
 }
 
 @end

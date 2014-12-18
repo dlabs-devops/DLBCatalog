@@ -8,8 +8,9 @@
 
 #import "DLBBarGraphCell.h"
 #import "DLBBarGraphView.h"
+#import "DLBBarGraphNode.h"
 
-@interface DLBBarGraphCell()<DLBBarGraphDataSource>
+@interface DLBBarGraphCell()<DLBBarGraphDataSource, DLBBarGraphNodeDrawing>
 @property (weak, nonatomic) IBOutlet DLBBarGraphView *barGraph;
 @property (nonatomic) BOOL animate;
 @end
@@ -22,6 +23,7 @@
     [super awakeFromNib];
     
     self.barGraph.dataSource = self;
+    self.barGraph.nodeDrawDelegate = self;
     self.barGraph.nodeBackgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.2f];
     self.barGraph.nodeColor = [UIColor blueColor];
     self.barGraph.barWidth = 8.0f;
@@ -59,5 +61,39 @@
     }
 }
 
+- (void)DLBBarGraphNode:(DLBBarGraphNode *)node drawIncontext:(CGContextRef)context withRect:(CGRect)rect
+{
+    if(node.index < 10)
+    {
+        // Draw background
+        CGContextSaveGState(context);
+        
+        CGContextSetFillColorWithColor(context, node.backgroundColor.CGColor);
+        CGContextFillRect(context, rect);
+        
+        CGContextSetFillColorWithColor(context, node.foregroundColor.CGColor);
+        
+        CGContextAddRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0-node.scale), rect.size.width, rect.size.height*node.scale));
+        
+        // generate gradient
+        CGFloat colors [] = {
+            1.0, .0f, .0f, 1.0,
+            .0, .0f, 1.0f, 1.0,
+        };
+        CGColorSpaceRef baseSpace = CGColorSpaceCreateDeviceRGB();
+        CGGradientRef gradient = CGGradientCreateWithColorComponents(baseSpace, colors, NULL, 2);
+        CGColorSpaceRelease(baseSpace), baseSpace = NULL;
+        CGContextClip(context);
+        CGContextDrawLinearGradient(context,
+                                    gradient,
+                                    CGPointZero,
+                                    CGPointMake(.0f, rect.size.height), 0);
+        CGContextRestoreGState(context);
+    }
+    else
+    {
+        [node drawDefaultInContext:context];
+    }
+}
 
 @end

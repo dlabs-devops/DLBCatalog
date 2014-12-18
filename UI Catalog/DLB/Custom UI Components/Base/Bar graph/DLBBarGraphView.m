@@ -98,9 +98,10 @@
     {
         [self.animationScale invalidateAnimation];
         self.animationScale = [[DLBAnimatableFloat alloc] initWithStartValue:.0f];
+        self.animationScale.animationStyle = DLBAnimationStyleEaseInOut;
         self.sourceNodes = self.targetNodes;
         self.targetNodes = targetNodes;
-        [self.animationScale animateTo:1.0f withDuration:.2 onFrameBlock:^(BOOL willEnd) {
+        [self.animationScale animateTo:1.0f withDuration:.36 onFrameBlock:^(BOOL willEnd) {
             [self setNeedsDisplay];
             if(willEnd)
             {
@@ -145,7 +146,16 @@
             {
                 // new node
                 DLBBarGraphNode *targetNode = self.targetNodes[i];
-                [targetNode drawInContext:context];
+                CGFloat interpolator = self.animationScale.floatValue;
+                DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
+                newNode.index = i;
+                newNode.scale = [self interpolateFloat:.0f with:targetNode.scale scale:interpolator];
+                newNode.frame = targetNode.frame;
+                newNode.foregroundColor = [self interpolateColor:[UIColor clearColor] with:targetNode.foregroundColor scale:interpolator];
+                newNode.backgroundColor = [self interpolateColor:[UIColor clearColor] with:targetNode.backgroundColor scale:interpolator];
+                newNode.drawDelegate = self.nodeDrawDelegate;
+                
+                [newNode drawInContext:context];
             }
             else if(i>=targetCount)
             {
@@ -156,9 +166,9 @@
                 DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
                 newNode.index = i;
                 newNode.scale = [self interpolateFloat:sourceNode.scale with:.0f scale:interpolator];
-                newNode.frame = sourceNode.frame;
+                newNode.frame = [self interpolateRect:sourceNode.frame with:[self rectForFrameAtIndex:newNode.index] scale:interpolator];
                 newNode.foregroundColor = sourceNode.foregroundColor;
-                newNode.backgroundColor = sourceNode.backgroundColor;
+                newNode.backgroundColor = [self interpolateColor:sourceNode.backgroundColor with:[UIColor clearColor] scale:interpolator];
                 newNode.drawDelegate = self.nodeDrawDelegate;
                 
                 [newNode drawInContext:context];
