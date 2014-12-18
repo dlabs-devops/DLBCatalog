@@ -24,10 +24,10 @@
     self.barGraph.dataSource = self;
     self.barGraph.nodeBackgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.2f];
     self.barGraph.nodeColor = [UIColor blueColor];
-    [self.barGraph reloadGraphAnimated:NO];
+    self.barGraph.barWidth = 8.0f;
     
     self.animate = YES;
-    [self scramble];
+    [self performSelector:@selector(scramble) withObject:nil afterDelay:1.0];
 }
 
 - (void)removeFromSuperview
