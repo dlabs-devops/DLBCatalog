@@ -75,7 +75,7 @@
     {
         NSLog(@"Animating to: %@", [@(currentValue) stringValue]);
         self.animatedScale = [[DLBAnimatableFloat alloc] initWithStartValue:.0f];
-        [self.animatedScale animateTo:1.0f withDuration:2.0 onFrameBlock:^(BOOL willENd) {
+        [self.animatedScale animateTo:1.0f withDuration:1.0 onFrameBlock:^(BOOL willENd) {
             if(willENd)
             {
                 [self setCurrentValue:currentValue animated:NO];
@@ -137,11 +137,11 @@
             component.font = self.font;
             [self addSubview:component];
             [self.viewComponents addObject:component];
-            component.allowZero = (endf>=1.0f);
+//            component.allowZero = (endf>=1.0f);
         }
         else if(component.mainValue != 0)
         {
-            component.allowZero = endf>=1.0f;
+//            component.allowZero = endf>=1.0f;
         }
         component.frame = componentFrame;
         [component setFrom:startf to:endf scale:scale];

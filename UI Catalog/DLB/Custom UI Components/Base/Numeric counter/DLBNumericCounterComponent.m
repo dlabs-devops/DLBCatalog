@@ -130,14 +130,21 @@
 - (void)setFrom:(CGFloat)start to:(CGFloat)end scale:(CGFloat)scale
 {
     CGFloat current = (NSInteger)start + scale*((NSInteger)end-(NSInteger)start);
+    
     NSInteger mainValue = [self round:current];
     CGFloat offset = mainValue-current;
+    
+    BOOL shouldHideZero = fabsf((float)current) < 5.0f;
+    
     while (mainValue>10) {
         mainValue-=10;
     }
     while (mainValue<0) {
         mainValue+=10;
     }
+    
+    self.allowZero = !shouldHideZero;
+    
     self.mainValue = mainValue;
     self.offsetScale = offset;
     
