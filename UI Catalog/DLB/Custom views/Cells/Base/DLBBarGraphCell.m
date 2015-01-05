@@ -22,11 +22,13 @@
 {
     [super awakeFromNib];
     
+    [self layoutIfNeeded];
+    
     self.barGraph.dataSource = self;
     self.barGraph.nodeDrawDelegate = self;
-    self.barGraph.nodeBackgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.2f];
+//    self.barGraph.nodeBackgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.2f];
     self.barGraph.nodeColor = [UIColor blueColor];
-    self.barGraph.barWidth = 8.0f;
+    self.barGraph.barWidth = self.barGraph.frame.size.width/20.0f;
     
     self.animate = YES;
     [self performSelector:@selector(scramble) withObject:nil afterDelay:1.0];
@@ -41,6 +43,7 @@
 - (NSInteger)DLBBarGraphViewNumberOfComponents:(DLBBarGraphView *)sender
 {
     NSInteger toRetunr = 5 + rand()%30;
+//    self.barGraph.barWidth = self.barGraph.frame.size.width/toRetunr;
     return toRetunr;
 }
 
@@ -63,8 +66,8 @@
 
 - (void)DLBBarGraphNode:(DLBBarGraphNode *)node drawIncontext:(CGContextRef)context withRect:(CGRect)rect
 {
-    if(node.index < 10)
-    {
+//    if(node.index < 10)
+//    {
         // Draw background
         CGContextSaveGState(context);
         
@@ -89,11 +92,11 @@
                                     CGPointZero,
                                     CGPointMake(.0f, rect.size.height), 0);
         CGContextRestoreGState(context);
-    }
-    else
-    {
-        [node drawDefaultInContext:context];
-    }
+//    }
+//    else
+//    {
+//        [node drawDefaultInContext:context];
+//    }
 }
 
 @end
