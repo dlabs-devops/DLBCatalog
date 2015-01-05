@@ -358,23 +358,23 @@
                                             <outlet property="barGraph" destination="Me2-fr-u7e" id="Xnd-Zh-lyc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="numericCounterCell" rowHeight="100" id="S64-t9-rpq" userLabel="Numeri counter cell" customClass="DLBBarGraphCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="numericCounterCell" rowHeight="100" id="S64-t9-rpq" userLabel="Numeri counter cell" customClass="DLBNumericCounterCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S64-t9-rpq" id="ngd-Zy-YZP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-uo-D1n" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
-                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numeric counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="H2r-e4-KgV"/>
                                                             </constraints>
@@ -410,11 +410,26 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-fC-MhR" userLabel="Preview view">
-                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhq-4Y-24L" userLabel="Counter" customClass="DLBNumericCounterView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="83"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="Vhq-4Y-24L" firstAttribute="leading" secondItem="Ngx-fC-MhR" secondAttribute="leading" id="0IR-EL-mic"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Vhq-4Y-24L" secondAttribute="trailing" id="cTO-5p-UlF"/>
                                                         <constraint firstAttribute="width" secondItem="Ngx-fC-MhR" secondAttribute="height" multiplier="1:1" id="d6F-DG-sTj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Vhq-4Y-24L" secondAttribute="bottom" id="jxl-eV-GIu"/>
+                                                        <constraint firstItem="Vhq-4Y-24L" firstAttribute="top" secondItem="Ngx-fC-MhR" secondAttribute="top" id="owV-bo-HtN"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="d6F-DG-sTj"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -422,10 +437,14 @@
                                                 <constraint firstItem="yxa-uo-D1n" firstAttribute="leading" secondItem="ngd-Zy-YZP" secondAttribute="leadingMargin" id="Nda-BF-b65"/>
                                                 <constraint firstAttribute="centerY" secondItem="yxa-uo-D1n" secondAttribute="centerY" id="U9H-CI-V31"/>
                                                 <constraint firstItem="Ngx-fC-MhR" firstAttribute="leading" secondItem="yxa-uo-D1n" secondAttribute="trailing" constant="22" id="Unk-6N-E6q"/>
+                                                <constraint firstItem="yxa-uo-D1n" firstAttribute="width" secondItem="Ngx-fC-MhR" secondAttribute="width" multiplier="2:1" id="WbI-QZ-bpk"/>
                                                 <constraint firstItem="Ngx-fC-MhR" firstAttribute="top" secondItem="ngd-Zy-YZP" secondAttribute="topMargin" id="oyD-NJ-eYP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ngx-fC-MhR" secondAttribute="trailing" id="vo6-dw-yah"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="counterView" destination="Vhq-4Y-24L" id="FtL-0o-GV9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

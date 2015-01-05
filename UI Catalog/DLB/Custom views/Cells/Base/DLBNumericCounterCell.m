@@ -7,17 +7,38 @@
 //
 
 #import "DLBNumericCounterCell.h"
+#import "DLBNumericCounterView.h"
+
+@interface DLBNumericCounterCell ()
+
+@property (weak, nonatomic) IBOutlet DLBNumericCounterView *counterView;
+
+@property (nonatomic) BOOL animate;
+
+@end
 
 @implementation DLBNumericCounterCell
 
-- (void)awakeFromNib {
-    // Initialization code
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self layoutIfNeeded];
+    
+    [self.counterView layoutIfNeeded];
+    self.counterView.clipsToBounds = YES;
+    
+    self.animate = YES;
+    [self performSelector:@selector(randomValue) withObject:nil afterDelay:1.0];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)randomValue
+{
+    [self.counterView setCurrentValue:rand()%200 animated:YES];
+    if(self.animate)
+    {
+        [self performSelector:@selector(randomValue) withObject:nil afterDelay:3.0];
+    }
 }
 
 @end

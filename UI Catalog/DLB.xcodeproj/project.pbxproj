@@ -22,6 +22,8 @@
 		21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8A1A419233000ADCA2 /* WNDPieChart.m */; };
 		21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */; };
 		215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */; };
+		215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */; };
+		215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */; };
 		2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */; };
 		2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */; };
 		2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */; };
@@ -85,6 +87,10 @@
 		21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
 		215C9FB21A5A80AF00D2B823 /* DLBNumericCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterCell.h; sourceTree = "<group>"; };
 		215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterCell.m; sourceTree = "<group>"; };
+		215C9FB61A5A81D100D2B823 /* DLBNumericCounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterView.h; sourceTree = "<group>"; };
+		215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterView.m; sourceTree = "<group>"; };
+		215C9FB91A5AAAC500D2B823 /* DLBNumericCounterComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterComponent.h; sourceTree = "<group>"; };
+		215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterComponent.m; sourceTree = "<group>"; };
 		2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphView.h; sourceTree = "<group>"; };
 		2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphView.m; sourceTree = "<group>"; };
 		2187BF6E1A43033D00E3FD37 /* DLBBarGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphNode.h; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				21326E681A419233000ADCA2 /* Circular progress view */,
 				21326E6C1A419233000ADCA2 /* Pie chart view */,
 				21326E751A419233000ADCA2 /* Pulse graph view */,
+				215C9FB51A5A818A00D2B823 /* Numeric counter */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -273,6 +280,17 @@
 			path = "Pulse graph view";
 			sourceTree = "<group>";
 		};
+		215C9FB51A5A818A00D2B823 /* Numeric counter */ = {
+			isa = PBXGroup;
+			children = (
+				215C9FB61A5A81D100D2B823 /* DLBNumericCounterView.h */,
+				215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */,
+				215C9FB91A5AAAC500D2B823 /* DLBNumericCounterComponent.h */,
+				215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */,
+			);
+			path = "Numeric counter";
+			sourceTree = "<group>";
+		};
 		2187BF691A43029400E3FD37 /* Bar graph */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,8 +370,8 @@
 		21D095F01A3069C100BC8F73 /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				21326E671A419233000ADCA2 /* Base */,
 				21326E791A419233000ADCA2 /* Tools */,
+				21326E671A419233000ADCA2 /* Base */,
 				21326E841A419233000ADCA2 /* Wandera */,
 			);
 			path = "Custom UI Components";
@@ -576,10 +594,12 @@
 				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
 				21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */,
 				21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */,
+				215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */,
 				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
 				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
 				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
 				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
+				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
