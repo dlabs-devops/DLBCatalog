@@ -191,23 +191,106 @@
                                             <outlet property="pulseGraph" destination="dI8-K7-uet" id="5zQ-j4-jwV"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="S64-t9-rpq" userLabel="Pie chart view cell" customClass="DLBPieChartCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="VV6-Yu-LyN" userLabel="Pie chart view cell" customClass="DLBPieChartCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VV6-Yu-LyN" id="OT9-jZ-055">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q60-O3-Pga" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="85" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-so-vhE">
+                                                            <rect key="frame" x="0.0" y="21" width="85" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-nq-NML">
+                                                            <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="j68-wL-mf4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="j68-wL-mf4"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="9yy-nq-NML" secondAttribute="trailing" id="3pl-wZ-uqp"/>
+                                                        <constraint firstItem="9yy-nq-NML" firstAttribute="top" secondItem="Q60-O3-Pga" secondAttribute="top" constant="2" id="7Az-Bt-lUt"/>
+                                                        <constraint firstAttribute="height" constant="50" id="904-rr-D86"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Avh-so-vhE" secondAttribute="bottom" constant="2" id="CUB-S1-MtS"/>
+                                                        <constraint firstItem="Avh-so-vhE" firstAttribute="top" secondItem="9yy-nq-NML" secondAttribute="bottom" id="HU5-Ls-Mq8"/>
+                                                        <constraint firstItem="Avh-so-vhE" firstAttribute="leading" secondItem="Q60-O3-Pga" secondAttribute="leading" id="XBE-bR-xKA"/>
+                                                        <constraint firstItem="9yy-nq-NML" firstAttribute="leading" secondItem="Q60-O3-Pga" secondAttribute="leading" id="ZF7-a0-8wk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Avh-so-vhE" secondAttribute="trailing" id="gCo-fw-soq"/>
+                                                        <constraint firstAttribute="top" secondItem="9yy-nq-NML" secondAttribute="top" id="oNU-4R-3Si"/>
+                                                        <constraint firstItem="Avh-so-vhE" firstAttribute="top" secondItem="Q60-O3-Pga" secondAttribute="top" constant="3" id="sda-G3-G1R"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="904-rr-D86"/>
+                                                            <exclude reference="7Az-Bt-lUt"/>
+                                                            <exclude reference="sda-G3-G1R"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adb-uU-5Xt" userLabel="Preview view">
+                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-L9-2eQ" userLabel="Pie chart view" customClass="DLBPieChartView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Bgf-L9-2eQ" secondAttribute="height" id="weL-mk-5Hs"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Bgf-L9-2eQ" firstAttribute="top" secondItem="Adb-uU-5Xt" secondAttribute="top" id="AWa-85-9jx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Bgf-L9-2eQ" secondAttribute="trailing" id="uiS-7H-F3z"/>
+                                                        <constraint firstAttribute="width" secondItem="Adb-uU-5Xt" secondAttribute="height" multiplier="1:1" id="yS2-hD-OY7"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Bgf-L9-2eQ" secondAttribute="bottom" id="zex-y3-2A9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Q60-O3-Pga" secondAttribute="centerY" id="C31-wv-1qh"/>
+                                                <constraint firstItem="Q60-O3-Pga" firstAttribute="leading" secondItem="OT9-jZ-055" secondAttribute="leadingMargin" id="Egf-Cq-rJF"/>
+                                                <constraint firstItem="Adb-uU-5Xt" firstAttribute="top" secondItem="OT9-jZ-055" secondAttribute="topMargin" id="HfQ-ii-dXy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Adb-uU-5Xt" secondAttribute="trailing" id="gGH-0c-tZS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Adb-uU-5Xt" secondAttribute="bottom" id="pKr-tE-7Zn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pieChart" destination="Bgf-L9-2eQ" id="Eya-s0-pFe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="barGraphViewCell" rowHeight="100" id="S64-t9-rpq" userLabel="Bar graph view cell" customClass="DLBBarGraphCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S64-t9-rpq" id="ngd-Zy-YZP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-uo-D1n" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="85" height="37"/>
+                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
-                                                            <rect key="frame" x="0.0" y="21" width="85" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
+                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="H2r-e4-KgV"/>
                                                             </constraints>
@@ -245,11 +328,11 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-fC-MhR" userLabel="Preview view">
                                                     <rect key="frame" x="509" y="8" width="83" height="83"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YC-rX-fsC" userLabel="Pie chart view" customClass="DLBPieChartView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YC-rX-fsC" userLabel="Bar graph view" customClass="DLBBarGraphView">
+                                                            <rect key="frame" x="-83" y="0.0" width="166" height="83"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="0YC-rX-fsC" secondAttribute="height" id="Bch-Do-epE"/>
+                                                                <constraint firstAttribute="width" secondItem="0YC-rX-fsC" secondAttribute="height" multiplier="2:1" id="Bch-Do-epE"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -266,12 +349,13 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ngx-fC-MhR" secondAttribute="bottom" id="LO4-Ba-mwJ"/>
                                                 <constraint firstItem="yxa-uo-D1n" firstAttribute="leading" secondItem="ngd-Zy-YZP" secondAttribute="leadingMargin" id="Nda-BF-b65"/>
                                                 <constraint firstAttribute="centerY" secondItem="yxa-uo-D1n" secondAttribute="centerY" id="U9H-CI-V31"/>
+                                                <constraint firstItem="Ngx-fC-MhR" firstAttribute="leading" secondItem="yxa-uo-D1n" secondAttribute="trailing" constant="22" id="Unk-6N-E6q"/>
                                                 <constraint firstItem="Ngx-fC-MhR" firstAttribute="top" secondItem="ngd-Zy-YZP" secondAttribute="topMargin" id="oyD-NJ-eYP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ngx-fC-MhR" secondAttribute="trailing" id="vo6-dw-yah"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="pieChart" destination="0YC-rX-fsC" id="u0s-x1-aga"/>
+                                            <outlet property="barGraph" destination="0YC-rX-fsC" id="X9e-z0-5hy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
