@@ -165,22 +165,77 @@
 
 - (CGRect)frameForIndex:(NSInteger)index elementCount:(NSInteger)elementCount
 {
+    if(elementCount == 0)
+    {
+        return CGRectZero;
+    }
     CGFloat componentWidth = self.frame.size.height*self.componentWHRatio*.7f;
-    return CGRectMake(self.frame.size.width-componentWidth*(1.0f+index),
-                      .0f,
-                      componentWidth,
-                      self.frame.size.height);
+    if(self.componentAlignment == NSTextAlignmentCenter)
+    {
+        if(elementCount%2)
+        {
+            NSInteger middle = elementCount/2+1;
+            NSInteger offsetCount = middle-(index+1);
+            return CGRectMake(self.frame.size.width*.5f+componentWidth*(-.5f+offsetCount),
+                              .0f,
+                              componentWidth,
+                              self.frame.size.height);
+        }
+        else
+        {
+            NSInteger middle = elementCount/2;
+            NSInteger offsetCount = middle-(index+1);
+            return CGRectMake(self.frame.size.width*.5f+componentWidth*(offsetCount),
+                              .0f,
+                              componentWidth,
+                              self.frame.size.height);
+        }
+    }
+    else if(self.componentAlignment == NSTextAlignmentLeft)
+    {
+        return CGRectMake(componentWidth*(elementCount-index-1),
+                          .0f,
+                          componentWidth,
+                          self.frame.size.height);
+    }
+    else
+    {
+        return CGRectMake(self.frame.size.width-componentWidth*(1.0f+index),
+                          .0f,
+                          componentWidth,
+                          self.frame.size.height);
+    }
+}
+
+- (NSInteger)componentCountForValue:(NSInteger)value
+{
+    NSInteger toReturn = self.suffix?1:0;
+    while (value>0) {
+        value/=10;
+        toReturn++;
+    }
+    return toReturn;
 }
 
 - (void)repositionViewsForScale:(CGFloat)scale from:(NSInteger)start to:(NSInteger)end
 {
     NSInteger iterator = 0;
     
-    CGRect componentFrame = [self frameForIndex:iterator elementCount:0];
+    CGRect componentFrame = CGRectZero;
+    
+    CGFloat frameScale = .0f;
+    static const CGFloat frameScaleTreshold = .8f;
+    if(scale > frameScaleTreshold)
+    {
+        frameScale = (scale-frameScaleTreshold)/(1.0f-frameScaleTreshold);
+    }
     
     if(self.suffix)
     {
-        componentFrame = [self frameForIndex:iterator elementCount:0];
+        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
+                                                       with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
+                                                      scale:frameScale
+                                            excludeZeroRect:YES];
         DLBNumericCounterComponent *component = [self componentAtIndex:iterator];
         if(component == nil)
         {
@@ -198,7 +253,11 @@
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
     while (startf >= 1.0f || endf >= 1.0f || iterator<self.viewComponents.count) {
-        componentFrame = [self frameForIndex:iterator elementCount:0];
+        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
+                                                       with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
+                                                      scale:frameScale
+                                            excludeZeroRect:YES];
+
         DLBNumericCounterComponent *component = [self componentAtIndex:iterator];
         if(component == nil)
         {

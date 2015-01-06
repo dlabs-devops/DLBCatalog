@@ -26,8 +26,10 @@
     [self layoutIfNeeded];
     
     [self.counterView layoutIfNeeded];
-    self.counterView.suffix = @"%";
+    self.counterView.componentAlignment = NSTextAlignmentCenter;
     self.counterView.clipsToBounds = YES;
+    self.counterView.layer.borderWidth = 2.0f;
+    self.counterView.layer.borderColor = [[[UIColor blackColor] colorWithAlphaComponent:.1f] CGColor];
     
     self.animate = YES;
     [self performSelector:@selector(randomValue) withObject:nil afterDelay:1.0];

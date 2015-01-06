@@ -9,6 +9,8 @@
 @import Foundation;
 @import UIKit;
 
+#import "DLBInterpolations.h"
+
 typedef enum : NSUInteger {
     DLBAnimationStyleLinear,
     DLBAnimationStyleEaseIn,

@@ -149,10 +149,10 @@
                 CGFloat interpolator = self.animationScale.floatValue;
                 DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
                 newNode.index = i;
-                newNode.scale = [self interpolateFloat:.0f with:targetNode.scale scale:interpolator];
+                newNode.scale = [DLBInterpolations interpolateFloat:.0f with:targetNode.scale scale:interpolator];
                 newNode.frame = targetNode.frame;
-                newNode.foregroundColor = [self interpolateColor:[UIColor clearColor] with:targetNode.foregroundColor scale:interpolator];
-                newNode.backgroundColor = [self interpolateColor:[UIColor clearColor] with:targetNode.backgroundColor scale:interpolator];
+                newNode.foregroundColor = [DLBInterpolations interpolateColor:[UIColor clearColor] with:targetNode.foregroundColor scale:interpolator];
+                newNode.backgroundColor = [DLBInterpolations interpolateColor:[UIColor clearColor] with:targetNode.backgroundColor scale:interpolator];
                 newNode.drawDelegate = self.nodeDrawDelegate;
                 
                 [newNode drawInContext:context];
@@ -165,10 +165,10 @@
                 // generate interpolated node
                 DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
                 newNode.index = i;
-                newNode.scale = [self interpolateFloat:sourceNode.scale with:.0f scale:interpolator];
-                newNode.frame = [self interpolateRect:sourceNode.frame with:[self rectForFrameAtIndex:newNode.index] scale:interpolator];
+                newNode.scale = [DLBInterpolations interpolateFloat:sourceNode.scale with:.0f scale:interpolator];
+                newNode.frame = [DLBInterpolations interpolateRect:sourceNode.frame with:[self rectForFrameAtIndex:newNode.index] scale:interpolator];
                 newNode.foregroundColor = sourceNode.foregroundColor;
-                newNode.backgroundColor = [self interpolateColor:sourceNode.backgroundColor with:[UIColor clearColor] scale:interpolator];
+                newNode.backgroundColor = [DLBInterpolations interpolateColor:sourceNode.backgroundColor with:[UIColor clearColor] scale:interpolator];
                 newNode.drawDelegate = self.nodeDrawDelegate;
                 
                 [newNode drawInContext:context];
@@ -182,10 +182,10 @@
                 // generate interpolated node
                 DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
                 newNode.index = i;
-                newNode.scale = [self interpolateFloat:sourceNode.scale with:targetNode.scale scale:interpolator];
-                newNode.frame = [self interpolateRect:sourceNode.frame with:targetNode.frame scale:interpolator];
-                newNode.foregroundColor = [self interpolateColor:sourceNode.foregroundColor with:targetNode.foregroundColor scale:interpolator];
-                newNode.backgroundColor = [self interpolateColor:sourceNode.backgroundColor with:targetNode.backgroundColor scale:interpolator];
+                newNode.scale = [DLBInterpolations interpolateFloat:sourceNode.scale with:targetNode.scale scale:interpolator];
+                newNode.frame = [DLBInterpolations interpolateRect:sourceNode.frame with:targetNode.frame scale:interpolator];
+                newNode.foregroundColor = [DLBInterpolations interpolateColor:sourceNode.foregroundColor with:targetNode.foregroundColor scale:interpolator];
+                newNode.backgroundColor = [DLBInterpolations interpolateColor:sourceNode.backgroundColor with:targetNode.backgroundColor scale:interpolator];
                 newNode.drawDelegate = self.nodeDrawDelegate;
                 
                 [newNode drawInContext:context];
@@ -194,34 +194,6 @@
     }
 }
 
-#pragma mark - convenience
-
-- (CGFloat)interpolateFloat:(CGFloat)source with:(CGFloat)target scale:(CGFloat)scale
-{
-    return source + (target-source)*scale;
-}
-
-- (CGRect)interpolateRect:(CGRect)source with:(CGRect)target scale:(CGFloat)scale
-{
-    return CGRectMake([self interpolateFloat:source.origin.x with:target.origin.x scale:scale],
-                      [self interpolateFloat:source.origin.y with:target.origin.y scale:scale],
-                      [self interpolateFloat:source.size.width with:target.size.width scale:scale],
-                      [self interpolateFloat:source.size.height with:target.size.height scale:scale]);
-}
-
-- (UIColor *)interpolateColor:(UIColor *)source with:(UIColor *)target scale:(CGFloat)scale
-{
-    CGFloat sColor[4];
-    CGFloat tColor[4];
-    
-    [source getRed:sColor green:sColor+1 blue:sColor+2 alpha:sColor+3];
-    [target getRed:tColor green:tColor+1 blue:tColor+2 alpha:tColor+3];
-    
-    return [UIColor colorWithRed:[self interpolateFloat:sColor[0] with:tColor[0] scale:scale]
-                           green:[self interpolateFloat:sColor[1] with:tColor[1] scale:scale]
-                            blue:[self interpolateFloat:sColor[2] with:tColor[2] scale:scale]
-                           alpha:[self interpolateFloat:sColor[3] with:tColor[3] scale:scale]];
-}
 
 #pragma mark nodes frame
 
