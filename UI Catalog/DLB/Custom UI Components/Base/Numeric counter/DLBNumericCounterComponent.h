@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Matic Oblak. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface DLBNumericCounterComponent : UIView
 

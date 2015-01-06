@@ -15,6 +15,7 @@
 @property (nonatomic, strong) DLBAnimatableFloat *animatedScale;
 @property (nonatomic, strong) NSMutableArray *viewComponents;
 @property (nonatomic) NSInteger backupValue;
+@property (nonatomic) NSInteger internalCurrentValue;
 
 @end
 
@@ -94,11 +95,16 @@
     return _suffixColor;
 }
 
+
+- (NSInteger)currentValue
+{
+    return self.internalCurrentValue;
+}
+
 - (void)setCurrentValue:(NSInteger)currentValue
 {
     [self setCurrentValue:currentValue animated:NO];
 }
-
 
 - (void)setCurrentValue:(NSInteger)currentValue animated:(BOOL)animated
 {
@@ -107,13 +113,13 @@
         [self.animatedScale invalidateAnimation];
         [self repositionViewsForScale:1.0f from:self.currentValue to:currentValue];
         self.animatedScale = nil;
-        _currentValue = currentValue;
+        self.internalCurrentValue = currentValue;
     }
     else
     {
         if(self.animatedScale)
         {
-            _currentValue = self.currentValue + self.animatedScale.floatValue*(self.backupValue-self.currentValue);
+            self.internalCurrentValue = self.currentValue + (NSInteger)(self.animatedScale.floatValue*(self.backupValue-self.currentValue));
             [self.animatedScale invalidateAnimation];
         }
         self.animatedScale = [[DLBAnimatableFloat alloc] initWithStartValue:.0f];
@@ -155,7 +161,7 @@
 
 - (DLBNumericCounterComponent *)componentAtIndex:(NSInteger)index
 {
-    if(self.viewComponents.count>index && index>=0)
+    if((NSInteger)self.viewComponents.count>index && index>=0)
     {
         return self.viewComponents[(NSUInteger)index];
     }
@@ -251,7 +257,7 @@
     
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
-    while (startf >= 1.0f || endf >= 1.0f || iterator<self.viewComponents.count) {
+    while (startf >= 1.0f || endf >= 1.0f || iterator<(NSInteger)self.viewComponents.count) {
         componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                       scale:frameScale
@@ -275,21 +281,5 @@
     }
 }
 
-- (UILabel *)defaultLabelComponent
-{
-    UILabel *toReturn = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, self.componentWHRatio*self.frame.size.height, self.frame.size.height)];
-    toReturn.textColor = [UIColor blackColor];
-    toReturn.font = self.font;
-    toReturn.adjustsFontSizeToFitWidth = YES;
-    return toReturn;
-}
-
-- (void)removeSubviewsOnView:(UIView *)view
-{
-    for(UIView *view in view.subviews)
-    {
-        [view removeFromSuperview];
-    }
-}
 
 @end

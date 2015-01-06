@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Matic Oblak. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "DLBPieChartView.h"
 
 @interface WNDPieChart : DLBPieChartView
