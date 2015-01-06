@@ -59,6 +59,15 @@ typedef enum : NSUInteger {
     return [self cellForComponent:(eBaseComponent)indexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == baseComponentNumericCounter)
+    {
+        [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseCounter" bundle:nil].instantiateInitialViewController animated:YES];
+    }
+}
+
+
 #pragma mark - Cells
 
 - (UITableViewCell *)cellForComponent:(eBaseComponent)component

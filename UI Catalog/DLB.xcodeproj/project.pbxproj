@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2105344C1A5C028200164018 /* DLBInterpolations.m */; };
+		210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210534501A5C0A6500164018 /* BaseCounterViewController.m */; };
+		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
 		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
 		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
 		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
@@ -62,6 +64,9 @@
 /* Begin PBXFileReference section */
 		2105344B1A5C028200164018 /* DLBInterpolations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInterpolations.h; sourceTree = "<group>"; };
 		2105344C1A5C028200164018 /* DLBInterpolations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInterpolations.m; sourceTree = "<group>"; };
+		2105344F1A5C0A6500164018 /* BaseCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCounterViewController.h; sourceTree = "<group>"; };
+		210534501A5C0A6500164018 /* BaseCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCounterViewController.m; sourceTree = "<group>"; };
+		210534531A5C0AA400164018 /* BaseCounter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseCounter.storyboard; sourceTree = "<group>"; };
 		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
 		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
 		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
@@ -154,6 +159,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2105344E1A5C0A4600164018 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2105344F1A5C0A6500164018 /* BaseCounterViewController.h */,
+				210534501A5C0A6500164018 /* BaseCounterViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		210534521A5C0A8700164018 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				210534531A5C0AA400164018 /* BaseCounter.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +416,7 @@
 		21EEE9111A419E7F000600FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				210534521A5C0A8700164018 /* Base */,
 				21EEE94C1A41B85A000600FD /* Wandera */,
 				21EEE91E1A419ECE000600FD /* Main.storyboard */,
 				21EEE91C1A419ECE000600FD /* Base.storyboard */,
@@ -407,6 +430,7 @@
 		21EEE9131A419E7F000600FD /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2105344E1A5C0A4600164018 /* Base */,
 				21EEE94F1A41B890000600FD /* Wandera */,
 				21EEE9241A419EE4000600FD /* MainViewController.h */,
 				21EEE9251A419EE4000600FD /* MainViewController.m */,
@@ -564,6 +588,7 @@
 			files = (
 				21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */,
 				21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */,
+				210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */,
 				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
 				21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */,
 				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
@@ -603,6 +628,7 @@
 				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
 				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
 				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
+				210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */,
 				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
 				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
