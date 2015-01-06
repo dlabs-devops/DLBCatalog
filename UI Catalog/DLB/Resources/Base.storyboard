@@ -274,23 +274,107 @@
                                             <outlet property="pieChart" destination="Bgf-L9-2eQ" id="Eya-s0-pFe"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="barGraphViewCell" rowHeight="100" id="S64-t9-rpq" userLabel="Bar graph view cell" customClass="DLBBarGraphCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="barGraphViewCell" rowHeight="100" id="uTT-zl-wnd" userLabel="Bar graph view cell" customClass="DLBBarGraphCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTT-zl-wnd" id="kgM-DN-Gzn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFL-eE-DIn" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV9-NN-EyU">
+                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-Un-A7l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="dEm-2a-VDg"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="dEm-2a-VDg"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qap-Un-A7l" firstAttribute="leading" secondItem="nFL-eE-DIn" secondAttribute="leading" id="2c0-QV-tUZ"/>
+                                                        <constraint firstAttribute="height" constant="50" id="4Ai-aL-o61"/>
+                                                        <constraint firstItem="EV9-NN-EyU" firstAttribute="top" secondItem="Qap-Un-A7l" secondAttribute="bottom" id="4w3-DO-ycy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qap-Un-A7l" secondAttribute="trailing" id="95c-cO-2gM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="EV9-NN-EyU" secondAttribute="bottom" constant="2" id="B2A-4p-9FL"/>
+                                                        <constraint firstItem="EV9-NN-EyU" firstAttribute="top" secondItem="nFL-eE-DIn" secondAttribute="top" constant="3" id="CTW-Xh-Dlq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EV9-NN-EyU" secondAttribute="trailing" id="JRN-V8-7xG"/>
+                                                        <constraint firstAttribute="top" secondItem="Qap-Un-A7l" secondAttribute="top" id="OyC-Qv-Aak"/>
+                                                        <constraint firstItem="Qap-Un-A7l" firstAttribute="top" secondItem="nFL-eE-DIn" secondAttribute="top" constant="2" id="o5u-66-SL4"/>
+                                                        <constraint firstItem="EV9-NN-EyU" firstAttribute="leading" secondItem="nFL-eE-DIn" secondAttribute="leading" id="yyG-zi-9QO"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="4Ai-aL-o61"/>
+                                                            <exclude reference="o5u-66-SL4"/>
+                                                            <exclude reference="CTW-Xh-Dlq"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOs-CG-rF7" userLabel="Preview view">
+                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-fr-u7e" userLabel="Bar graph view" customClass="DLBBarGraphView">
+                                                            <rect key="frame" x="-83" y="0.0" width="166" height="83"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Me2-fr-u7e" secondAttribute="height" multiplier="2:1" id="KJ2-lQ-FBE"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Me2-fr-u7e" secondAttribute="bottom" id="7LZ-Pn-5jw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Me2-fr-u7e" secondAttribute="trailing" id="8V6-BQ-OUM"/>
+                                                        <constraint firstItem="Me2-fr-u7e" firstAttribute="top" secondItem="GOs-CG-rF7" secondAttribute="top" id="Dw3-ck-56d"/>
+                                                        <constraint firstAttribute="width" secondItem="GOs-CG-rF7" secondAttribute="height" multiplier="1:1" id="nfV-7K-cpC"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GOs-CG-rF7" secondAttribute="bottom" id="Q7S-wh-JCq"/>
+                                                <constraint firstItem="GOs-CG-rF7" firstAttribute="top" secondItem="kgM-DN-Gzn" secondAttribute="topMargin" id="SLu-bC-WcW"/>
+                                                <constraint firstAttribute="centerY" secondItem="nFL-eE-DIn" secondAttribute="centerY" id="YPB-aE-QFv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GOs-CG-rF7" secondAttribute="trailing" id="vFi-d0-ox2"/>
+                                                <constraint firstItem="nFL-eE-DIn" firstAttribute="leading" secondItem="kgM-DN-Gzn" secondAttribute="leadingMargin" id="vKr-ur-3vD"/>
+                                                <constraint firstItem="GOs-CG-rF7" firstAttribute="leading" secondItem="nFL-eE-DIn" secondAttribute="trailing" constant="22" id="zTB-gg-2B9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="barGraph" destination="Me2-fr-u7e" id="Xnd-Zh-lyc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="numericCounterCell" rowHeight="100" id="S64-t9-rpq" userLabel="Numeri counter cell" customClass="DLBNumericCounterCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S64-t9-rpq" id="ngd-Zy-YZP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-uo-D1n" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
-                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numeric counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="H2r-e4-KgV"/>
                                                             </constraints>
@@ -326,23 +410,26 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-fC-MhR" userLabel="Preview view">
-                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YC-rX-fsC" userLabel="Bar graph view" customClass="DLBBarGraphView">
-                                                            <rect key="frame" x="-83" y="0.0" width="166" height="83"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="0YC-rX-fsC" secondAttribute="height" multiplier="2:1" id="Bch-Do-epE"/>
-                                                            </constraints>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhq-4Y-24L" userLabel="Counter" customClass="DLBNumericCounterView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="83"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="0YC-rX-fsC" secondAttribute="bottom" id="Cjj-P3-eWc"/>
-                                                        <constraint firstAttribute="trailing" secondItem="0YC-rX-fsC" secondAttribute="trailing" id="KvN-hs-DTg"/>
+                                                        <constraint firstItem="Vhq-4Y-24L" firstAttribute="leading" secondItem="Ngx-fC-MhR" secondAttribute="leading" id="0IR-EL-mic"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Vhq-4Y-24L" secondAttribute="trailing" id="cTO-5p-UlF"/>
                                                         <constraint firstAttribute="width" secondItem="Ngx-fC-MhR" secondAttribute="height" multiplier="1:1" id="d6F-DG-sTj"/>
-                                                        <constraint firstItem="0YC-rX-fsC" firstAttribute="top" secondItem="Ngx-fC-MhR" secondAttribute="top" id="mnw-ki-E83"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Vhq-4Y-24L" secondAttribute="bottom" id="jxl-eV-GIu"/>
+                                                        <constraint firstItem="Vhq-4Y-24L" firstAttribute="top" secondItem="Ngx-fC-MhR" secondAttribute="top" id="owV-bo-HtN"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="d6F-DG-sTj"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -350,12 +437,13 @@
                                                 <constraint firstItem="yxa-uo-D1n" firstAttribute="leading" secondItem="ngd-Zy-YZP" secondAttribute="leadingMargin" id="Nda-BF-b65"/>
                                                 <constraint firstAttribute="centerY" secondItem="yxa-uo-D1n" secondAttribute="centerY" id="U9H-CI-V31"/>
                                                 <constraint firstItem="Ngx-fC-MhR" firstAttribute="leading" secondItem="yxa-uo-D1n" secondAttribute="trailing" constant="22" id="Unk-6N-E6q"/>
+                                                <constraint firstItem="yxa-uo-D1n" firstAttribute="width" secondItem="Ngx-fC-MhR" secondAttribute="width" multiplier="2:1" id="WbI-QZ-bpk"/>
                                                 <constraint firstItem="Ngx-fC-MhR" firstAttribute="top" secondItem="ngd-Zy-YZP" secondAttribute="topMargin" id="oyD-NJ-eYP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ngx-fC-MhR" secondAttribute="trailing" id="vo6-dw-yah"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="barGraph" destination="0YC-rX-fsC" id="X9e-z0-5hy"/>
+                                            <outlet property="counterView" destination="Vhq-4Y-24L" id="FtL-0o-GV9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

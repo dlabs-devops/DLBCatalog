@@ -13,6 +13,7 @@ typedef enum : NSUInteger {
     baseComponentPulseGraph,
     baseComponentPieChart,
     baseComponentBarGraph,
+    baseComponentNumericCounter,
     baseComponentCount
 } eBaseComponent;
 
@@ -58,6 +59,15 @@ typedef enum : NSUInteger {
     return [self cellForComponent:(eBaseComponent)indexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == baseComponentNumericCounter)
+    {
+        [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseCounter" bundle:nil].instantiateInitialViewController animated:YES];
+    }
+}
+
+
 #pragma mark - Cells
 
 - (UITableViewCell *)cellForComponent:(eBaseComponent)component
@@ -85,6 +95,12 @@ typedef enum : NSUInteger {
         case baseComponentBarGraph:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"barGraphViewCell"];
+            toReturn = cell;
+            break;
+        }
+        case baseComponentNumericCounter:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"numericCounterCell"];
             toReturn = cell;
             break;
         }
