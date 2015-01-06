@@ -111,7 +111,6 @@
     }
     else
     {
-        NSLog(@"Animating to: %@", [@(currentValue) stringValue]);
         if(self.animatedScale)
         {
             _currentValue = self.currentValue + self.animatedScale.floatValue*(self.backupValue-self.currentValue);
