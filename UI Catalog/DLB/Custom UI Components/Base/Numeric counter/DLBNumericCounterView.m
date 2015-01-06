@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) DLBAnimatableFloat *animatedScale;
 @property (nonatomic, strong) NSMutableArray *viewComponents;
+@property (nonatomic) NSInteger backupValue;
 
 @end
 
@@ -111,15 +112,22 @@
     else
     {
         NSLog(@"Animating to: %@", [@(currentValue) stringValue]);
+        if(self.animatedScale)
+        {
+            _currentValue = self.currentValue + self.animatedScale.floatValue*(self.backupValue-self.currentValue);
+            [self.animatedScale invalidateAnimation];
+        }
         self.animatedScale = [[DLBAnimatableFloat alloc] initWithStartValue:.0f];
-        [self.animatedScale animateTo:1.0f withDuration:1.0 onFrameBlock:^(BOOL willENd) {
+        self.animatedScale.animationStyle = DLBAnimationStyleEaseInOut;
+        self.backupValue = currentValue;
+        [self.animatedScale animateTo:1.0f withDuration:2.0 onFrameBlock:^(BOOL willENd) {
             if(willENd)
             {
-                [self setCurrentValue:currentValue animated:NO];
+                [self setCurrentValue:self.backupValue animated:NO];
             }
             else
             {
-                [self repositionViewsForScale:self.animatedScale.floatValue from:self.currentValue to:currentValue];
+                [self repositionViewsForScale:self.animatedScale.floatValue from:self.currentValue to:self.backupValue];
             }
         }];
     }
@@ -189,7 +197,7 @@
     
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
-    while (startf >= 1.0f || endf >= 1.0f) {
+    while (startf >= 1.0f || endf >= 1.0f || iterator<self.viewComponents.count) {
         componentFrame = [self frameForIndex:iterator elementCount:0];
         DLBNumericCounterComponent *component = [self componentAtIndex:iterator];
         if(component == nil)
