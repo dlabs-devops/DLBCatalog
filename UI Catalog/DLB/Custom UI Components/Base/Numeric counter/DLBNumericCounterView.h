@@ -49,6 +49,8 @@
 // Default is nil
 //
 @property (nonatomic, strong) NSString *suffix;
+@property (nonatomic, strong) UIFont *suffixFont;
+@property (nonatomic, strong) UIColor *suffixColor;
 //
 // Set the current value
 // Can animate

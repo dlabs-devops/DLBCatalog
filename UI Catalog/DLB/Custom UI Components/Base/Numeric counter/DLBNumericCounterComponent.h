@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic) BOOL allowZero;
+@property (nonatomic, strong) NSString *staticString;
 
 - (void)setFrom:(CGFloat)start to:(CGFloat)end scale:(CGFloat)scale;
 

@@ -26,6 +26,7 @@
     [self layoutIfNeeded];
     
     [self.counterView layoutIfNeeded];
+    self.counterView.suffix = @"%";
     self.counterView.clipsToBounds = YES;
     
     self.animate = YES;

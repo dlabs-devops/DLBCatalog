@@ -129,33 +129,47 @@
 
 - (void)setFrom:(CGFloat)start to:(CGFloat)end scale:(CGFloat)scale
 {
-    CGFloat current = (NSInteger)start + scale*((NSInteger)end-(NSInteger)start);
-    
-    NSInteger mainValue = [self round:current];
-    CGFloat offset = mainValue-current;
-    
-    BOOL shouldHideZero = fabsf((float)current) < 5.0f;
-    
-    while (mainValue>10) {
-        mainValue-=10;
+    if(self.staticString)
+    {
+        self.mainValue = 0;
+        self.offsetScale = .0f;
     }
-    while (mainValue<0) {
-        mainValue+=10;
+    else
+    {
+        CGFloat current = (NSInteger)start + scale*((NSInteger)end-(NSInteger)start);
+        
+        NSInteger mainValue = [self round:current];
+        CGFloat offset = mainValue-current;
+        
+        BOOL shouldHideZero = fabsf((float)current) < 5.0f;
+        
+        while (mainValue>10) {
+            mainValue-=10;
+        }
+        while (mainValue<0) {
+            mainValue+=10;
+        }
+        
+        self.allowZero = !shouldHideZero;
+        
+        self.mainValue = mainValue;
+        self.offsetScale = offset;
     }
-    
-    self.allowZero = !shouldHideZero;
-    
-    self.mainValue = mainValue;
-    self.offsetScale = offset;
-    
-    self.mainLabel.alpha = 1.0f-fabsf((float)offset);
-    self.topLabel.alpha = offset;
-    self.bottomLabel.alpha = offset;
 }
 
 - (NSInteger)round:(CGFloat)amount
 {
     return (NSInteger)(roundf((float)amount));
+}
+
+- (void)setStaticString:(NSString *)staticString
+{
+    _staticString = staticString;
+    if(_staticString)
+    {
+        [self setFrom:.0f to:.0f scale:1.0f];
+        self.mainLabel.text = staticString;
+    }
 }
 
 @end

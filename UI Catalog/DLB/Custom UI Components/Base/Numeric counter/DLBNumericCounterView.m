@@ -38,6 +38,25 @@
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = self.bounds;
+    gradientLayer.colors = [NSArray arrayWithObjects:
+                            (id)[UIColor clearColor].CGColor,
+                            (id)[UIColor whiteColor].CGColor,
+                            (id)[UIColor whiteColor].CGColor,
+                            (id)[UIColor clearColor].CGColor,
+                            nil];  
+    gradientLayer.locations = @[@.0,
+                                @.3,
+                                @.7,
+                                @1.0];
+    self.layer.mask = gradientLayer;
+}
+
 - (void)loadDefaults
 {
     self.minimumValue = 0;
@@ -54,6 +73,24 @@
         return [UIFont systemFontOfSize:200.0f];
     }
     return _font;
+}
+
+- (UIFont *)suffixFont
+{
+    if(_suffixFont == nil)
+    {
+        return [UIFont systemFontOfSize:30.0f];
+    }
+    return _suffixFont;
+}
+
+- (UIColor *)suffixColor
+{
+    if(_suffixColor == nil)
+    {
+        return self.textColor;
+    }
+    return _suffixColor;
 }
 
 - (void)setCurrentValue:(NSInteger)currentValue
@@ -118,18 +155,43 @@
     return nil;
 }
 
+- (CGRect)frameForIndex:(NSInteger)index elementCount:(NSInteger)elementCount
+{
+    CGFloat componentWidth = self.frame.size.height*self.componentWHRatio*.7f;
+    return CGRectMake(self.frame.size.width-componentWidth*(1.0f+index),
+                      .0f,
+                      componentWidth,
+                      self.frame.size.height);
+}
+
 - (void)repositionViewsForScale:(CGFloat)scale from:(NSInteger)start to:(NSInteger)end
 {
     NSInteger iterator = 0;
+    
+    CGRect componentFrame = [self frameForIndex:iterator elementCount:0];
+    
+    if(self.suffix)
+    {
+        componentFrame = [self frameForIndex:iterator elementCount:0];
+        DLBNumericCounterComponent *component = [self componentAtIndex:iterator];
+        if(component == nil)
+        {
+            component = [[DLBNumericCounterComponent alloc] initWithFrame:componentFrame];
+            component.textColor = self.suffixColor;
+            component.font = self.suffixFont;
+            [self addSubview:component];
+            [self.viewComponents addObject:component];
+        }
+        component.frame = componentFrame;
+        component.staticString = self.suffix;
+        iterator++;
+    }
+    
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
     while (startf >= 1.0f || endf >= 1.0f) {
+        componentFrame = [self frameForIndex:iterator elementCount:0];
         DLBNumericCounterComponent *component = [self componentAtIndex:iterator];
-        CGFloat componentWidth = self.frame.size.height*self.componentWHRatio;
-        CGRect componentFrame = CGRectMake(self.frame.size.width-componentWidth*(1.0f+iterator),
-                                           .0f,
-                                           componentWidth,
-                                           self.frame.size.height);
         if(component == nil)
         {
             component = [[DLBNumericCounterComponent alloc] initWithFrame:componentFrame];
@@ -137,13 +199,9 @@
             component.font = self.font;
             [self addSubview:component];
             [self.viewComponents addObject:component];
-//            component.allowZero = (endf>=1.0f);
-        }
-        else if(component.mainValue != 0)
-        {
-//            component.allowZero = endf>=1.0f;
         }
         component.frame = componentFrame;
+        component.staticString = nil;
         [component setFrom:startf to:endf scale:scale];
         startf/=10.0f;
         endf/=10.0f;
