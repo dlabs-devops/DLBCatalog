@@ -18,6 +18,12 @@
 
 @end
 
+@protocol DLBBarGraphDelegate <NSObject>
+
+- (void)DLBBarGraphDelegateEndedAnimation:(DLBBarGraphView *)sender;
+
+@end
+
 @protocol DLBBarGraphNodeDrawing;
 
 @interface DLBBarGraphView : UIView
@@ -39,6 +45,7 @@
 @property (nonatomic, strong) UIColor *nodeBackgroundColor;
 
 @property (nonatomic, weak) id<DLBBarGraphDataSource> dataSource;
+@property (nonatomic, weak) id<DLBBarGraphDelegate> delegate;
 @property (nonatomic, weak) id<DLBBarGraphNodeDrawing> nodeDrawDelegate;
 
 - (void)reloadGraphAnimated:(BOOL)animated;

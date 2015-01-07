@@ -21,6 +21,12 @@
 //
 - (NSNumber *)WNDBarGraphView:(WNDBarGraphView *)sender valueFrom:(NSDate *)startDate to:(NSDate *)endDate;
 //
+// Return a secondary value on a specific time range
+// Start date should be inclusive (X>=T)
+// End date should be exclusive (X<T)
+//
+- (NSNumber *)WNDBarGraphView:(WNDBarGraphView *)sender secondaryValueFrom:(NSDate *)startDate to:(NSDate *)endDate;
+//
 // Return graph scale.
 // This value represents the top most point on the graph
 //
@@ -44,8 +50,16 @@
 #pragma mark - Class
 
 @interface WNDBarGraphView : UIView
+
 @property (nonatomic, weak) id<WNDBarGraphViewDataSource> dataSource;
 
-- (void)refreshWithStyle:(eBarGraphTransitionStyle)style animated:(BOOL)animated;
+@property (nonatomic, strong) UIColor *primaryBarColor;
+@property (nonatomic, strong) UIColor *secondaryBarColor;
+
+//
+// Will return NO if refresh is internaly blocked
+// Try recalling later
+//
+- (BOOL)refreshWithStyle:(eBarGraphTransitionStyle)style animated:(BOOL)animated;
 
 @end

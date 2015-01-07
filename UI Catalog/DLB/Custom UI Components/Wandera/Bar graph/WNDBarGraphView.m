@@ -11,11 +11,13 @@
 #import "WNDBarGraphDataObject.h"
 #import "DLBBarGraphNode.h"
 
-@interface WNDBarGraphView()<DLBBarGraphDataSource, DLBBarGraphNodeDrawing>
+@interface WNDBarGraphView()<DLBBarGraphDataSource, DLBBarGraphNodeDrawing, DLBBarGraphDelegate>
 
 @property (nonatomic, strong) DLBBarGraphView *barGraph;
 @property (nonatomic, strong) WNDBarGraphDataObject *currentDataObject;
 @property (nonatomic, strong) WNDBarGraphDataObject *previousDataObject;
+@property (nonatomic) eBarGraphTransitionStyle currentTransitionStyle;
+@property (nonatomic) BOOL blockRefresh;
 
 @end
 
@@ -26,25 +28,31 @@
 {
     [super layoutSubviews];
     self.barGraph.frame = [self graphFrame];
-    [self.barGraph layoutIfNeeded];
 }
 
 
 #pragma mark - Transitions
 
-- (void)refreshWithStyle:(eBarGraphTransitionStyle)style animated:(BOOL)animated
+- (BOOL)refreshWithStyle:(eBarGraphTransitionStyle)style animated:(BOOL)animated
 {
+    if(self.blockRefresh)
+    {
+        // refresh is blocked
+        return NO;
+    }
+    
     self.previousDataObject = self.currentDataObject;
     self.currentDataObject = [self generateNewDataObject];
     
     if(animated == NO)
     {
+        self.currentTransitionStyle = barGraphTransitionStyleRefresh;
         self.barGraph.graphScale = self.currentDataObject.scale;
         [self.barGraph reloadGraphAnimated:NO];
     }
     else
     {
-        // TODO: handle all styles
+        self.currentTransitionStyle = style;
         switch (style) {
             case barGraphTransitionStyleRefresh:
                 self.barGraph.graphScale = self.currentDataObject.scale;
@@ -56,6 +64,7 @@
                 DLBBarGraphView *previousGraph = self.barGraph;
                 
                 previousGraph.dataSource = nil;
+                previousGraph.delegate = nil;
                 previousGraph.nodeDrawDelegate = nil;
                 
                 self.barGraph = nil;
@@ -68,7 +77,7 @@
                 self.barGraph.graphScale = self.currentDataObject.scale;
                 [self.barGraph reloadGraphAnimated:NO];
                 
-                [UIView animateWithDuration:.3 animations:^{
+                [UIView animateWithDuration:.35 delay:.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     previousGraph.frame = CGRectMake(normalFrame.origin.x+normalFrame.size.width,
                                                      normalFrame.origin.y,
                                                      normalFrame.size.width,
@@ -86,6 +95,7 @@
                 DLBBarGraphView *previousGraph = self.barGraph;
                 
                 previousGraph.dataSource = nil;
+                previousGraph.delegate = nil;
                 previousGraph.nodeDrawDelegate = nil;
                 
                 self.barGraph = nil;
@@ -98,7 +108,7 @@
                 self.barGraph.graphScale = self.currentDataObject.scale;
                 [self.barGraph reloadGraphAnimated:NO];
                 
-                [UIView animateWithDuration:.3 animations:^{
+                [UIView animateWithDuration:.35 delay:.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     previousGraph.frame = CGRectMake(normalFrame.origin.x-normalFrame.size.width,
                                                      normalFrame.origin.y,
                                                      normalFrame.size.width,
@@ -111,12 +121,30 @@
                 break;
             }
             case barGraphTransitionStyleCloseAndOpen:
+                self.blockRefresh = YES;
                 self.barGraph.graphScale = self.currentDataObject.scale;
+                // reverse first and second and refresh the data
+                
+                self.previousDataObject = self.currentDataObject;
+                self.currentDataObject = nil;
+                
                 [self.barGraph reloadGraphAnimated:YES];
                 break;
             default:
                 break;
         }
+    }
+    return YES;
+}
+
+- (void)DLBBarGraphDelegateEndedAnimation:(DLBBarGraphView *)sender
+{
+    if(self.currentTransitionStyle == barGraphTransitionStyleCloseAndOpen)
+    {
+        self.blockRefresh = NO;
+        self.currentDataObject = self.previousDataObject;
+        self.previousDataObject = nil;
+        [self refreshWithStyle:barGraphTransitionStyleRefresh animated:YES];
     }
 }
 
@@ -136,6 +164,7 @@
     
     // fill value data
     NSMutableArray *values = [[NSMutableArray alloc] init];
+    NSMutableArray *secondaryValues = [[NSMutableArray alloc] init];
     NSDate *lastDate = nil;
     for(NSDate *date in object.componentStartDates)
     {
@@ -147,10 +176,17 @@
                 amount = @(.0f);
             }
             [values addObject:amount];
+            NSNumber *secondaryAmount = [self.dataSource WNDBarGraphView:self valueFrom:lastDate to:date];
+            if(secondaryAmount == nil)
+            {
+                secondaryAmount = @(.0f);
+            }
+            [secondaryValues addObject:secondaryAmount];
         }
         lastDate = date;
     }
     object.componentValues = values;
+    object.componentSecondaryValues = secondaryValues;
     
     object.scale = object.scale; // is a small optimization
     
@@ -169,8 +205,11 @@
     if(_barGraph == nil)
     {
         _barGraph = [[DLBBarGraphView alloc] initWithFrame:[self graphFrame]];
+        _barGraph.barWidth = 5.0f;        
+        _barGraph.backgroundColor = [UIColor clearColor];
         [self addSubview:_barGraph];
         _barGraph.dataSource = self;
+        _barGraph.delegate = self;
         _barGraph.nodeDrawDelegate = self;
     }
     return _barGraph;
@@ -185,7 +224,7 @@
 
 - (NSNumber *)DLBBarGraphView:(DLBBarGraphView *)sender valueAtIndex:(NSInteger)index
 {
-    NSNumber *toReturn = [self.currentDataObject valueAtIndex:index];
+    NSNumber *toReturn = [self.currentDataObject overallValueAtIndex:index];
     if(toReturn == nil)
     {
         return @(.0f);
@@ -198,6 +237,23 @@
 
 #pragma mark Bar drawing
 
+- (UIColor *)primaryBarColor
+{
+    if(_primaryBarColor == nil)
+    {
+        _primaryBarColor = [UIColor colorWithRed:98.0f/255.0f green:164.0f/255.0f blue:230.0f/255.0f alpha:1.0f];
+    }
+    return _primaryBarColor;
+}
+- (UIColor *)secondaryBarColor
+{
+    if(_secondaryBarColor == nil)
+    {
+        _secondaryBarColor = [UIColor colorWithRed:217.0f/255.0f green:115.0f/255.0f blue:40.0f/255.0f alpha:1.0f];
+    }
+    return _secondaryBarColor;
+}
+
 - (void)DLBBarGraphNode:(DLBBarGraphNode *)node drawInContext:(CGContextRef)context withRect:(CGRect)rect
 {
     CGContextSaveGState(context);
@@ -205,23 +261,24 @@
     CGContextSetFillColorWithColor(context, node.backgroundColor.CGColor);
     CGContextFillRect(context, rect);
     
-    CGContextSetFillColorWithColor(context, node.foregroundColor.CGColor);
     
-    CGContextAddRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0-node.scale), rect.size.width, rect.size.height*node.scale));
+    CGFloat minScale = [self.currentDataObject secondaryValueAtIndex:node.index].floatValue;
+    CGFloat maxScale = [self.currentDataObject overallValueAtIndex:node.index].floatValue;
+    CGFloat secondaryScale = .0f;
+    if(maxScale >= .0f)
+    {
+        secondaryScale = minScale/maxScale * node.scale;
+    }
+    CGRect maximumRect = CGRectMake(rect.origin.x, rect.size.height*(1.0-node.scale), rect.size.width, rect.size.height*node.scale);
+    CGRect minimumRect = CGRectMake(rect.origin.x, rect.size.height*(1.0-secondaryScale), rect.size.width, rect.size.height*node.scale);
     
-    // generate gradient
-    CGFloat colors [] = {
-        1.0, .0f, .0f, 1.0,
-        .0, .0f, 1.0f, 1.0,
-    };
-    CGColorSpaceRef baseSpace = CGColorSpaceCreateDeviceRGB();
-    CGGradientRef gradient = CGGradientCreateWithColorComponents(baseSpace, colors, NULL, 2);
-    CGColorSpaceRelease(baseSpace), baseSpace = NULL;
-    CGContextClip(context);
-    CGContextDrawLinearGradient(context,
-                                gradient,
-                                CGPointZero,
-                                CGPointMake(.0f, rect.size.height), 0);
+    
+    CGContextSetFillColorWithColor(context, self.primaryBarColor.CGColor);
+    CGContextFillRect(context, maximumRect);
+    CGContextSetFillColorWithColor(context, self.secondaryBarColor.CGColor);
+    CGContextFillRect(context, minimumRect);
+    
+
     CGContextRestoreGState(context);
 }
 

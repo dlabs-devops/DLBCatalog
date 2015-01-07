@@ -16,6 +16,7 @@
 
 @property (nonatomic) NSInteger componentCount;
 @property (nonatomic, strong) NSArray *componentValues;
+@property (nonatomic, strong) NSArray *componentSecondaryValues;
 
 @property (nonatomic) CGFloat scale;
 
@@ -32,5 +33,14 @@
 // A convenience method to return a value at index or zero if out of bounds
 //
 - (NSNumber *)valueAtIndex:(NSInteger)index;
+//
+// A convenience method to return a secondary value at index or zero if out of bounds
+//
+- (NSNumber *)secondaryValueAtIndex:(NSInteger)index;
+//
+// A convenience method to return a sum value of value and secondary value at index or zero if out of bounds
+//
+- (NSNumber *)overallValueAtIndex:(NSInteger)index;
+
 
 @end

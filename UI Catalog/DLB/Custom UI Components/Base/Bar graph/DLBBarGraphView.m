@@ -81,7 +81,11 @@
 - (void)reloadGraphAnimated:(BOOL)animated
 {
     NSMutableArray *targetNodes = [[NSMutableArray alloc] init];
-    NSInteger newCount = self.cachedComponentCount = [self.dataSource DLBBarGraphViewNumberOfComponents:self];
+    NSInteger newCount = [self.dataSource DLBBarGraphViewNumberOfComponents:self];
+    if(newCount)
+    {
+        self.cachedComponentCount = newCount;
+    }
     for(NSInteger i=0; i<newCount; i++)
     {
         DLBBarGraphNode *newNode = [[DLBBarGraphNode alloc] init];
@@ -106,6 +110,7 @@
             if(willEnd)
             {
                 self.sourceNodes = nil;
+                [self.delegate DLBBarGraphDelegateEndedAnimation:self];
             }
         }];
         

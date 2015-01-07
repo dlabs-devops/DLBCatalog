@@ -73,5 +73,17 @@
     }
     return self.componentValues[(NSUInteger)index];
 }
+- (NSNumber *)secondaryValueAtIndex:(NSInteger)index
+{
+    if(index < 0 || index >= self.componentValues.count)
+    {
+        return @(.0f);
+    }
+    return self.componentSecondaryValues[(NSUInteger)index];
+}
+- (NSNumber *)overallValueAtIndex:(NSInteger)index
+{
+    return @([self valueAtIndex:index].floatValue + [self secondaryValueAtIndex:index].floatValue);
+}
 
 @end

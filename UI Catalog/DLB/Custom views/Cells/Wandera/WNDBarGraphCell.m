@@ -20,6 +20,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.barGraph.clipsToBounds = YES;
     self.barGraph.dataSource = self;
     
     [self animate];
@@ -27,16 +28,22 @@
 
 - (NSNumber *)WNDBarGraphView:(WNDBarGraphView *)sender valueFrom:(NSDate *)startDate to:(NSDate *)endDate
 {
-    int value = rand()%100;
+    int value = rand()%50;
     return @(value);
 }
+- (NSNumber *)WNDBarGraphView:(WNDBarGraphView *)sender secondaryValueFrom:(NSDate *)startDate to:(NSDate *)endDate
+{
+    int value = rand()%50;
+    return @(value);
+}
+
 - (NSNumber *)WNDBarGraphViewGraphScale:(WNDBarGraphView *)sender
 {
     return @(100.0f);
 }
 - (NSDate *)WNDBarGraphViewDisplayStartDate:(WNDBarGraphView *)sender
 {
-    NSInteger rnd = (NSInteger)(rand()%20) - 10;
+    NSInteger rnd = ((NSInteger)(rand()%20)) - 3;
     return [DLBDateTools date:[NSDate date] byAddingDays:-30+rnd];
 }
 - (NSDate *)WNDBarGraphViewDisplayEndDate:(WNDBarGraphView *)sender
@@ -56,8 +63,9 @@
 
 - (void)animate
 {
-    [self.barGraph refreshWithStyle:barGraphTransitionStyleRefresh animated:YES];
-    [self performSelector:@selector(animate) withObject:nil afterDelay:3.0];
+    int step = rand()%4;
+    [self.barGraph refreshWithStyle:step animated:YES];
+    [self performSelector:@selector(animate) withObject:nil afterDelay:6.0];
 }
 
 
