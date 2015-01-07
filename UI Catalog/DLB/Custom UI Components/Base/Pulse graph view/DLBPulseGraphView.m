@@ -40,7 +40,7 @@
     if(_pulseRanges == nil)
     {
         return @[
-                 [DLBFloatingRange withLocation:.8 length:.6]
+                 [DLBFloatingRange withLocation:.8f length:.6f]
                  ];
     }
     return _pulseRanges;
@@ -161,7 +161,7 @@
     CGMutablePathRef path = CGPathCreateMutable();
     CGPoint startPoint = [self relativePointAtIndex:0];
     CGPathMoveToPoint(path, NULL, startPoint.x, startPoint.y);
-    for(NSInteger i=1; i<self.linePoints.count; i++)
+    for(NSInteger i=1; i<(NSInteger)self.linePoints.count; i++)
     {
         CGPoint point = [self relativePointAtIndex:i];
         CGPathAddLineToPoint(path, NULL, point.x, point.y);

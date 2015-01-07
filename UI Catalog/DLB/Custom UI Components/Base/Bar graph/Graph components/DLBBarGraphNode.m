@@ -51,7 +51,7 @@
     
     CGContextSetFillColorWithColor(context, self.foregroundColor.CGColor);
     
-    CGContextFillRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0-self.scale), rect.size.width, rect.size.height*self.scale));
+    CGContextFillRect(context, CGRectMake(rect.origin.x, rect.size.height*(1.0f-self.scale), rect.size.width, rect.size.height*self.scale));
 }
 
 @end

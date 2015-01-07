@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Matic Oblak. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface DLBPieChartSector : NSObject
 

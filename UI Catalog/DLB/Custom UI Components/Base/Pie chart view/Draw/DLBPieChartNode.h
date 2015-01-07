@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Matic Oblak. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class DLBPieChartSector;
 

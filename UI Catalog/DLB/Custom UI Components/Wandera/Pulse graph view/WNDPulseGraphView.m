@@ -41,19 +41,32 @@
     self.pulseHeadRadius = 10.0f;
     
     self.linePoints = @[
-                        [NSNumber valueWithCGPoint:CGPointMake(0 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(74.36 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(79.43 / 320.0, ((74.66 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(82.92 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(86.42 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(87.82 / 320.0, ((90.34 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(91.31 / 320.0, ((37.33 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(96.91 / 320.0, ((110 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(100.41 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(109.15 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(117.89 / 320.0, ((80.06 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(124.88 / 320.0, ((85.11 / 70.0) - 1.0) * -1.0)],
-                        [NSNumber valueWithCGPoint:CGPointMake(320 / 320.0, ((85.36 / 70.0) - 1.0) * -1.0)]
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(0/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(74.36/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(79.43/320.0),
+                                                               (CGFloat)(((74.66/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(82.92/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(86.42/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(87.82/320.0),
+                                                               (CGFloat)(((90.34/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(91.31/320.0),
+                                                               (CGFloat)(((37.33/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(96.91/320.0),
+                                                               (CGFloat)(((110/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(100.41/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(109.15/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(117.89/320.0),
+                                                               (CGFloat)(((80.06/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(124.88/320.0),
+                                                               (CGFloat)(((85.11/70.0) - 1.0)*-1.0))],
+                        [NSNumber valueWithCGPoint:CGPointMake((CGFloat)(320/320.0),
+                                                               (CGFloat)(((85.36/70.0) - 1.0)*-1.0))]
                         ];
     self.indicatorCount = 4;
 }
