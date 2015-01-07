@@ -195,23 +195,109 @@
                                             <outlet property="pulseGraph" destination="k3L-xj-bnY" id="Yrf-7T-so9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="VWB-WC-xEP" userLabel="Pie chart view cell" customClass="WNDPieChartCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartViewCell" rowHeight="100" id="UoV-zv-9az" userLabel="Pie chart view cell" customClass="WNDPieChartCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UoV-zv-9az" id="Vhs-Cd-AsQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAp-wx-wLc" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-df-rCt" userLabel="By: Matic Oblak">
+                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-aZ-HOC" userLabel="Pulse graph">
+                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="rUg-cl-TZ5"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.92941176469999998" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="rUg-cl-TZ5"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Dve-aZ-HOC" firstAttribute="top" secondItem="jAp-wx-wLc" secondAttribute="top" constant="2" id="DWq-ci-yPn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Skp-df-rCt" secondAttribute="trailing" id="EcE-zm-VEC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Dve-aZ-HOC" secondAttribute="trailing" id="LMR-Lk-bU6"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Skp-df-rCt" secondAttribute="bottom" constant="2" id="TM5-x1-2Xb"/>
+                                                        <constraint firstItem="Skp-df-rCt" firstAttribute="top" secondItem="Dve-aZ-HOC" secondAttribute="bottom" id="YVX-eu-mXE"/>
+                                                        <constraint firstItem="Skp-df-rCt" firstAttribute="top" secondItem="jAp-wx-wLc" secondAttribute="top" constant="3" id="Zo2-1n-fia"/>
+                                                        <constraint firstAttribute="top" secondItem="Dve-aZ-HOC" secondAttribute="top" id="bIS-Gs-wV8"/>
+                                                        <constraint firstItem="Dve-aZ-HOC" firstAttribute="leading" secondItem="jAp-wx-wLc" secondAttribute="leading" id="crv-Ra-FHV"/>
+                                                        <constraint firstItem="Skp-df-rCt" firstAttribute="leading" secondItem="jAp-wx-wLc" secondAttribute="leading" id="mVo-uA-tg7"/>
+                                                        <constraint firstAttribute="height" constant="50" id="vm8-hS-9DA"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="vm8-hS-9DA"/>
+                                                            <exclude reference="DWq-ci-yPn"/>
+                                                            <exclude reference="Zo2-1n-fia"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5y-uA-ZNJ" userLabel="Preview view">
+                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-18-E4D" userLabel="Pie chart view" customClass="WNDPieChart">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="tmd-18-E4D" secondAttribute="height" id="Zj5-I7-sKE"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="tmd-18-E4D" secondAttribute="bottom" id="9OT-xu-OVg"/>
+                                                        <constraint firstAttribute="width" secondItem="O5y-uA-ZNJ" secondAttribute="height" multiplier="1:1" id="Gbu-TP-z7q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tmd-18-E4D" secondAttribute="trailing" id="UsQ-Qe-ffj"/>
+                                                        <constraint firstItem="tmd-18-E4D" firstAttribute="top" secondItem="O5y-uA-ZNJ" secondAttribute="top" id="iQg-zn-ifw"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="O5y-uA-ZNJ" firstAttribute="leading" secondItem="jAp-wx-wLc" secondAttribute="trailing" constant="22" id="18G-Ib-cAR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="O5y-uA-ZNJ" secondAttribute="bottom" id="7NB-Xg-0UX"/>
+                                                <constraint firstAttribute="centerY" secondItem="jAp-wx-wLc" secondAttribute="centerY" id="8tI-py-TRb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O5y-uA-ZNJ" secondAttribute="trailing" id="X5s-Ld-j3B"/>
+                                                <constraint firstItem="jAp-wx-wLc" firstAttribute="leading" secondItem="Vhs-Cd-AsQ" secondAttribute="leadingMargin" id="vQN-sx-wgp"/>
+                                                <constraint firstItem="O5y-uA-ZNJ" firstAttribute="top" secondItem="Vhs-Cd-AsQ" secondAttribute="topMargin" id="yOA-pX-RcI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="pieChart" destination="tmd-18-E4D" id="Uev-6Z-MfC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="barGraphViewCell" rowHeight="100" id="VWB-WC-xEP" userLabel="Bar graph view cell" customClass="WNDBarGraphCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VWB-WC-xEP" id="nNE-sQ-2Ys">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTL-rl-GCA" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                    <rect key="frame" x="8" y="31" width="396" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-mn-HGt" userLabel="By: Matic Oblak">
-                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-mn-HGt" userLabel="By: Matic Oblak">
+                                                            <rect key="frame" x="0.0" y="21" width="396" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OIq-BK-Vpg" userLabel="Pulse graph">
-                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OIq-BK-Vpg" userLabel="Pulse graph">
+                                                            <rect key="frame" x="0.0" y="0.0" width="396" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="gSy-US-ANz"/>
                                                             </constraints>
@@ -247,22 +333,28 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlZ-8N-UqD" userLabel="Preview view">
-                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                    <rect key="frame" x="426" y="8" width="166" height="83"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYh-8M-RgA" userLabel="Pie chart view" customClass="WNDPieChart">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYh-8M-RgA" userLabel="Bar graph view" customClass="WNDBarGraphView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="83"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="uYh-8M-RgA" secondAttribute="height" id="LNQ-cB-Na0"/>
+                                                                <constraint firstAttribute="width" secondItem="uYh-8M-RgA" secondAttribute="height" multiplier="1:1" id="LNQ-cB-Na0"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="LNQ-cB-Na0"/>
+                                                                </mask>
+                                                            </variation>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="uYh-8M-RgA" secondAttribute="trailing" id="9bS-IQ-mrp"/>
-                                                        <constraint firstAttribute="width" secondItem="hlZ-8N-UqD" secondAttribute="height" multiplier="1:1" id="bAe-mv-aa0"/>
+                                                        <constraint firstAttribute="width" secondItem="hlZ-8N-UqD" secondAttribute="height" multiplier="2:1" id="bAe-mv-aa0"/>
                                                         <constraint firstAttribute="bottom" secondItem="uYh-8M-RgA" secondAttribute="bottom" id="hAA-vB-nNy"/>
                                                         <constraint firstItem="uYh-8M-RgA" firstAttribute="top" secondItem="hlZ-8N-UqD" secondAttribute="top" id="lyb-Di-3dG"/>
+                                                        <constraint firstItem="uYh-8M-RgA" firstAttribute="leading" secondItem="hlZ-8N-UqD" secondAttribute="leading" id="xqe-9R-T4F"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -278,7 +370,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="pieChart" destination="uYh-8M-RgA" id="gFk-Ne-wgr"/>
+                                            <outlet property="barGraph" destination="uYh-8M-RgA" id="j6j-3E-Him"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

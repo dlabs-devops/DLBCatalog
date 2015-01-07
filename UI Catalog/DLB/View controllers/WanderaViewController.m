@@ -12,6 +12,7 @@ typedef enum : NSUInteger {
     wanderaComponentCircularProgressView,
     wanderaComponentPulseGraph,
     wanderaComponentPieChart,
+    wanderaComponentBarGraph,
     wanderaComponentCount
 } eWanderaComponent;
 
@@ -88,6 +89,12 @@ typedef enum : NSUInteger {
         case wanderaComponentPieChart:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"pieChartViewCell"];
+            toReturn = cell;
+            break;
+        }
+        case wanderaComponentBarGraph:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"barGraphViewCell"];
             toReturn = cell;
             break;
         }
