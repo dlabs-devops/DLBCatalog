@@ -30,6 +30,13 @@
 		2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */; };
 		2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */; };
 		2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */; };
+		21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */; };
+		21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */; };
+		21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */; };
+		21CC05401A5D555800B071E1 /* WNDBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */; };
+		21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */; };
+		21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */; };
+		21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
 		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
@@ -105,6 +112,19 @@
 		2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphNode.m; sourceTree = "<group>"; };
 		2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphCell.h; sourceTree = "<group>"; };
 		2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphCell.m; sourceTree = "<group>"; };
+		21CA3F6D1A5E7FE800D27F5E /* WanderaBarGraphVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaBarGraphVC.h; sourceTree = "<group>"; };
+		21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaBarGraphVC.m; sourceTree = "<group>"; };
+		21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaBarGraph.storyboard; sourceTree = "<group>"; };
+		21CC053B1A5D54A100B071E1 /* WNDBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphView.h; sourceTree = "<group>"; };
+		21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphView.m; sourceTree = "<group>"; };
+		21CC053E1A5D555800B071E1 /* WNDBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphCell.h; sourceTree = "<group>"; };
+		21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphCell.m; sourceTree = "<group>"; };
+		21CC05411A5D61AD00B071E1 /* WNDBarGraphDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphDataObject.h; sourceTree = "<group>"; };
+		21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphDataObject.m; sourceTree = "<group>"; };
+		21CC05441A5D625B00B071E1 /* WNDBarGraphTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphTools.h; sourceTree = "<group>"; };
+		21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphTools.m; sourceTree = "<group>"; };
+		21CC05481A5D65C300B071E1 /* DLBDateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBDateTools.h; sourceTree = "<group>"; };
+		21CC05491A5D65C300B071E1 /* DLBDateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBDateTools.m; sourceTree = "<group>"; };
 		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -240,6 +260,7 @@
 		21326E791A419233000ADCA2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				21CC05471A5D65B900B071E1 /* Date */,
 				21326E7A1A419233000ADCA2 /* Animations */,
 				21326E811A419233000ADCA2 /* Components */,
 			);
@@ -273,6 +294,7 @@
 		21326E841A419233000ADCA2 /* Wandera */ = {
 			isa = PBXGroup;
 			children = (
+				21CC053A1A5D547D00B071E1 /* Bar graph */,
 				21326E851A419233000ADCA2 /* Circular progress view */,
 				21326E881A419233000ADCA2 /* Pie chart view */,
 				21326E8B1A419233000ADCA2 /* Pulse graph view */,
@@ -335,6 +357,28 @@
 				2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */,
 			);
 			path = "Graph components";
+			sourceTree = "<group>";
+		};
+		21CC053A1A5D547D00B071E1 /* Bar graph */ = {
+			isa = PBXGroup;
+			children = (
+				21CC053B1A5D54A100B071E1 /* WNDBarGraphView.h */,
+				21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */,
+				21CC05411A5D61AD00B071E1 /* WNDBarGraphDataObject.h */,
+				21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */,
+				21CC05441A5D625B00B071E1 /* WNDBarGraphTools.h */,
+				21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */,
+			);
+			path = "Bar graph";
+			sourceTree = "<group>";
+		};
+		21CC05471A5D65B900B071E1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				21CC05481A5D65C300B071E1 /* DLBDateTools.h */,
+				21CC05491A5D65C300B071E1 /* DLBDateTools.m */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		21D095BE1A30699F00BC8F73 = {
@@ -485,6 +529,8 @@
 				21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */,
 				21EEE9441A41B0C2000600FD /* WNDPulseGraphCell.h */,
 				21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */,
+				21CC053E1A5D555800B071E1 /* WNDBarGraphCell.h */,
+				21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */,
 			);
 			path = Wandera;
 			sourceTree = "<group>";
@@ -493,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */,
+				21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */,
 			);
 			path = Wandera;
 			sourceTree = "<group>";
@@ -502,6 +549,8 @@
 			children = (
 				21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */,
 				21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */,
+				21CA3F6D1A5E7FE800D27F5E /* WanderaBarGraphVC.h */,
+				21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */,
 			);
 			path = Wandera;
 			sourceTree = "<group>";
@@ -590,6 +639,7 @@
 				21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */,
 				210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */,
 				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
+				21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */,
 				21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */,
 				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
 				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
@@ -620,6 +670,7 @@
 				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
 				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
 				2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */,
+				21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */,
 				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
 				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
 				21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */,
@@ -633,16 +684,21 @@
 				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
+				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
+				21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */,
 				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
+				21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */,
+				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
 				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,
 				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
 				215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */,
 				21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */,
 				21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */,
 				21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */,
+				21CC05401A5D555800B071E1 /* WNDBarGraphCell.m in Sources */,
 				21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

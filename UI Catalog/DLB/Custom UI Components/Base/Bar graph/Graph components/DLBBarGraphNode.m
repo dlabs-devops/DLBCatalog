@@ -31,9 +31,9 @@
 
 - (void)drawInContext:(CGContextRef)context
 {
-    if(self.drawDelegate && [self.drawDelegate respondsToSelector:@selector(DLBBarGraphNode:drawIncontext:withRect:)])
+    if(self.drawDelegate && [self.drawDelegate respondsToSelector:@selector(DLBBarGraphNode:drawInContext:withRect:)])
     {
-        [self.drawDelegate DLBBarGraphNode:self drawIncontext:context withRect:self.frame];
+        [self.drawDelegate DLBBarGraphNode:self drawInContext:context withRect:self.frame];
     }
     else
     {

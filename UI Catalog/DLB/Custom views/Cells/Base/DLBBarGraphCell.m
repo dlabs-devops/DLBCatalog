@@ -64,7 +64,7 @@
     }
 }
 
-- (void)DLBBarGraphNode:(DLBBarGraphNode *)node drawIncontext:(CGContextRef)context withRect:(CGRect)rect
+- (void)DLBBarGraphNode:(DLBBarGraphNode *)node drawInContext:(CGContextRef)context withRect:(CGRect)rect
 {
 //    if(node.index < 10)
 //    {
