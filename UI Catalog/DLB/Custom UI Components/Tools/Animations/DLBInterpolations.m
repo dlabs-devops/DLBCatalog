@@ -17,6 +17,18 @@
     return source + (target-source)*scale;
 }
 
++ (CGSize)interpolateSize:(CGSize)source with:(CGSize)target scale:(CGFloat)scale
+{
+    return CGSizeMake([self interpolateFloat:source.width with:target.width scale:scale],
+                      [self interpolateFloat:source.height with:target.height scale:scale]);
+}
+
++ (CGPoint)interpolatePoint:(CGPoint)source with:(CGPoint)target scale:(CGFloat)scale
+{
+    return CGPointMake([self interpolateFloat:source.x with:target.x scale:scale],
+                      [self interpolateFloat:source.y with:target.y scale:scale]);
+}
+
 + (CGRect)interpolateRect:(CGRect)source with:(CGRect)target scale:(CGFloat)scale
 {
     return [self interpolateRect:source with:target scale:scale excludeZeroRect:NO];

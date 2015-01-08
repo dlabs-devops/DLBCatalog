@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-gc-NCx" customClass="WNDGraphGrid">
+                                <rect key="frame" x="16" y="20" width="568" height="227"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9T-wY-c8Z" customClass="WNDBarGraphView">
                                 <rect key="frame" x="16" y="20" width="568" height="227"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -131,8 +135,8 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="led-7T-fMa"/>
                                         <exclude reference="f4g-0P-KrD"/>
+                                        <exclude reference="led-7T-fMa"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -185,8 +189,8 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Un0-6J-nQk"/>
                                         <exclude reference="9De-xi-ORo"/>
+                                        <exclude reference="Un0-6J-nQk"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -198,6 +202,7 @@
                         <constraints>
                             <constraint firstItem="tdd-l6-Pew" firstAttribute="leading" secondItem="M0v-dm-jR8" secondAttribute="trailing" constant="6" id="0Pn-TL-uyL"/>
                             <constraint firstItem="I9T-wY-c8Z" firstAttribute="leading" secondItem="PSm-vj-pIm" secondAttribute="leadingMargin" id="1la-dS-Tde"/>
+                            <constraint firstItem="I9T-wY-c8Z" firstAttribute="trailing" secondItem="lgD-gc-NCx" secondAttribute="trailing" id="2NB-9b-NYI"/>
                             <constraint firstItem="I9T-wY-c8Z" firstAttribute="centerX" secondItem="M0v-dm-jR8" secondAttribute="centerX" id="3YJ-jh-opx"/>
                             <constraint firstItem="Z8q-wm-rET" firstAttribute="width" secondItem="Coi-Yh-u8j" secondAttribute="width" id="3sj-MQ-DTY"/>
                             <constraint firstItem="Z8q-wm-rET" firstAttribute="centerY" secondItem="Coi-Yh-u8j" secondAttribute="centerY" id="9nw-Ry-gbV"/>
@@ -215,7 +220,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="I9T-wY-c8Z" secondAttribute="trailing" id="TH2-AR-eIH"/>
                             <constraint firstItem="EfF-YK-pwX" firstAttribute="leading" secondItem="Z8q-wm-rET" secondAttribute="trailing" constant="6" id="Yuj-04-smm"/>
                             <constraint firstItem="BIc-nv-XKY" firstAttribute="top" secondItem="M0v-dm-jR8" secondAttribute="top" id="ZHY-Eo-Cji"/>
+                            <constraint firstItem="I9T-wY-c8Z" firstAttribute="leading" secondItem="lgD-gc-NCx" secondAttribute="leading" id="a7X-ht-3pP"/>
                             <constraint firstItem="Coi-Yh-u8j" firstAttribute="centerY" secondItem="LfE-F2-kSV" secondAttribute="centerY" id="e2g-gZ-hX0"/>
+                            <constraint firstItem="I9T-wY-c8Z" firstAttribute="top" secondItem="lgD-gc-NCx" secondAttribute="top" id="h6h-HC-w4l"/>
+                            <constraint firstItem="I9T-wY-c8Z" firstAttribute="bottom" secondItem="lgD-gc-NCx" secondAttribute="bottom" id="hAo-Pa-rcB"/>
                             <constraint firstItem="Coi-Yh-u8j" firstAttribute="width" secondItem="LfE-F2-kSV" secondAttribute="width" id="jAX-6L-sPO"/>
                             <constraint firstItem="I9T-wY-c8Z" firstAttribute="top" secondItem="30q-mE-GoN" secondAttribute="bottom" id="jFn-ge-3yx"/>
                             <constraint firstItem="Z8q-wm-rET" firstAttribute="bottom" secondItem="Coi-Yh-u8j" secondAttribute="bottom" constant="-556" id="nEJ-Tx-zfr"/>
@@ -231,6 +239,7 @@
                     </view>
                     <connections>
                         <outlet property="dayButton" destination="BIc-nv-XKY" id="uju-sC-S5V"/>
+                        <outlet property="graphGrid" destination="lgD-gc-NCx" id="EHw-5h-UTT"/>
                         <outlet property="graphView" destination="I9T-wY-c8Z" id="NIe-Xc-2el"/>
                         <outlet property="monthButton" destination="tdd-l6-Pew" id="GDf-QT-p7s"/>
                         <outlet property="weekButton" destination="M0v-dm-jR8" id="btU-dH-yQe"/>

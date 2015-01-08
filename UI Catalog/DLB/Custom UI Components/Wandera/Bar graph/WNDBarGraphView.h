@@ -11,6 +11,7 @@
 
 @class WNDBarGraphView;
 @class DLBBarGraphView;
+@class WNDBarGraphDataObject;
 
 #pragma mark - Data source
 
@@ -58,6 +59,8 @@
 @property (nonatomic, strong) UIColor *secondaryBarColor;
 
 @property (nonatomic) CGFloat barWidth;
+
+@property (nonatomic, readonly) WNDBarGraphDataObject *currentDataObject;
 
 //
 // Will return NO if refresh is internaly blocked
