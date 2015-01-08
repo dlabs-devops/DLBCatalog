@@ -66,6 +66,11 @@ typedef enum : NSUInteger {
         [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"WanderaPieChart" bundle:nil].instantiateInitialViewController animated:YES];
         
     }
+    if(indexPath.row == wanderaComponentBarGraph)
+    {
+        [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"WanderaBarGraph" bundle:nil].instantiateInitialViewController animated:YES];
+        
+    }
 }
 
 #pragma mark - Cells
