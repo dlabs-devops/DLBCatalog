@@ -10,6 +10,7 @@
 #import "WNDBarGraphTools.h"
 
 @class WNDBarGraphView;
+@class DLBBarGraphView;
 
 #pragma mark - Data source
 
@@ -55,6 +56,8 @@
 
 @property (nonatomic, strong) UIColor *primaryBarColor;
 @property (nonatomic, strong) UIColor *secondaryBarColor;
+
+@property (nonatomic) CGFloat barWidth;
 
 //
 // Will return NO if refresh is internaly blocked

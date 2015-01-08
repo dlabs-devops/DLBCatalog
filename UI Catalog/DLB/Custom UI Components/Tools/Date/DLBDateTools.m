@@ -10,6 +10,15 @@
 
 @implementation DLBDateTools
 
++ (NSDate *)date:(NSDate *)date byAddingMonths:(NSInteger)months
+{
+    if(date == nil)
+    {
+        return nil;
+    }
+    return [[NSCalendar autoupdatingCurrentCalendar] dateByAddingUnit:NSCalendarUnitMonth value:months toDate:date options:(NSCalendarOptions)0];
+}
+
 + (NSDate *)date:(NSDate *)date byAddingDays:(NSInteger)days
 {
     if(date == nil)

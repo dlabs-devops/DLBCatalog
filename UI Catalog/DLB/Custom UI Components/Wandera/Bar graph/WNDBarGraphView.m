@@ -201,6 +201,15 @@
 
 #pragma mark - Graph
 
+- (CGFloat)barWidth
+{
+    if(_barWidth <= .0f)
+    {
+        return 5.0f;
+    }
+    return _barWidth;
+}
+
 - (CGRect)graphFrame
 {
     return CGRectMake(.0f, .0f, self.frame.size.width, self.frame.size.height);
@@ -211,7 +220,7 @@
     if(_barGraph == nil)
     {
         _barGraph = [[DLBBarGraphView alloc] initWithFrame:[self graphFrame]];
-        _barGraph.barWidth = 5.0f;        
+        _barGraph.barWidth = self.barWidth;
         _barGraph.backgroundColor = [UIColor clearColor];
         [self addSubview:_barGraph];
         _barGraph.dataSource = self;

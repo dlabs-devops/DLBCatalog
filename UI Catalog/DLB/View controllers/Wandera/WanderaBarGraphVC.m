@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *dayButton;
 @property (weak, nonatomic) IBOutlet UIButton *monthButton;
 
+@property (nonatomic, strong) NSDate *selectedDate;
+@property (nonatomic) NSInteger periodeMode;
+
 @end
 
 @implementation WanderaBarGraphVC
@@ -23,7 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.selectedDate = [NSDate date];
+    self.periodeMode = 2;
+    
     self.graphView.dataSource = self;
+    self.graphView.barWidth = 5.0f/320.0f * self.view.frame.size.width;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,14 +46,17 @@
     if(sender == self.weekButton)
     {
         self.weekButton.backgroundColor = [UIColor colorWithWhite:.3f alpha:1.0f];
+        self.periodeMode = 1;
     }
     else if(sender == self.monthButton)
     {
         self.monthButton.backgroundColor = [UIColor colorWithWhite:.3f alpha:1.0f];
+        self.periodeMode = 2;
     }
     if(sender == self.dayButton)
     {
         self.dayButton.backgroundColor = [UIColor colorWithWhite:.3f alpha:1.0f];
+        self.periodeMode = 0;
     }
 }
 
@@ -67,22 +77,76 @@
 }
 - (NSDate *)WNDBarGraphViewDisplayStartDate:(WNDBarGraphView *)sender
 {
-    NSInteger rnd = ((NSInteger)(rand()%20)) - 3;
-    return [DLBDateTools date:[NSDate date] byAddingDays:-30+rnd];
+    return self.selectedDate;
 }
 - (NSDate *)WNDBarGraphViewDisplayEndDate:(WNDBarGraphView *)sender
 {
-    return [NSDate date];
+    NSDate *toReturn = self.selectedDate;
+    switch (self.periodeMode) {
+        case 0:
+            toReturn = [DLBDateTools date:toReturn byAddingDays:1];
+            break;
+        case 1:
+            toReturn = [DLBDateTools date:toReturn byAddingDays:7];
+            break;
+        case 2:
+            toReturn = [DLBDateTools date:toReturn byAddingMonths:1];
+            break;
+        default:
+            break;
+    }
+    return toReturn;
 }
 - (eBarGraphComponentPeriod)WNDBarGraphViewDisplayComponentPeriod:(WNDBarGraphView *)sender
 {
-    return barGraphComponentPeriodDay;
+    if(self.periodeMode == 0)
+    {
+        return barGraphComponentPeriodHour;
+    }
+    else
+    {
+        return barGraphComponentPeriodDay;
+    }
 }
 
-- (void)animate
-{
-    int step = rand()%4;
-    [self.graphView refreshWithStyle:step animated:YES];
+- (IBAction)refreshFromLeft:(id)sender {
+    switch (self.periodeMode) {
+        case 0:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingDays:-1];
+            break;
+        case 1:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingDays:-7];
+            break;
+        case 2:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingMonths:-1];
+            break;
+        default:
+            break;
+    }
+    [self.graphView refreshWithStyle:barGraphTransitionStyleFromLeft animated:YES];
+}
+- (IBAction)refreshStatic:(id)sender {
+    [self.graphView refreshWithStyle:barGraphTransitionStyleRefresh animated:YES];
+}
+- (IBAction)refreshInOut:(id)sender {
+    [self.graphView refreshWithStyle:barGraphTransitionStyleCloseAndOpen animated:YES];
+}
+- (IBAction)refreshFromRight:(id)sender {
+    switch (self.periodeMode) {
+        case 0:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingDays:1];
+            break;
+        case 1:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingDays:7];
+            break;
+        case 2:
+            self.selectedDate = [DLBDateTools date:self.selectedDate byAddingMonths:1];
+            break;
+        default:
+            break;
+    }
+    [self.graphView refreshWithStyle:barGraphTransitionStyleFromRight animated:YES];
+    
 }
 
 @end

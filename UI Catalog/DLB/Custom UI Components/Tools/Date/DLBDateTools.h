@@ -10,6 +10,7 @@
 
 @interface DLBDateTools : NSObject
 
++ (NSDate *)date:(NSDate *)date byAddingMonths:(NSInteger)months;
 + (NSDate *)date:(NSDate *)date byAddingDays:(NSInteger)days;
 + (NSDate *)date:(NSDate *)date byAddingHours:(NSInteger)hours;
 
