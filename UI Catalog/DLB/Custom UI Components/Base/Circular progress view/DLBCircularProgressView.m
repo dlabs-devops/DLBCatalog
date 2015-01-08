@@ -95,7 +95,6 @@
 {
     if(animated)
     {
-        // TODO:
         self.animatableScale = [[DLBAnimatableFloat alloc] initWithStartValue:self.value];
         self.animatableScale.animationStyle = DLBAnimationStyleEaseInOut;
         [self.animatableScale animateTo:value withDuration:.5 onFrameBlock:^(BOOL willEnd) {

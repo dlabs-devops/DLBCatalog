@@ -9,9 +9,14 @@
 #import "WanderaBarGraphVC.h"
 #import "WNDBarGraphView.h"
 #import "DLBDateTools.h"
+#import "WNDGraphGrid.h"
+
+#import "WNDBarGraphDataObject.h"
 
 @interface WanderaBarGraphVC ()<WNDBarGraphViewDataSource>
 @property (weak, nonatomic) IBOutlet WNDBarGraphView *graphView;
+@property (weak, nonatomic) IBOutlet WNDGraphGrid *graphGrid;
+
 @property (weak, nonatomic) IBOutlet UIButton *weekButton;
 @property (weak, nonatomic) IBOutlet UIButton *dayButton;
 @property (weak, nonatomic) IBOutlet UIButton *monthButton;
@@ -31,11 +36,6 @@
     
     self.graphView.dataSource = self;
     self.graphView.barWidth = 5.0f/320.0f * self.view.frame.size.width;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)periodSelected:(UIButton *)sender {
@@ -124,12 +124,15 @@
             break;
     }
     [self.graphView refreshWithStyle:barGraphTransitionStyleFromLeft animated:YES];
+    [self.graphGrid setParameters:[self generateGridParameters] animated:YES];
 }
 - (IBAction)refreshStatic:(id)sender {
     [self.graphView refreshWithStyle:barGraphTransitionStyleRefresh animated:YES];
+    [self.graphGrid setParameters:[self generateGridParameters] animated:YES];
 }
 - (IBAction)refreshInOut:(id)sender {
     [self.graphView refreshWithStyle:barGraphTransitionStyleCloseAndOpen animated:YES];
+    [self.graphGrid setParameters:[self generateGridParameters] animated:YES];
 }
 - (IBAction)refreshFromRight:(id)sender {
     switch (self.periodeMode) {
@@ -146,7 +149,18 @@
             break;
     }
     [self.graphView refreshWithStyle:barGraphTransitionStyleFromRight animated:YES];
+    [self.graphGrid setParameters:[self generateGridParameters] animated:YES];
+}
+
+- (WNDGraphGridParameters *)generateGridParameters
+{
+    WNDGraphGridParameters *toReturn = [[WNDGraphGridParameters alloc] init];
     
+    toReturn.lineSegmentSize = CGSizeMake(self.graphView.frame.size.width/(self.graphView.currentDataObject.componentCount),
+                                          self.graphView.frame.size.height/5.0f);
+    toReturn.subgridVerticalPixelSkipCount = 2;
+    
+    return toReturn;
 }
 
 @end

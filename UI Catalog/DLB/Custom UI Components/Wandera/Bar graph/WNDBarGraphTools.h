@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Matic Oblak. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 //
 // Transition style enumeration
