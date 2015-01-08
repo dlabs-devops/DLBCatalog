@@ -41,11 +41,11 @@
         return NO;
     }
     
-    self.previousDataObject = self.currentDataObject;
-    self.currentDataObject = [self generateNewDataObject];
-    
     if(animated == NO)
     {
+        self.previousDataObject = self.currentDataObject;
+        self.currentDataObject = [self generateNewDataObject];
+        
         self.currentTransitionStyle = barGraphTransitionStyleRefresh;
         self.barGraph.graphScale = self.currentDataObject.scale;
         [self.barGraph reloadGraphAnimated:NO];
@@ -55,12 +55,16 @@
         self.currentTransitionStyle = style;
         switch (style) {
             case barGraphTransitionStyleRefresh:
+                self.previousDataObject = self.currentDataObject;
+                self.currentDataObject = [self generateNewDataObject];
                 self.barGraph.graphScale = self.currentDataObject.scale;
                 [self.barGraph reloadGraphAnimated:YES];
                 break;
             case barGraphTransitionStyleFromLeft:
             {
                 // create another graph view and animate the current one
+                self.previousDataObject = self.currentDataObject;
+                self.currentDataObject = [self generateNewDataObject];
                 DLBBarGraphView *previousGraph = self.barGraph;
                 
                 previousGraph.dataSource = nil;
@@ -92,6 +96,8 @@
             case barGraphTransitionStyleFromRight:
             {
                 // create another graph view and animate the current one
+                self.previousDataObject = self.currentDataObject;
+                self.currentDataObject = [self generateNewDataObject];
                 DLBBarGraphView *previousGraph = self.barGraph;
                 
                 previousGraph.dataSource = nil;
@@ -142,8 +148,8 @@
     if(self.currentTransitionStyle == barGraphTransitionStyleCloseAndOpen)
     {
         self.blockRefresh = NO;
-        self.currentDataObject = self.previousDataObject;
-        self.previousDataObject = nil;
+        self.previousDataObject = self.currentDataObject;
+        self.currentDataObject = [self generateNewDataObject];
         [self refreshWithStyle:barGraphTransitionStyleRefresh animated:YES];
     }
 }
@@ -176,7 +182,7 @@
                 amount = @(.0f);
             }
             [values addObject:amount];
-            NSNumber *secondaryAmount = [self.dataSource WNDBarGraphView:self valueFrom:lastDate to:date];
+            NSNumber *secondaryAmount = [self.dataSource WNDBarGraphView:self secondaryValueFrom:lastDate to:date];
             if(secondaryAmount == nil)
             {
                 secondaryAmount = @(.0f);
@@ -261,9 +267,13 @@
     CGContextSetFillColorWithColor(context, node.backgroundColor.CGColor);
     CGContextFillRect(context, rect);
     
-    
-    CGFloat minScale = [self.currentDataObject secondaryValueAtIndex:node.index].floatValue;
-    CGFloat maxScale = [self.currentDataObject overallValueAtIndex:node.index].floatValue;
+    WNDBarGraphDataObject *targetObject = self.currentDataObject;
+    if(node.scale > .0f && targetObject == nil)
+    {
+        targetObject = self.previousDataObject;
+    }
+    CGFloat minScale = [targetObject secondaryValueAtIndex:node.index].floatValue;
+    CGFloat maxScale = [targetObject overallValueAtIndex:node.index].floatValue;
     CGFloat secondaryScale = .0f;
     if(maxScale >= .0f)
     {

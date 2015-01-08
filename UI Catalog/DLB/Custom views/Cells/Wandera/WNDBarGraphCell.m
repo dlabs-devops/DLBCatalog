@@ -65,7 +65,7 @@
 {
     int step = rand()%4;
     [self.barGraph refreshWithStyle:step animated:YES];
-    [self performSelector:@selector(animate) withObject:nil afterDelay:6.0];
+    [self performSelector:@selector(animate) withObject:nil afterDelay:3.0];
 }
 
 
