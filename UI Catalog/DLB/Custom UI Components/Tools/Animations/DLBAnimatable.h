@@ -15,7 +15,8 @@ typedef enum : NSUInteger {
     DLBAnimationStyleLinear,
     DLBAnimationStyleEaseIn,
     DLBAnimationStyleEaseOut,
-    DLBAnimationStyleEaseInOut
+    DLBAnimationStyleEaseInOut,
+    DLBAnimationStyleBreakThrough,
 } DLBAnimationStyle;
 
 @interface DLBAnimatable : NSObject

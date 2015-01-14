@@ -30,6 +30,7 @@
 		2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */; };
 		2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */; };
 		2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */; };
+		21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */; };
 		21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */; };
 		21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */; };
 		21CA3F751A5E9F3B00D27F5E /* WNDGraphGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA3F741A5E9F3B00D27F5E /* WNDGraphGrid.m */; };
@@ -113,6 +114,8 @@
 		2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphNode.m; sourceTree = "<group>"; };
 		2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphCell.h; sourceTree = "<group>"; };
 		2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphCell.m; sourceTree = "<group>"; };
+		21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimationsCell.h; sourceTree = "<group>"; };
+		21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimationsCell.m; sourceTree = "<group>"; };
 		21CA3F6D1A5E7FE800D27F5E /* WanderaBarGraphVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaBarGraphVC.h; sourceTree = "<group>"; };
 		21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaBarGraphVC.m; sourceTree = "<group>"; };
 		21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaBarGraph.storyboard; sourceTree = "<group>"; };
@@ -529,6 +532,8 @@
 				2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */,
 				215C9FB21A5A80AF00D2B823 /* DLBNumericCounterCell.h */,
 				215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */,
+				21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */,
+				21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
 				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
+				21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */,
 				2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */,
 				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
 				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,

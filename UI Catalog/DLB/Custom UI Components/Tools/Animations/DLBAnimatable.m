@@ -86,6 +86,9 @@
         case DLBAnimationStyleEaseInOut:
             toReturn = [self currentEaseInOutInterpolator];
             break;
+        case DLBAnimationStyleBreakThrough:
+            toReturn = [self currentBreakThroughInterpolator];
+            break;
     }
     return toReturn;
 }
@@ -132,5 +135,42 @@
     
     return (CGFloat)(x + (y-x)*ratio);
 }
+
+- (CGFloat)currentBreakThroughInterpolator
+{   double points[] = {
+        .0, // .0
+        .04, // .1
+        .1, // .2
+        .2, // .3
+        .35, // .4
+        .55, // .5
+        .8, // .6
+        1.0, // .7
+        1.4, // .8
+        1.15,// .9
+        1.0 // 1.0
+    };
+    
+    double x = (double)[self currentScale];
+    
+    NSInteger position = (NSInteger)(x*10.0f);
+    if(position >= 10)
+    {
+        position = 9;
+    }
+    else if(position < 0)
+    {
+        position = 0;
+    }
+    
+    double y1 = points[position];
+    double y2 = points[position+1];
+    double interpolator = (x*10.0)-((double)position);
+    
+    double y = y1 + (y2-y1)*interpolator;
+
+    return (CGFloat)y;
+}
+
 
 @end
