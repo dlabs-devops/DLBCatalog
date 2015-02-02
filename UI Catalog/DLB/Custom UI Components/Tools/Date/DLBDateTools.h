@@ -14,4 +14,17 @@
 + (NSDate *)date:(NSDate *)date byAddingDays:(NSInteger)days;
 + (NSDate *)date:(NSDate *)date byAddingHours:(NSInteger)hours;
 
+//
+// Returns the beginning of the given date according to local time zone
+//
++ (NSDate *)beginningOfTheDate:(NSDate *)date;
+//
+// Returns the beginning of the given week according to local time zone
+//
++ (NSDate *)beginningOfTheWeek:(NSDate *)date;
+//
+// Returns the beginning of the given month according to local time zone
+//
++ (NSDate *)beginningOfTheMonth:(NSDate *)date;
+
 @end
