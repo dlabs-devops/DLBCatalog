@@ -8,11 +8,15 @@
 
 #import "BaseMediarecorderViewController.h"
 #import "DLBMediaRecorder.h"
+@import MediaPlayer;
 
 @interface BaseMediarecorderViewController ()<DLBMediaRecorderDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *videoPannel;
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *frontBackButton;
+@property (weak, nonatomic) IBOutlet UIButton *torchOnButton;
 
 @property (nonatomic, strong) DLBMediaRecorder *recorder;
 
@@ -26,7 +30,26 @@
     [super viewDidAppear:animated];
     self.recorder = [[DLBMediaRecorder alloc] init];
     self.recorder.delegate = self;
+    [self.recorder preinitializeVideoInput];
     self.recorder.sessionAttachedView = self.videoPannel;
+    [self.recorder initializeRecorder];
+    [self refreshButtons];
+}
+
+- (void)refreshButtons
+{
+    NSFileManager *manager = [NSFileManager defaultManager];
+    self.playButton.hidden = [manager fileExistsAtPath:self.recorder.outputPath]==NO;
+    
+    self.frontBackButton.enabled = self.recorder.frontCameraAvailable;
+    [self.frontBackButton setTitle:self.recorder.frontCamera?@"Back camera":@"Front camera" forState:UIControlStateNormal];
+}
+
+- (IBAction)playVideoPressed:(id)sender
+{
+    MPMoviePlayerViewController *controller = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:self.recorder.outputPath]];
+    [self presentMoviePlayerViewControllerAnimated:controller];
+    [controller.moviePlayer play];
 }
 
 - (IBAction)startStopPressed:(id)sender
@@ -38,6 +61,7 @@
     }
     else
     {
+        self.recorder.outputVideoOrientation = [DLBMediaRecorder videoOrientationFromInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
         [self.recorder beginRecording];
         [self.startStopButton setTitle:@"Stop recording" forState:UIControlStateNormal];
     }
@@ -52,6 +76,37 @@
 - (void)DLBMediaRecorder:(DLBMediaRecorder *)sender finishedRecordingAt:(NSString *)path asSuccessful:(BOOL)didSucceed
 {
     NSLog(@"Finished recording %@", didSucceed?@"successfully":@"failed");
+    [self refreshButtons];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.recorder refreshPreviewLayer];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
+    {
+         self.recorder.previewVideoOrientation = [DLBMediaRecorder videoOrientationFromInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+         [self.recorder refreshPreviewLayer];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context)
+    {
+         
+    }];
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
+
+- (IBAction)torchPressed:(id)sender
+{
+    self.recorder.torchEnabled = !self.recorder.torchEnabled;
+}
+- (IBAction)frontBackPressed:(id)sender
+{
+    self.recorder.frontCamera = !self.recorder.frontCamera;
+    [self refreshButtons];
 }
 
 @end

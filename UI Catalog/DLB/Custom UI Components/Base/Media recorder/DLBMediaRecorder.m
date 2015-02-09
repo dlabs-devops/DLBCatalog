@@ -14,6 +14,8 @@
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureMovieFileOutput *movieFileOutput;
 @property (nonatomic, strong) AVCaptureDeviceInput *videoInputDevice;
+@property (nonatomic, strong) AVCaptureDeviceInput *frontVideoInputDevice; // cache
+@property (nonatomic, strong) AVCaptureDeviceInput *backVideoInputDevice; // cache
 @property (nonatomic, strong) AVCaptureDeviceInput *audioInputDevice;
 @property (nonatomic) BOOL recorderInitialized;
 @property (nonatomic) BOOL isRecording;
@@ -92,11 +94,61 @@
 
 #pragma mark - recorder setup
 
+- (void)preinitializeVideoInput
+{
+    NSError *error;
+    
+    self.backVideoInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] error:&error];
+    if(error)
+    {
+        [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsWarning:@"Unable to generate back video device" additionalInfo:error.localizedDescription]];
+        self.backVideoInputDevice = nil;
+    }
+    
+    error = nil;
+    AVCaptureDevice *frontDevice = [self frontCameraDevice];
+    if(frontDevice)
+    {
+        self.frontVideoInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:frontDevice error:&error];
+    }
+    if(error)
+    {
+        [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsWarning:@"Unable to generate front video device" additionalInfo:error.localizedDescription]];
+        self.frontVideoInputDevice = nil;
+    }
+}
+
+- (AVCaptureDeviceInput *)currentVideoInput
+{
+    if(self.frontCamera && self.frontVideoInputDevice)
+    {
+        return self.frontVideoInputDevice;
+    }
+    else
+    {
+        return self.backVideoInputDevice;
+    }
+}
+
 - (BOOL)attachVideoDevice
 {
-    AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    self.videoInputDevice = [self currentVideoInput];
+    
     NSError *videoError;
-    self.videoInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&videoError];
+    if(self.videoInputDevice == nil)
+    {
+        AVCaptureDevice *videoDevice = nil;
+        if(self.frontCamera && self.frontCameraAvailable)
+        {
+            videoDevice = [self frontCameraDevice];
+        }
+        else
+        {
+            videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        }
+        self.videoInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&videoError];
+    }
+    
     if([self.captureSession canAddInput:self.videoInputDevice])
     {
         [self.captureSession addInput:self.videoInputDevice];
@@ -115,7 +167,6 @@
     {
         return YES;
     }
-    
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
     NSError *audioError;
     self.audioInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&audioError];
@@ -159,6 +210,24 @@
     }
 }
 
+- (void)setOutputVideoOrientation:(AVCaptureVideoOrientation)outputVideoOrientation
+{
+    _outputVideoOrientation = outputVideoOrientation;
+    if(self.recorderInitialized)
+    {
+        for(AVCaptureConnection *connection in self.movieFileOutput.connections)
+        {
+            for(AVCaptureInputPort *port in [connection inputPorts])
+            {
+                if ([[port mediaType] isEqual:AVMediaTypeVideo] && [connection isVideoOrientationSupported])
+                {
+                    connection.videoOrientation = self.outputVideoOrientation;
+                }
+            }
+        }
+    }
+}
+
 - (void)tearDown
 {
     [self.movieFileOutput stopRecording];
@@ -167,6 +236,8 @@
     
     self.movieFileOutput = nil;
     
+    self.frontVideoInputDevice = nil;
+    self.backVideoInputDevice = nil;
     self.videoInputDevice = nil;
     self.audioInputDevice = nil;
     
@@ -214,13 +285,134 @@
         [self.captureSession startRunning];
     }
     
-    self.recorderInitialized = toReturn;    
+    self.recorderInitialized = toReturn;
     if(self.sessionAttachedView)
     {
         // This will reinitialize the preview layer
         self.sessionAttachedView = self.sessionAttachedView;
     }
+    [self refreshTorchState];
     return toReturn;
+}
+
+#pragma mark front camera
+
+- (AVCaptureDevice *)frontCameraDevice {
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices) {
+        if ([device position] == AVCaptureDevicePositionFront) {
+            return device;
+        }
+    }
+    return nil;
+}
+
+- (BOOL)frontCameraAvailable
+{
+    return [self frontCameraDevice] != nil;
+}
+
+- (void)setFrontCamera:(BOOL)frontCamera
+{
+    if(frontCamera != _frontCamera)
+    {
+        if(frontCamera)
+        {
+            if([self frontCameraAvailable])
+            {
+                if(self.recorderInitialized)
+                {
+                    [self.captureSession beginConfiguration];
+                    [self.captureSession removeInput:self.videoInputDevice];
+                    [self setTorchEnabled:NO onDevice:self.videoInputDevice.device];
+                    _frontCamera = YES;
+                    [self attachVideoDevice];
+                    [self.captureSession commitConfiguration];
+                    [self refreshTorchState];
+                }
+                else
+                {
+                    _frontCamera = YES;
+                }
+            }
+            else
+            {
+                [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsWarning:@"Front camera is not available"]];
+                _frontCamera = NO;
+            }
+        }
+        else
+        {
+            if(self.recorderInitialized)
+            {
+                [self.captureSession beginConfiguration];
+                [self.captureSession removeInput:self.videoInputDevice];
+                [self setTorchEnabled:NO onDevice:self.videoInputDevice.device];
+                _frontCamera = NO;
+                [self attachVideoDevice];
+                [self.captureSession commitConfiguration];
+                [self refreshTorchState];
+            }
+            else
+            {
+                _frontCamera = NO;
+            }
+        }
+    }
+}
+
+#pragma mark torch
+
+- (BOOL)isTorchAvailabel
+{
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    NSMutableArray *torchDevices = [[NSMutableArray alloc] init];
+    
+    for (AVCaptureDevice *device in devices) {
+        if ([device hasTorch]) {
+            [torchDevices addObject:device];
+        }
+    }
+    
+    return ([torchDevices count] > 0);
+}
+
+- (void)setTorchEnabled:(BOOL)torchEnabled
+{
+    _torchEnabled = torchEnabled;
+    [self setTorchEnabled:torchEnabled onDevice:self.videoInputDevice.device];
+}
+
+- (void)refreshTorchState
+{
+    [self setTorchEnabled:self.torchEnabled onDevice:self.videoInputDevice.device];
+    if(self.frontVideoInputDevice != self.videoInputDevice)
+    {
+        [self setTorchEnabled:NO onDevice:self.frontVideoInputDevice.device];
+    }
+    if(self.backVideoInputDevice != self.videoInputDevice)
+    {
+        [self setTorchEnabled:NO onDevice:self.backVideoInputDevice.device];
+    }
+    
+}
+
+- (void)setTorchEnabled:(BOOL)torchEnabled onDevice:(AVCaptureDevice *)device
+{
+    if([device hasTorch])
+    {
+        NSError *configError;
+        BOOL didLock = [device lockForConfiguration:&configError];
+        if(didLock)
+        {
+            [device setTorchMode:torchEnabled?AVCaptureTorchModeOn:AVCaptureTorchModeOff];
+            [device unlockForConfiguration];
+        }
+        else
+        {
+            [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsError:@"Failed to lock video device to enable torch" additionalInfo:configError.localizedDescription]];
+        }
+    }
 }
 
 #pragma mark - capture delegate
@@ -240,7 +432,6 @@
     if(error)
     {
         [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsError:@"Error finalizing the video" additionalInfo:error.localizedDescription]];
-        recordedSuccessfully = NO;
     }
     else if(recordedSuccessfully == NO)
     {
@@ -289,6 +480,13 @@
     self.isRecording = NO;
 }
 
+- (void)stopSession
+{
+    [self tearDown];
+}
+
+#pragma mark preview
+
 - (void)setSessionAttachedView:(UIView *)sessionAttachedView
 {
     [self.previewLayer removeFromSuperlayer];
@@ -307,10 +505,35 @@
     }
 }
 
-- (void)stopSession
+- (void)refreshPreviewLayer
 {
-    [self tearDown];
+    self.previewLayer.connection.videoOrientation = self.previewVideoOrientation;
+    self.previewLayer.bounds = CGRectMake(.0f, .0f, self.sessionAttachedView.frame.size.width, self.sessionAttachedView.frame.size.height);
+    self.previewLayer.position = CGPointMake(self.sessionAttachedView.frame.size.width*.5f, self.sessionAttachedView.frame.size.height*.5f);
 }
 
+
+#pragma mark - convenience
+
++ (AVCaptureVideoOrientation)videoOrientationFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationPortrait:
+            return AVCaptureVideoOrientationPortrait;
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            return AVCaptureVideoOrientationLandscapeLeft;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            return AVCaptureVideoOrientationLandscapeRight;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return AVCaptureVideoOrientationPortraitUpsideDown;
+            break;
+        case UIInterfaceOrientationUnknown:
+            return AVCaptureVideoOrientationPortrait;
+            break;
+    }
+}
 
 @end

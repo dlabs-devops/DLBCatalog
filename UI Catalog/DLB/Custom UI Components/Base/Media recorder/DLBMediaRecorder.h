@@ -30,26 +30,31 @@
 // Note the output file will always be of type of .mov
 //
 @property (nonatomic, strong) NSString *outputPath;
+
 //
 // maximum video duration
 // use .0 for unlimited
 //
 @property (nonatomic) NSTimeInterval maximumDuration;
+
 //
 // video quality
 // defaults to AVCaptureSessionPresetMedium
 //
 @property (nonatomic, strong) NSString *videoCaptureQualityPreset;
+
 //
 // includes sound recording
 // defaults to YES
 //
 @property (nonatomic) BOOL allowSoundRecording;
+
 //
 // output orientation
 // defaults to AVCaptureVideoOrientationLandscapeRight
 //
 @property (nonatomic) AVCaptureVideoOrientation outputVideoOrientation;
+
 //
 // A view that is attached to the session to see the preview
 //
@@ -59,6 +64,23 @@
 // defaults to AVCaptureVideoOrientationPortrait
 //
 @property (nonatomic) AVCaptureVideoOrientation previewVideoOrientation;
+
+//
+// Swaps to either front or back camera
+// Defaults to back camera (NO)
+//
+@property (nonatomic) BOOL frontCamera;
+@property (nonatomic, readonly) BOOL frontCameraAvailable;
+@property (nonatomic, readonly) BOOL backCameraAvailable;
+
+//
+// Enable torch
+// Defaults to NO
+//
+@property (nonatomic) BOOL torchEnabled;
+@property (nonatomic, readonly) BOOL torchAvailabel;
+
+#pragma mark recording controlls
 //
 // Initializes the recorder
 // beginRecording will call this method if not previously called
@@ -76,5 +98,20 @@
 // Stops session
 //
 - (void)stopSession;
+
+#pragma mark extra
+//
+// Use this method to refresh the preview layer size
+// For instance when the views are layout
+//
+- (void)refreshPreviewLayer;
+//
+// Will preinitialize the camera input for faster swapping from front to back
+//
+- (void)preinitializeVideoInput;
+
+#pragma mark convenience
+
++ (AVCaptureVideoOrientation)videoOrientationFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
 @end
