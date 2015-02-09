@@ -15,6 +15,7 @@ typedef enum : NSUInteger {
     baseComponentBarGraph,
     baseComponentNumericCounter,
     baseComponentAnimations,
+    baseComponentRecording,
     baseComponentCount
 } eBaseComponent;
 
@@ -66,6 +67,10 @@ typedef enum : NSUInteger {
     {
         [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseCounter" bundle:nil].instantiateInitialViewController animated:YES];
     }
+    if(indexPath.row == baseComponentRecording)
+    {
+        [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseMediaRecorder" bundle:nil].instantiateInitialViewController animated:YES];
+    }
 }
 
 
@@ -108,6 +113,12 @@ typedef enum : NSUInteger {
         case baseComponentAnimations:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"animationsCell"];
+            toReturn = cell;
+            break;
+        }
+        case baseComponentRecording:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"recordingCell"];
             toReturn = cell;
             break;
         }
