@@ -18,7 +18,7 @@ typedef enum : NSUInteger {
 @property (nonatomic) DLBInternalErrorType errorType;
 @property (nonatomic, readonly) NSString *internalMessage;
 @property (nonatomic, readonly) NSString *developerComment;
-@property (nonatomic, strong) NSString *internalDescription;
+@property (nonatomic, readonly) NSString *internalDescription;
 
 - (instancetype)initAsWarning:(NSString *)message;
 - (instancetype)initAsError:(NSString *)message;
