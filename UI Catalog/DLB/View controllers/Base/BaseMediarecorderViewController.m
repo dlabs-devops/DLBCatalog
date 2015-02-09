@@ -42,7 +42,9 @@
     self.playButton.hidden = [manager fileExistsAtPath:self.recorder.outputPath]==NO;
     
     self.frontBackButton.enabled = self.recorder.frontCameraAvailable;
-    [self.frontBackButton setTitle:self.recorder.frontCamera?@"Back camera":@"Front camera" forState:UIControlStateNormal];
+    [self.frontBackButton setTitle:self.recorder.frontCamera?@"Front camera":@"Back camera" forState:UIControlStateNormal];
+    
+    [self.torchOnButton setTitle:self.recorder.torchEnabled?@"Torch on":@"Torch off" forState:UIControlStateNormal];
 }
 
 - (IBAction)playVideoPressed:(id)sender
@@ -102,6 +104,7 @@
 - (IBAction)torchPressed:(id)sender
 {
     self.recorder.torchEnabled = !self.recorder.torchEnabled;
+    [self refreshButtons];
 }
 - (IBAction)frontBackPressed:(id)sender
 {
