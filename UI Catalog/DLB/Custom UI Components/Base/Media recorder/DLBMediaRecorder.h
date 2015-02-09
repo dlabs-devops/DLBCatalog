@@ -114,4 +114,7 @@
 
 + (AVCaptureVideoOrientation)videoOrientationFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
++ (BOOL)userAllowsVideoRecording;
++ (BOOL)userAllowsAudioRecording;
+
 @end

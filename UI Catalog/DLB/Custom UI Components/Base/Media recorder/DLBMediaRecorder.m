@@ -444,6 +444,11 @@
 
 - (void)beginRecording
 {
+    if([DLBMediaRecorder userAllowsVideoRecording] == NO)
+    {
+        [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsError:@"User has not authorized the camera access"]];
+        return;
+    }
     if(self.isRecording)
     {
         [self.delegate DLBMediaRecorder:self encounteredIssue:[[DLBInternalError alloc] initAsWarning:@"Recording already in progress" additionalInfo:@"The recording has been called before the previous recording has finished"]];
@@ -535,5 +540,18 @@
             break;
     }
 }
+
++ (BOOL)userAllowsVideoRecording
+{
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    return status == AVAuthorizationStatusAuthorized;
+}
+
++ (BOOL)userAllowsAudioRecording
+{
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    return status == AVAuthorizationStatusAuthorized;
+}
+
 
 @end
