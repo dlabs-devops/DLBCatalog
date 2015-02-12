@@ -37,7 +37,9 @@ DLBCatalog is an internal repository of common UI components from multiple proje
   
   *Some description.*
   
+# Contributing
 
+To contribute a component into the catalog, just create a new branch (or fork the repository) and push all changes to the branch. Then create a pull request and ask us to review it, because we must update Podspec to support CocoaPods integration.
 
 License
 ========
