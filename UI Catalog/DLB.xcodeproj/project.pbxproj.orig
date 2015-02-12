@@ -58,10 +58,17 @@
 		21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE94A1A41B1C0000600FD /* WanderaViewController.m */; };
 		21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */; };
 		21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */; };
+<<<<<<< HEAD
+		21FFECF81A88B47F0017B2A9 /* DLBMediaRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */; };
+		21FFECFC1A88B70F0017B2A9 /* DLBInternalError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */; };
+		21FFECFF1A88C43A0017B2A9 /* BaseMediarecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */; };
+		21FFED011A88C44F0017B2A9 /* BaseMediaRecorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */; };
+=======
 		6A60C3B30EC969F417489275 /* DLBProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */; };
 		6A60C72D427F190D7C8E1B38 /* WNDUsageDataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */; };
 		6A60C93A18D4569E9F5D550D /* WNDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */; };
 		6A60CC36ABB292AA2B8AA431 /* DLBProgressBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */; };
+>>>>>>> catalog/progressBar
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +176,7 @@
 		21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaPieChart.storyboard; sourceTree = "<group>"; };
 		21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaPieChartVC.h; sourceTree = "<group>"; };
 		21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaPieChartVC.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBMediaRecorder.h; sourceTree = "<group>"; };
 		21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBMediaRecorder.m; sourceTree = "<group>"; };
 		21FFECFA1A88B70F0017B2A9 /* DLBInternalError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInternalError.h; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 		21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediarecorderViewController.h; sourceTree = "<group>"; };
 		21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMediarecorderViewController.m; sourceTree = "<group>"; };
 		21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseMediaRecorder.storyboard; sourceTree = "<group>"; };
+=======
 		6A60C38C43153D30569746BC /* DLBProgressBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarCell.h; sourceTree = "<group>"; };
 		6A60C4CC2953CFFDBFD27E48 /* DLBProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarView.h; sourceTree = "<group>"; };
 		6A60C573C5833BE547A2822C /* WNDProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressBar.h; sourceTree = "<group>"; };
@@ -184,6 +193,7 @@
 		6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDUsageDataFormatter.m; sourceTree = "<group>"; };
 		6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBProgressBarCell.m; sourceTree = "<group>"; };
 		6A60CFE35592E6E56B05DB91 /* WNDUsageDataFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDUsageDataFormatter.h; sourceTree = "<group>"; };
+>>>>>>> catalog/progressBar
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -602,6 +612,7 @@
 			path = Wandera;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		21FFECF51A88B4730017B2A9 /* Media recorder */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,8 +629,7 @@
 				21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */,
 			);
 			path = "Internal alerting";
-			sourceTree = "<group>";
-		};
+=======
 		6A60C20689F265BC274E427B /* ProgressBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +663,7 @@
 				6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */,
 			);
 			path = StringHandling;
+>>>>>>> catalog/progressBar
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

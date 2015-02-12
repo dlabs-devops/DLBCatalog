@@ -524,6 +524,7 @@
                                             <outlet property="previewView" destination="7fL-yC-JnL" id="Hhz-is-vAK"/>
                                         </connections>
                                     </tableViewCell>
+<<<<<<< HEAD
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recordingCell" rowHeight="100" id="7rw-C4-sSY" userLabel="Recording cell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -535,27 +536,52 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-HE-VXM">
                                                             <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+=======
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="progressBarCell" rowHeight="100" id="hcJ-SM-8wN" customClass="DLBProgressBarCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hcJ-SM-8wN" id="ROA-fj-H6v">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3J-tV-klc" userLabel="Labels pannel">
+                                                    <rect key="frame" x="10" y="31" width="248" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-mo-alS">
+                                                            <rect key="frame" x="0.0" y="21" width="248" height="14"/>
+>>>>>>> catalog/progressBar
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+<<<<<<< HEAD
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="IwK-oo-9EK"/>
+=======
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A5q-b0-ewC" userLabel="Animation transitions">
+                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="6Re-nw-6ue"/>
+>>>>>>> catalog/progressBar
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="default">
                                                                 <mask key="constraints">
+<<<<<<< HEAD
                                                                     <exclude reference="IwK-oo-9EK"/>
+=======
+                                                                    <exclude reference="6Re-nw-6ue"/>
+>>>>>>> catalog/progressBar
                                                                 </mask>
                                                             </variation>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+<<<<<<< HEAD
                                                         <constraint firstItem="8Ui-IC-Vdk" firstAttribute="leading" secondItem="zQR-RZ-iOE" secondAttribute="leading" id="8j9-Cu-0Pg"/>
                                                         <constraint firstAttribute="bottom" secondItem="F0N-HE-VXM" secondAttribute="bottom" constant="2" id="92v-yP-oYx"/>
                                                         <constraint firstAttribute="top" secondItem="8Ui-IC-Vdk" secondAttribute="top" id="DQe-E2-Bf8"/>
@@ -584,53 +610,7 @@
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="xfh-ww-xIS"/>
-                                                        </mask>
-                                                    </variation>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="zQR-RZ-iOE" secondAttribute="centerY" id="D0D-Ka-ktF"/>
-                                                <constraint firstItem="lxT-ui-mvn" firstAttribute="leading" secondItem="zQR-RZ-iOE" secondAttribute="trailing" constant="22" id="LFQ-0W-rg6"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lxT-ui-mvn" secondAttribute="bottom" id="MZb-IE-EGL"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lxT-ui-mvn" secondAttribute="trailing" id="SNk-8s-TFY"/>
-                                                <constraint firstItem="zQR-RZ-iOE" firstAttribute="width" secondItem="lxT-ui-mvn" secondAttribute="width" multiplier="2:1" id="dXw-EJ-Kbw"/>
-                                                <constraint firstItem="lxT-ui-mvn" firstAttribute="top" secondItem="dai-zz-Ko3" secondAttribute="topMargin" id="fD3-Pe-g5r"/>
-                                                <constraint firstItem="zQR-RZ-iOE" firstAttribute="leading" secondItem="dai-zz-Ko3" secondAttribute="leadingMargin" id="rgs-Kd-P97"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="progressBarCell" rowHeight="100" id="hcJ-SM-8wN" customClass="DLBProgressBarCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hcJ-SM-8wN" id="ROA-fj-H6v">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3J-tV-klc" userLabel="Labels pannel">
-                                                    <rect key="frame" x="10" y="31" width="248" height="37"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-mo-alS">
-                                                            <rect key="frame" x="0.0" y="21" width="248" height="14"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A5q-b0-ewC" userLabel="Animation transitions">
-                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="6Re-nw-6ue"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="6Re-nw-6ue"/>
-                                                                </mask>
-                                                            </variation>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
+=======
                                                         <constraint firstItem="A5q-b0-ewC" firstAttribute="top" secondItem="q3J-tV-klc" secondAttribute="top" constant="2" id="8xq-NM-bAA"/>
                                                         <constraint firstAttribute="height" constant="50" id="K79-s5-pWZ"/>
                                                         <constraint firstAttribute="bottom" secondItem="Y7c-mo-alS" secondAttribute="bottom" constant="2" id="QDN-OT-zTM"/>
@@ -659,11 +639,23 @@
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="FZF-b3-NDG"/>
+>>>>>>> catalog/progressBar
                                                         </mask>
                                                     </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
+<<<<<<< HEAD
+                                                <constraint firstAttribute="centerY" secondItem="zQR-RZ-iOE" secondAttribute="centerY" id="D0D-Ka-ktF"/>
+                                                <constraint firstItem="lxT-ui-mvn" firstAttribute="leading" secondItem="zQR-RZ-iOE" secondAttribute="trailing" constant="22" id="LFQ-0W-rg6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lxT-ui-mvn" secondAttribute="bottom" id="MZb-IE-EGL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lxT-ui-mvn" secondAttribute="trailing" id="SNk-8s-TFY"/>
+                                                <constraint firstItem="zQR-RZ-iOE" firstAttribute="width" secondItem="lxT-ui-mvn" secondAttribute="width" multiplier="2:1" id="dXw-EJ-Kbw"/>
+                                                <constraint firstItem="lxT-ui-mvn" firstAttribute="top" secondItem="dai-zz-Ko3" secondAttribute="topMargin" id="fD3-Pe-g5r"/>
+                                                <constraint firstItem="zQR-RZ-iOE" firstAttribute="leading" secondItem="dai-zz-Ko3" secondAttribute="leadingMargin" id="rgs-Kd-P97"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+=======
                                                 <constraint firstItem="q3J-tV-klc" firstAttribute="leading" secondItem="ROA-fj-H6v" secondAttribute="leading" constant="10" id="2N5-xm-jxQ"/>
                                                 <constraint firstAttribute="centerY" secondItem="q3J-tV-klc" secondAttribute="centerY" id="2wf-oR-MGk"/>
                                                 <constraint firstItem="wAU-rR-JxF" firstAttribute="leading" secondItem="ROA-fj-H6v" secondAttribute="leading" id="K4Y-aV-47Y"/>
@@ -684,6 +676,7 @@
                                         <connections>
                                             <outlet property="progressBarView" destination="wAU-rR-JxF" id="JlG-Iv-QqT"/>
                                         </connections>
+>>>>>>> catalog/progressBar
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
