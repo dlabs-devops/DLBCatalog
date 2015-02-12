@@ -12,36 +12,41 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Tools/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Tools/**/*.{h,m}'
   end
 
   s.subspec 'BarGraph' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Bar graph/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/BarGraph/**/*.{h,m}'
   end
 
   s.subspec 'CircularProgress' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Circular progress view/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/CircularProgress/**/*.{h,m}'
+  end
+
+  s.subspec 'LineGraph' do |ss|
+    ss.dependency 'DLBCatalog/Core'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/LineGraph/**/*.{h,m}'
   end
 
   s.subspec 'MediaRecorder' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Media recorder/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/MediaRecorder/**/*.{h,m}'
   end
 
   s.subspec 'NumericCounter' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Numeric counter/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/NumericCounter/**/*.{h,m}'
   end
 
   s.subspec 'PieChart' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Pie chart view/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/PieChart/**/*.{h,m}'
   end
 
   s.subspec 'PulseGraph' do |ss|
     ss.dependency 'DLBCatalog/Core'
-    ss.source_files = 'UI Catalog/DLB/Custom UI Components/Base/Pulse graph view/**/*.{h,m}'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/PulseGraph/**/*.{h,m}'
   end
 end

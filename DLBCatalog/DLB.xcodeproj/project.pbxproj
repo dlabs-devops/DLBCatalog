@@ -233,29 +233,29 @@
 		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				21FFECF51A88B4730017B2A9 /* Media recorder */,
-				2187BF691A43029400E3FD37 /* Bar graph */,
-				21326E681A419233000ADCA2 /* Circular progress view */,
-				21326E6C1A419233000ADCA2 /* Pie chart view */,
-				21326E751A419233000ADCA2 /* Pulse graph view */,
-				215C9FB51A5A818A00D2B823 /* Numeric counter */,
+				21FFECF51A88B4730017B2A9 /* MediaRecorder */,
+				2187BF691A43029400E3FD37 /* BarGraph */,
+				21326E681A419233000ADCA2 /* CircularProgress */,
+				21326E6C1A419233000ADCA2 /* PieChart */,
+				21326E751A419233000ADCA2 /* PulseGraph */,
+				215C9FB51A5A818A00D2B823 /* NumericCounter */,
 				6A60C20689F265BC274E427B /* ProgressBar */,
 				6A60CC11BBD1FC252BE7BAC0 /* LineGraph */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		21326E681A419233000ADCA2 /* Circular progress view */ = {
+		21326E681A419233000ADCA2 /* CircularProgress */ = {
 			isa = PBXGroup;
 			children = (
 				21326E691A419233000ADCA2 /* DLBCircularProgressView.h */,
 				21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */,
 				21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */,
 			);
-			path = "Circular progress view";
+			path = CircularProgress;
 			sourceTree = "<group>";
 		};
-		21326E6C1A419233000ADCA2 /* Pie chart view */ = {
+		21326E6C1A419233000ADCA2 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
 				21326E6D1A419233000ADCA2 /* DLBPieChartSector.h */,
@@ -265,7 +265,7 @@
 				21326E711A419233000ADCA2 /* DLBPieChartView.xib */,
 				21326E721A419233000ADCA2 /* Draw */,
 			);
-			path = "Pie chart view";
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 		21326E721A419233000ADCA2 /* Draw */ = {
@@ -277,14 +277,14 @@
 			path = Draw;
 			sourceTree = "<group>";
 		};
-		21326E751A419233000ADCA2 /* Pulse graph view */ = {
+		21326E751A419233000ADCA2 /* PulseGraph */ = {
 			isa = PBXGroup;
 			children = (
 				21326E761A419233000ADCA2 /* DLBPulseGraphView.h */,
 				21326E771A419233000ADCA2 /* DLBPulseGraphView.m */,
 				21326E781A419233000ADCA2 /* untitled folder */,
 			);
-			path = "Pulse graph view";
+			path = PulseGraph;
 			sourceTree = "<group>";
 		};
 		21326E781A419233000ADCA2 /* untitled folder */ = {
@@ -370,7 +370,7 @@
 			path = "Pulse graph view";
 			sourceTree = "<group>";
 		};
-		215C9FB51A5A818A00D2B823 /* Numeric counter */ = {
+		215C9FB51A5A818A00D2B823 /* NumericCounter */ = {
 			isa = PBXGroup;
 			children = (
 				215C9FB61A5A81D100D2B823 /* DLBNumericCounterView.h */,
@@ -378,17 +378,17 @@
 				215C9FB91A5AAAC500D2B823 /* DLBNumericCounterComponent.h */,
 				215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */,
 			);
-			path = "Numeric counter";
+			path = NumericCounter;
 			sourceTree = "<group>";
 		};
-		2187BF691A43029400E3FD37 /* Bar graph */ = {
+		2187BF691A43029400E3FD37 /* BarGraph */ = {
 			isa = PBXGroup;
 			children = (
 				2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */,
 				2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */,
 				2187BF6D1A43032600E3FD37 /* Graph components */,
 			);
-			path = "Bar graph";
+			path = BarGraph;
 			sourceTree = "<group>";
 		};
 		2187BF6D1A43032600E3FD37 /* Graph components */ = {
@@ -452,11 +452,11 @@
 		21D095C91A30699F00BC8F73 /* DLB */ = {
 			isa = PBXGroup;
 			children = (
-				21D095F01A3069C100BC8F73 /* Custom UI Components */,
-				21EEE90E1A419E7F000600FD /* Application delegate */,
+				21D095F01A3069C100BC8F73 /* Components */,
+				21EEE90E1A419E7F000600FD /* Delegate */,
 				21EEE9111A419E7F000600FD /* Resources */,
 				21EEE9131A419E7F000600FD /* View controllers */,
-				21EEE92A1A41A3EB000600FD /* Custom views */,
+				21EEE92A1A41A3EB000600FD /* Views */,
 				21D095CA1A30699F00BC8F73 /* Supporting Files */,
 				6A60C99DC7B896882E5C2ACF /* Tools */,
 			);
@@ -489,23 +489,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		21D095F01A3069C100BC8F73 /* Custom UI Components */ = {
+		21D095F01A3069C100BC8F73 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				21326E791A419233000ADCA2 /* Tools */,
 				21326E671A419233000ADCA2 /* Base */,
 				21326E841A419233000ADCA2 /* Wandera */,
 			);
-			path = "Custom UI Components";
+			path = Components;
 			sourceTree = "<group>";
 		};
-		21EEE90E1A419E7F000600FD /* Application delegate */ = {
+		21EEE90E1A419E7F000600FD /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				21EEE90F1A419E7F000600FD /* AppDelegate.h */,
 				21EEE9101A419E7F000600FD /* AppDelegate.m */,
 			);
-			path = "Application delegate";
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		21EEE9111A419E7F000600FD /* Resources */ = {
@@ -537,12 +537,12 @@
 			path = "View controllers";
 			sourceTree = "<group>";
 		};
-		21EEE92A1A41A3EB000600FD /* Custom views */ = {
+		21EEE92A1A41A3EB000600FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				21EEE92B1A41A3EB000600FD /* Cells */,
 			);
-			path = "Custom views";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		21EEE92B1A41A3EB000600FD /* Cells */ = {
@@ -610,13 +610,13 @@
 			path = Wandera;
 			sourceTree = "<group>";
 		};
-		21FFECF51A88B4730017B2A9 /* Media recorder */ = {
+		21FFECF51A88B4730017B2A9 /* MediaRecorder */ = {
 			isa = PBXGroup;
 			children = (
 				21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */,
 				21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */,
 			);
-			path = "Media recorder";
+			path = MediaRecorder;
 			sourceTree = "<group>";
 		};
 		21FFECF91A88B7020017B2A9 /* Internal alerting */ = {
