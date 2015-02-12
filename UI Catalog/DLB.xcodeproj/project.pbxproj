@@ -58,6 +58,10 @@
 		21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE94A1A41B1C0000600FD /* WanderaViewController.m */; };
 		21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */; };
 		21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */; };
+		6A60C3B30EC969F417489275 /* DLBProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */; };
+		6A60C72D427F190D7C8E1B38 /* WNDUsageDataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */; };
+		6A60C93A18D4569E9F5D550D /* WNDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */; };
+		6A60CC36ABB292AA2B8AA431 /* DLBProgressBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,14 @@
 		21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaPieChart.storyboard; sourceTree = "<group>"; };
 		21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaPieChartVC.h; sourceTree = "<group>"; };
 		21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaPieChartVC.m; sourceTree = "<group>"; };
+		6A60C38C43153D30569746BC /* DLBProgressBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarCell.h; sourceTree = "<group>"; };
+		6A60C4CC2953CFFDBFD27E48 /* DLBProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarView.h; sourceTree = "<group>"; };
+		6A60C573C5833BE547A2822C /* WNDProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressBar.h; sourceTree = "<group>"; };
+		6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBProgressBarView.m; sourceTree = "<group>"; };
+		6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressBar.m; sourceTree = "<group>"; };
+		6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDUsageDataFormatter.m; sourceTree = "<group>"; };
+		6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBProgressBarCell.m; sourceTree = "<group>"; };
+		6A60CFE35592E6E56B05DB91 /* WNDUsageDataFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDUsageDataFormatter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +222,7 @@
 				21326E6C1A419233000ADCA2 /* Pie chart view */,
 				21326E751A419233000ADCA2 /* Pulse graph view */,
 				215C9FB51A5A818A00D2B823 /* Numeric counter */,
+				6A60C20689F265BC274E427B /* ProgressBar */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 				21326E8B1A419233000ADCA2 /* Pulse graph view */,
 				21CC053A1A5D547D00B071E1 /* Bar graph */,
 				21CA3F721A5E9F1800D27F5E /* Graph addons */,
+				6A60CAE40259F9EF37705D39 /* ProgressBar */,
 			);
 			path = Wandera;
 			sourceTree = "<group>";
@@ -424,6 +438,7 @@
 				21EEE9131A419E7F000600FD /* View controllers */,
 				21EEE92A1A41A3EB000600FD /* Custom views */,
 				21D095CA1A30699F00BC8F73 /* Supporting Files */,
+				6A60C99DC7B896882E5C2ACF /* Tools */,
 			);
 			path = DLB;
 			sourceTree = "<group>";
@@ -534,6 +549,8 @@
 				215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */,
 				21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */,
 				21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */,
+				6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */,
+				6A60C38C43153D30569746BC /* DLBProgressBarCell.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -571,6 +588,41 @@
 				21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */,
 			);
 			path = Wandera;
+			sourceTree = "<group>";
+		};
+		6A60C20689F265BC274E427B /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */,
+				6A60C4CC2953CFFDBFD27E48 /* DLBProgressBarView.h */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		6A60C99DC7B896882E5C2ACF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6A60CD1B0FD6469EA0DFB2CF /* StringHandling */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6A60CAE40259F9EF37705D39 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */,
+				6A60C573C5833BE547A2822C /* WNDProgressBar.h */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		6A60CD1B0FD6469EA0DFB2CF /* StringHandling */ = {
+			isa = PBXGroup;
+			children = (
+				6A60CFE35592E6E56B05DB91 /* WNDUsageDataFormatter.h */,
+				6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */,
+			);
+			path = StringHandling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,6 +772,10 @@
 				21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */,
 				21CC05401A5D555800B071E1 /* WNDBarGraphCell.m in Sources */,
 				21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */,
+				6A60C3B30EC969F417489275 /* DLBProgressBarView.m in Sources */,
+				6A60CC36ABB292AA2B8AA431 /* DLBProgressBarCell.m in Sources */,
+				6A60C93A18D4569E9F5D550D /* WNDProgressBar.m in Sources */,
+				6A60C72D427F190D7C8E1B38 /* WNDUsageDataFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +880,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DLB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

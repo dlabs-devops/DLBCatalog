@@ -15,6 +15,7 @@ typedef enum : NSUInteger {
     baseComponentBarGraph,
     baseComponentNumericCounter,
     baseComponentAnimations,
+    baseComponentProgressBar,
     baseComponentCount
 } eBaseComponent;
 
@@ -108,6 +109,12 @@ typedef enum : NSUInteger {
         case baseComponentAnimations:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"animationsCell"];
+            toReturn = cell;
+            break;
+        }
+        case baseComponentProgressBar:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"progressBarCell"];
             toReturn = cell;
             break;
         }
