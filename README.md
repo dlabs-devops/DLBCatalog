@@ -10,12 +10,34 @@ DLBCatalog is an internal repository of common UI components from multiple proje
 # Component list
 
 - Bar Graph
+  
+  Some description.
+  
 - Circular Progress View
+  
+  Some description.
+  
 - Line Graph
+  
+  Some description.
+  
 - Media Recorder
+  
+  Some description.
+  
 - Numeric Counter
+  
+  Some description.
+  
 - Pie Chart
+  
+  Some description.
+  
 - Pulse Graph
+  
+  Some description.
+  
+
 
 License
 ========
