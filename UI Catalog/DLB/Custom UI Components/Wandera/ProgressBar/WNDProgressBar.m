@@ -30,7 +30,7 @@
     {
         _labelFontAttributes = [NSMutableDictionary dictionary];
         _labelFontAttributes[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.37f green:0.4f blue:0.48f alpha:1.0f];
-        _labelFontAttributes[NSFontAttributeName] = [UIFont fontWithName:@"Geometria-Bold" size:10.0f];
+        _labelFontAttributes[NSFontAttributeName] = [UIFont fontWithName:@"Helvetica-Bold" size:10.0f];
     }
 
     return _labelFontAttributes;

@@ -7,6 +7,7 @@
 //
 
 #import "WNDUsageDataFormatter.h"
+#import <UIKit/UIKit.h>
 
 static const int kMB = 1;
 static const int kGB = 2;

@@ -531,16 +531,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3J-tV-klc" userLabel="Labels pannel">
-                                                    <rect key="frame" x="10" y="31" width="255" height="37"/>
+                                                    <rect key="frame" x="10" y="31" width="248" height="37"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Urban Puhar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-mo-alS">
-                                                            <rect key="frame" x="0.0" y="21" width="255" height="14"/>
+                                                            <rect key="frame" x="0.0" y="21" width="248" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A5q-b0-ewC" userLabel="Animation transitions">
-                                                            <rect key="frame" x="0.0" y="0.0" width="255" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="6Re-nw-6ue"/>
                                                             </constraints>
@@ -576,7 +576,7 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-rR-JxF" userLabel="Preview view" customClass="WNDProgressBar">
-                                                    <rect key="frame" x="287" y="0.0" width="127" height="99"/>
+                                                    <rect key="frame" x="280" y="20" width="124" height="59"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="wAU-rR-JxF" secondAttribute="height" multiplier="1:1" id="FZF-b3-NDG"/>
@@ -593,11 +593,11 @@
                                                 <constraint firstAttribute="centerY" secondItem="q3J-tV-klc" secondAttribute="centerY" id="2wf-oR-MGk"/>
                                                 <constraint firstItem="wAU-rR-JxF" firstAttribute="leading" secondItem="ROA-fj-H6v" secondAttribute="leading" id="K4Y-aV-47Y"/>
                                                 <constraint firstItem="wAU-rR-JxF" firstAttribute="centerY" secondItem="ROA-fj-H6v" secondAttribute="centerY" id="Vmt-yQ-cim"/>
-                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="bottom" secondItem="ROA-fj-H6v" secondAttribute="bottom" id="WzX-AB-lvD"/>
-                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="top" secondItem="ROA-fj-H6v" secondAttribute="top" id="bgH-yN-IKE"/>
+                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="bottom" secondItem="ROA-fj-H6v" secondAttribute="bottom" constant="-20" id="WzX-AB-lvD"/>
+                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="top" secondItem="ROA-fj-H6v" secondAttribute="top" constant="20" id="bgH-yN-IKE"/>
                                                 <constraint firstItem="q3J-tV-klc" firstAttribute="width" secondItem="wAU-rR-JxF" secondAttribute="width" multiplier="2:1" id="dVt-Kw-z9j"/>
                                                 <constraint firstItem="wAU-rR-JxF" firstAttribute="leading" secondItem="q3J-tV-klc" secondAttribute="trailing" constant="22" id="klX-Vr-oms"/>
-                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="trailing" secondItem="ROA-fj-H6v" secondAttribute="trailing" id="nGv-cy-cOB"/>
+                                                <constraint firstItem="wAU-rR-JxF" firstAttribute="trailing" secondItem="ROA-fj-H6v" secondAttribute="trailing" constant="-10" id="nGv-cy-cOB"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -607,7 +607,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="progressBarView" destination="wAU-rR-JxF" id="A2R-1z-B1R"/>
+                                            <outlet property="progressBarView" destination="wAU-rR-JxF" id="JlG-Iv-QqT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

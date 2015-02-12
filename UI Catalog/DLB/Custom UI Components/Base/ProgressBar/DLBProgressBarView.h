@@ -3,6 +3,8 @@
 // Copyright (c) 2015 Matic Oblak. All rights reserved.
 //
 
+// TODO: add comments and make it more generic
+
 @import UIKit;
 
 @interface DLBProgressBarView : UIView
