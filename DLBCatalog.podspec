@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.license  = 'Proprietary'
   s.summary  = 'A collection of proprietary UI components used in D·Labs projects.'
   s.homepage = 'https://github.com/dlabs/DLBCatalog'
-  s.authors  = { 'Dal Rupnik' => 'legoless@gmail.com', 'Matic Oblak' => '', 'Urban Puhar' => 'urban.puhar@gmail.com' }
+  s.authors  = { 'Dal Rupnik' => 'legoless@gmail.com', 'Matic Oblak' => 'maticoblaksm@gmail.com', 'Urban Puhar' => 'urban.puhar@gmail.com' }
   s.source   = { :git => 'https://github.com/dlabs/DLBCatalog.git', :tag => s.version }
   s.requires_arc = true
   s.platform     = :ios, '7.0'
