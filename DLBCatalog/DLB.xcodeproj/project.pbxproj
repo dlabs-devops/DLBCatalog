@@ -1,0 +1,1038 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2105344C1A5C028200164018 /* DLBInterpolations.m */; };
+		210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210534501A5C0A6500164018 /* BaseCounterViewController.m */; };
+		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
+		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
+		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
+		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
+		21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E701A419233000ADCA2 /* DLBPieChartView.m */; };
+		21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E711A419233000ADCA2 /* DLBPieChartView.xib */; };
+		21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E741A419233000ADCA2 /* DLBPieChartNode.m */; };
+		21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E771A419233000ADCA2 /* DLBPulseGraphView.m */; };
+		21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E7C1A419233000ADCA2 /* DLBAnimatable.m */; };
+		21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */; };
+		21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E801A419233000ADCA2 /* DLBAnimations.m */; };
+		21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E831A419233000ADCA2 /* DLBFloatingRange.m */; };
+		21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E871A419233000ADCA2 /* WNDProgressView.m */; };
+		21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8A1A419233000ADCA2 /* WNDPieChart.m */; };
+		21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */; };
+		215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */; };
+		215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */; };
+		215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */; };
+		2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */; };
+		2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */; };
+		2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */; };
+		21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */; };
+		21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */; };
+		21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */; };
+		21CA3F751A5E9F3B00D27F5E /* WNDGraphGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CA3F741A5E9F3B00D27F5E /* WNDGraphGrid.m */; };
+		21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */; };
+		21CC05401A5D555800B071E1 /* WNDBarGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */; };
+		21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */; };
+		21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */; };
+		21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; };
+		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
+		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
+		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
+		21EEE9191A419E7F000600FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9121A419E7F000600FD /* Images.xcassets */; };
+		21EEE9201A419ECE000600FD /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91C1A419ECE000600FD /* Base.storyboard */; };
+		21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91D1A419ECE000600FD /* LaunchScreen.xib */; };
+		21EEE9221A419ECE000600FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91E1A419ECE000600FD /* Main.storyboard */; };
+		21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91F1A419ECE000600FD /* Wandera.storyboard */; };
+		21EEE9261A419EE4000600FD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9251A419EE4000600FD /* MainViewController.m */; };
+		21EEE9291A41A164000600FD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9281A41A164000600FD /* BaseViewController.m */; };
+		21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */; };
+		21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9391A41B09C000600FD /* DLBPieChartCell.m */; };
+		21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */; };
+		21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */; };
+		21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */; };
+		21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */; };
+		21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE94A1A41B1C0000600FD /* WanderaViewController.m */; };
+		21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */; };
+		21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */; };
+		6A60C3B30EC969F417489275 /* DLBProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */; };
+		6A60C41869E81911D0304147 /* DLBLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C10AB6B3C503C1C3853D /* DLBLineGraphView.m */; };
+		6A60C441E80DF3F99B1155CD /* DLBPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C1D821D883B62AFAF89D /* DLBPathRenderer.m */; };
+		6A60C72D427F190D7C8E1B38 /* WNDUsageDataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */; };
+		6A60C93A18D4569E9F5D550D /* WNDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */; };
+		6A60CC36ABB292AA2B8AA431 /* DLBProgressBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21D095E11A30699F00BC8F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21D095BF1A30699F00BC8F73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21D095C61A30699F00BC8F73;
+			remoteInfo = DLB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2105344B1A5C028200164018 /* DLBInterpolations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInterpolations.h; sourceTree = "<group>"; };
+		2105344C1A5C028200164018 /* DLBInterpolations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInterpolations.m; sourceTree = "<group>"; };
+		2105344F1A5C0A6500164018 /* BaseCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCounterViewController.h; sourceTree = "<group>"; };
+		210534501A5C0A6500164018 /* BaseCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCounterViewController.m; sourceTree = "<group>"; };
+		210534531A5C0AA400164018 /* BaseCounter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseCounter.storyboard; sourceTree = "<group>"; };
+		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
+		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
+		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
+		21326E6D1A419233000ADCA2 /* DLBPieChartSector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartSector.h; sourceTree = "<group>"; };
+		21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartSector.m; sourceTree = "<group>"; };
+		21326E6F1A419233000ADCA2 /* DLBPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartView.h; sourceTree = "<group>"; };
+		21326E701A419233000ADCA2 /* DLBPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartView.m; sourceTree = "<group>"; };
+		21326E711A419233000ADCA2 /* DLBPieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBPieChartView.xib; sourceTree = "<group>"; };
+		21326E731A419233000ADCA2 /* DLBPieChartNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartNode.h; sourceTree = "<group>"; };
+		21326E741A419233000ADCA2 /* DLBPieChartNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartNode.m; sourceTree = "<group>"; };
+		21326E761A419233000ADCA2 /* DLBPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphView.h; sourceTree = "<group>"; };
+		21326E771A419233000ADCA2 /* DLBPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphView.m; sourceTree = "<group>"; };
+		21326E7B1A419233000ADCA2 /* DLBAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatable.h; sourceTree = "<group>"; };
+		21326E7C1A419233000ADCA2 /* DLBAnimatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatable.m; sourceTree = "<group>"; };
+		21326E7D1A419233000ADCA2 /* DLBAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimatableFloat.h; sourceTree = "<group>"; };
+		21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimatableFloat.m; sourceTree = "<group>"; };
+		21326E7F1A419233000ADCA2 /* DLBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimations.h; sourceTree = "<group>"; };
+		21326E801A419233000ADCA2 /* DLBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimations.m; sourceTree = "<group>"; };
+		21326E821A419233000ADCA2 /* DLBFloatingRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBFloatingRange.h; sourceTree = "<group>"; };
+		21326E831A419233000ADCA2 /* DLBFloatingRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBFloatingRange.m; sourceTree = "<group>"; };
+		21326E861A419233000ADCA2 /* WNDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressView.h; sourceTree = "<group>"; };
+		21326E871A419233000ADCA2 /* WNDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressView.m; sourceTree = "<group>"; };
+		21326E891A419233000ADCA2 /* WNDPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPieChart.h; sourceTree = "<group>"; };
+		21326E8A1A419233000ADCA2 /* WNDPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChart.m; sourceTree = "<group>"; };
+		21326E8C1A419233000ADCA2 /* WNDPulseGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphView.h; sourceTree = "<group>"; };
+		21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphView.m; sourceTree = "<group>"; };
+		215C9FB21A5A80AF00D2B823 /* DLBNumericCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterCell.h; sourceTree = "<group>"; };
+		215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterCell.m; sourceTree = "<group>"; };
+		215C9FB61A5A81D100D2B823 /* DLBNumericCounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterView.h; sourceTree = "<group>"; };
+		215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterView.m; sourceTree = "<group>"; };
+		215C9FB91A5AAAC500D2B823 /* DLBNumericCounterComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBNumericCounterComponent.h; sourceTree = "<group>"; };
+		215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBNumericCounterComponent.m; sourceTree = "<group>"; };
+		2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphView.h; sourceTree = "<group>"; };
+		2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphView.m; sourceTree = "<group>"; };
+		2187BF6E1A43033D00E3FD37 /* DLBBarGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphNode.h; sourceTree = "<group>"; };
+		2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphNode.m; sourceTree = "<group>"; };
+		2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBarGraphCell.h; sourceTree = "<group>"; };
+		2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBarGraphCell.m; sourceTree = "<group>"; };
+		21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBAnimationsCell.h; sourceTree = "<group>"; };
+		21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBAnimationsCell.m; sourceTree = "<group>"; };
+		21CA3F6D1A5E7FE800D27F5E /* WanderaBarGraphVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaBarGraphVC.h; sourceTree = "<group>"; };
+		21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaBarGraphVC.m; sourceTree = "<group>"; };
+		21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaBarGraph.storyboard; sourceTree = "<group>"; };
+		21CA3F731A5E9F3B00D27F5E /* WNDGraphGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDGraphGrid.h; sourceTree = "<group>"; };
+		21CA3F741A5E9F3B00D27F5E /* WNDGraphGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDGraphGrid.m; sourceTree = "<group>"; };
+		21CC053B1A5D54A100B071E1 /* WNDBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphView.h; sourceTree = "<group>"; };
+		21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphView.m; sourceTree = "<group>"; };
+		21CC053E1A5D555800B071E1 /* WNDBarGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphCell.h; sourceTree = "<group>"; };
+		21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphCell.m; sourceTree = "<group>"; };
+		21CC05411A5D61AD00B071E1 /* WNDBarGraphDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphDataObject.h; sourceTree = "<group>"; };
+		21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphDataObject.m; sourceTree = "<group>"; };
+		21CC05441A5D625B00B071E1 /* WNDBarGraphTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDBarGraphTools.h; sourceTree = "<group>"; };
+		21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDBarGraphTools.m; sourceTree = "<group>"; };
+		21CC05481A5D65C300B071E1 /* DLBDateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBDateTools.h; sourceTree = "<group>"; };
+		21CC05491A5D65C300B071E1 /* DLBDateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBDateTools.m; sourceTree = "<group>"; };
+		21D095C71A30699F00BC8F73 /* DLB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D095CB1A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D095CC1A30699F00BC8F73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
+		21EEE90F1A419E7F000600FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21EEE9101A419E7F000600FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21EEE9121A419E7F000600FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		21EEE91C1A419ECE000600FD /* Base.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
+		21EEE91D1A419ECE000600FD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		21EEE91E1A419ECE000600FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		21EEE91F1A419ECE000600FD /* Wandera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wandera.storyboard; sourceTree = "<group>"; };
+		21EEE9241A419EE4000600FD /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		21EEE9251A419EE4000600FD /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		21EEE9271A41A164000600FD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		21EEE9281A41A164000600FD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		21EEE9361A41B09C000600FD /* DLBBaseCircularViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBaseCircularViewCell.h; sourceTree = "<group>"; };
+		21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBaseCircularViewCell.m; sourceTree = "<group>"; };
+		21EEE9381A41B09C000600FD /* DLBPieChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPieChartCell.h; sourceTree = "<group>"; };
+		21EEE9391A41B09C000600FD /* DLBPieChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPieChartCell.m; sourceTree = "<group>"; };
+		21EEE93A1A41B09C000600FD /* DLBPulseGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPulseGraphCell.h; sourceTree = "<group>"; };
+		21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPulseGraphCell.m; sourceTree = "<group>"; };
+		21EEE9401A41B0C2000600FD /* WNDCircularViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDCircularViewCell.h; sourceTree = "<group>"; };
+		21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDCircularViewCell.m; sourceTree = "<group>"; };
+		21EEE9421A41B0C2000600FD /* WNDPieChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPieChartCell.h; sourceTree = "<group>"; };
+		21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPieChartCell.m; sourceTree = "<group>"; };
+		21EEE9441A41B0C2000600FD /* WNDPulseGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDPulseGraphCell.h; sourceTree = "<group>"; };
+		21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDPulseGraphCell.m; sourceTree = "<group>"; };
+		21EEE9491A41B1C0000600FD /* WanderaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaViewController.h; sourceTree = "<group>"; };
+		21EEE94A1A41B1C0000600FD /* WanderaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaViewController.m; sourceTree = "<group>"; };
+		21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaPieChart.storyboard; sourceTree = "<group>"; };
+		21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaPieChartVC.h; sourceTree = "<group>"; };
+		21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaPieChartVC.m; sourceTree = "<group>"; };
+		21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBMediaRecorder.h; sourceTree = "<group>"; };
+		21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBMediaRecorder.m; sourceTree = "<group>"; };
+		21FFECFA1A88B70F0017B2A9 /* DLBInternalError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInternalError.h; sourceTree = "<group>"; };
+		21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInternalError.m; sourceTree = "<group>"; };
+		21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediarecorderViewController.h; sourceTree = "<group>"; };
+		21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMediarecorderViewController.m; sourceTree = "<group>"; };
+		21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseMediaRecorder.storyboard; sourceTree = "<group>"; };
+		6A60C10AB6B3C503C1C3853D /* DLBLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBLineGraphView.m; sourceTree = "<group>"; };
+		6A60C1D821D883B62AFAF89D /* DLBPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPathRenderer.m; sourceTree = "<group>"; };
+		6A60C38C43153D30569746BC /* DLBProgressBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarCell.h; sourceTree = "<group>"; };
+		6A60C4CC2953CFFDBFD27E48 /* DLBProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBProgressBarView.h; sourceTree = "<group>"; };
+		6A60C573C5833BE547A2822C /* WNDProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDProgressBar.h; sourceTree = "<group>"; };
+		6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBProgressBarView.m; sourceTree = "<group>"; };
+		6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDProgressBar.m; sourceTree = "<group>"; };
+		6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDUsageDataFormatter.m; sourceTree = "<group>"; };
+		6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBProgressBarCell.m; sourceTree = "<group>"; };
+		6A60CA2EADC9FA3AD86950C1 /* DLBLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBLineGraphView.h; sourceTree = "<group>"; };
+		6A60CDC06FB4DC6D456E42DD /* DLBPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPathRenderer.h; sourceTree = "<group>"; };
+		6A60CFE35592E6E56B05DB91 /* WNDUsageDataFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDUsageDataFormatter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21D095C41A30699F00BC8F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21D095DD1A30699F00BC8F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2105344E1A5C0A4600164018 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2105344F1A5C0A6500164018 /* BaseCounterViewController.h */,
+				210534501A5C0A6500164018 /* BaseCounterViewController.m */,
+				21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */,
+				21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		210534521A5C0A8700164018 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				210534531A5C0AA400164018 /* BaseCounter.storyboard */,
+				21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		21326E671A419233000ADCA2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				21FFECF51A88B4730017B2A9 /* MediaRecorder */,
+				2187BF691A43029400E3FD37 /* BarGraph */,
+				21326E681A419233000ADCA2 /* CircularProgress */,
+				21326E6C1A419233000ADCA2 /* PieChart */,
+				21326E751A419233000ADCA2 /* PulseGraph */,
+				215C9FB51A5A818A00D2B823 /* NumericCounter */,
+				6A60C20689F265BC274E427B /* ProgressBar */,
+				6A60CC11BBD1FC252BE7BAC0 /* LineGraph */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		21326E681A419233000ADCA2 /* CircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				21326E691A419233000ADCA2 /* DLBCircularProgressView.h */,
+				21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */,
+				21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */,
+			);
+			path = CircularProgress;
+			sourceTree = "<group>";
+		};
+		21326E6C1A419233000ADCA2 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				21326E6D1A419233000ADCA2 /* DLBPieChartSector.h */,
+				21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */,
+				21326E6F1A419233000ADCA2 /* DLBPieChartView.h */,
+				21326E701A419233000ADCA2 /* DLBPieChartView.m */,
+				21326E711A419233000ADCA2 /* DLBPieChartView.xib */,
+				21326E721A419233000ADCA2 /* Draw */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		21326E721A419233000ADCA2 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				21326E731A419233000ADCA2 /* DLBPieChartNode.h */,
+				21326E741A419233000ADCA2 /* DLBPieChartNode.m */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		21326E751A419233000ADCA2 /* PulseGraph */ = {
+			isa = PBXGroup;
+			children = (
+				21326E761A419233000ADCA2 /* DLBPulseGraphView.h */,
+				21326E771A419233000ADCA2 /* DLBPulseGraphView.m */,
+				21326E781A419233000ADCA2 /* untitled folder */,
+			);
+			path = PulseGraph;
+			sourceTree = "<group>";
+		};
+		21326E781A419233000ADCA2 /* untitled folder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "untitled folder";
+			sourceTree = "<group>";
+		};
+		21326E791A419233000ADCA2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				21FFECF91A88B7020017B2A9 /* Internal alerting */,
+				21CC05471A5D65B900B071E1 /* Date */,
+				21326E7A1A419233000ADCA2 /* Animations */,
+				21326E811A419233000ADCA2 /* Components */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		21326E7A1A419233000ADCA2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				21326E7B1A419233000ADCA2 /* DLBAnimatable.h */,
+				21326E7C1A419233000ADCA2 /* DLBAnimatable.m */,
+				21326E7D1A419233000ADCA2 /* DLBAnimatableFloat.h */,
+				21326E7E1A419233000ADCA2 /* DLBAnimatableFloat.m */,
+				21326E7F1A419233000ADCA2 /* DLBAnimations.h */,
+				21326E801A419233000ADCA2 /* DLBAnimations.m */,
+				2105344B1A5C028200164018 /* DLBInterpolations.h */,
+				2105344C1A5C028200164018 /* DLBInterpolations.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		21326E811A419233000ADCA2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				21326E821A419233000ADCA2 /* DLBFloatingRange.h */,
+				21326E831A419233000ADCA2 /* DLBFloatingRange.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		21326E841A419233000ADCA2 /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21326E851A419233000ADCA2 /* Circular progress view */,
+				21326E881A419233000ADCA2 /* Pie chart view */,
+				21326E8B1A419233000ADCA2 /* Pulse graph view */,
+				21CC053A1A5D547D00B071E1 /* Bar graph */,
+				21CA3F721A5E9F1800D27F5E /* Graph addons */,
+				6A60CAE40259F9EF37705D39 /* ProgressBar */,
+				6A60CDA1ECA297DABFA5EBE7 /* LineChart */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21326E851A419233000ADCA2 /* Circular progress view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E861A419233000ADCA2 /* WNDProgressView.h */,
+				21326E871A419233000ADCA2 /* WNDProgressView.m */,
+			);
+			path = "Circular progress view";
+			sourceTree = "<group>";
+		};
+		21326E881A419233000ADCA2 /* Pie chart view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E891A419233000ADCA2 /* WNDPieChart.h */,
+				21326E8A1A419233000ADCA2 /* WNDPieChart.m */,
+			);
+			path = "Pie chart view";
+			sourceTree = "<group>";
+		};
+		21326E8B1A419233000ADCA2 /* Pulse graph view */ = {
+			isa = PBXGroup;
+			children = (
+				21326E8C1A419233000ADCA2 /* WNDPulseGraphView.h */,
+				21326E8D1A419233000ADCA2 /* WNDPulseGraphView.m */,
+			);
+			path = "Pulse graph view";
+			sourceTree = "<group>";
+		};
+		215C9FB51A5A818A00D2B823 /* NumericCounter */ = {
+			isa = PBXGroup;
+			children = (
+				215C9FB61A5A81D100D2B823 /* DLBNumericCounterView.h */,
+				215C9FB71A5A81D100D2B823 /* DLBNumericCounterView.m */,
+				215C9FB91A5AAAC500D2B823 /* DLBNumericCounterComponent.h */,
+				215C9FBA1A5AAAC500D2B823 /* DLBNumericCounterComponent.m */,
+			);
+			path = NumericCounter;
+			sourceTree = "<group>";
+		};
+		2187BF691A43029400E3FD37 /* BarGraph */ = {
+			isa = PBXGroup;
+			children = (
+				2187BF6A1A4302A500E3FD37 /* DLBBarGraphView.h */,
+				2187BF6B1A4302A500E3FD37 /* DLBBarGraphView.m */,
+				2187BF6D1A43032600E3FD37 /* Graph components */,
+			);
+			path = BarGraph;
+			sourceTree = "<group>";
+		};
+		2187BF6D1A43032600E3FD37 /* Graph components */ = {
+			isa = PBXGroup;
+			children = (
+				2187BF6E1A43033D00E3FD37 /* DLBBarGraphNode.h */,
+				2187BF6F1A43033D00E3FD37 /* DLBBarGraphNode.m */,
+			);
+			path = "Graph components";
+			sourceTree = "<group>";
+		};
+		21CA3F721A5E9F1800D27F5E /* Graph addons */ = {
+			isa = PBXGroup;
+			children = (
+				21CA3F731A5E9F3B00D27F5E /* WNDGraphGrid.h */,
+				21CA3F741A5E9F3B00D27F5E /* WNDGraphGrid.m */,
+			);
+			path = "Graph addons";
+			sourceTree = "<group>";
+		};
+		21CC053A1A5D547D00B071E1 /* Bar graph */ = {
+			isa = PBXGroup;
+			children = (
+				21CC053B1A5D54A100B071E1 /* WNDBarGraphView.h */,
+				21CC053C1A5D54A100B071E1 /* WNDBarGraphView.m */,
+				21CC05411A5D61AD00B071E1 /* WNDBarGraphDataObject.h */,
+				21CC05421A5D61AD00B071E1 /* WNDBarGraphDataObject.m */,
+				21CC05441A5D625B00B071E1 /* WNDBarGraphTools.h */,
+				21CC05451A5D625B00B071E1 /* WNDBarGraphTools.m */,
+			);
+			path = "Bar graph";
+			sourceTree = "<group>";
+		};
+		21CC05471A5D65B900B071E1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				21CC05481A5D65C300B071E1 /* DLBDateTools.h */,
+				21CC05491A5D65C300B071E1 /* DLBDateTools.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		21D095BE1A30699F00BC8F73 = {
+			isa = PBXGroup;
+			children = (
+				21D095C91A30699F00BC8F73 /* DLB */,
+				21D095E31A30699F00BC8F73 /* DLBTests */,
+				21D095C81A30699F00BC8F73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21D095C81A30699F00BC8F73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21D095C71A30699F00BC8F73 /* DLB.app */,
+				21D095E01A30699F00BC8F73 /* DLBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21D095C91A30699F00BC8F73 /* DLB */ = {
+			isa = PBXGroup;
+			children = (
+				21D095F01A3069C100BC8F73 /* Components */,
+				21EEE90E1A419E7F000600FD /* Delegate */,
+				21EEE9111A419E7F000600FD /* Resources */,
+				21EEE9131A419E7F000600FD /* View controllers */,
+				21EEE92A1A41A3EB000600FD /* Views */,
+				21D095CA1A30699F00BC8F73 /* Supporting Files */,
+				6A60C99DC7B896882E5C2ACF /* Tools */,
+			);
+			path = DLB;
+			sourceTree = "<group>";
+		};
+		21D095CA1A30699F00BC8F73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21D095CB1A30699F00BC8F73 /* Info.plist */,
+				21D095CC1A30699F00BC8F73 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21D095E31A30699F00BC8F73 /* DLBTests */ = {
+			isa = PBXGroup;
+			children = (
+				21D095E61A30699F00BC8F73 /* DLBTests.m */,
+				21D095E41A30699F00BC8F73 /* Supporting Files */,
+			);
+			path = DLBTests;
+			sourceTree = "<group>";
+		};
+		21D095E41A30699F00BC8F73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21D095E51A30699F00BC8F73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21D095F01A3069C100BC8F73 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				21326E791A419233000ADCA2 /* Tools */,
+				21326E671A419233000ADCA2 /* Base */,
+				21326E841A419233000ADCA2 /* Wandera */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		21EEE90E1A419E7F000600FD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE90F1A419E7F000600FD /* AppDelegate.h */,
+				21EEE9101A419E7F000600FD /* AppDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		21EEE9111A419E7F000600FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				210534521A5C0A8700164018 /* Base */,
+				21EEE94C1A41B85A000600FD /* Wandera */,
+				21EEE91E1A419ECE000600FD /* Main.storyboard */,
+				21EEE91C1A419ECE000600FD /* Base.storyboard */,
+				21EEE91F1A419ECE000600FD /* Wandera.storyboard */,
+				21EEE91D1A419ECE000600FD /* LaunchScreen.xib */,
+				21EEE9121A419E7F000600FD /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21EEE9131A419E7F000600FD /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2105344E1A5C0A4600164018 /* Base */,
+				21EEE94F1A41B890000600FD /* Wandera */,
+				21EEE9241A419EE4000600FD /* MainViewController.h */,
+				21EEE9251A419EE4000600FD /* MainViewController.m */,
+				21EEE9271A41A164000600FD /* BaseViewController.h */,
+				21EEE9281A41A164000600FD /* BaseViewController.m */,
+				21EEE9491A41B1C0000600FD /* WanderaViewController.h */,
+				21EEE94A1A41B1C0000600FD /* WanderaViewController.m */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		21EEE92A1A41A3EB000600FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE92B1A41A3EB000600FD /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21EEE92B1A41A3EB000600FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9351A41B09C000600FD /* Base */,
+				21EEE93F1A41B0C2000600FD /* Wandera */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		21EEE9351A41B09C000600FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9361A41B09C000600FD /* DLBBaseCircularViewCell.h */,
+				21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */,
+				21EEE9381A41B09C000600FD /* DLBPieChartCell.h */,
+				21EEE9391A41B09C000600FD /* DLBPieChartCell.m */,
+				21EEE93A1A41B09C000600FD /* DLBPulseGraphCell.h */,
+				21EEE93B1A41B09C000600FD /* DLBPulseGraphCell.m */,
+				2187BF711A43187200E3FD37 /* DLBBarGraphCell.h */,
+				2187BF721A43187200E3FD37 /* DLBBarGraphCell.m */,
+				215C9FB21A5A80AF00D2B823 /* DLBNumericCounterCell.h */,
+				215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */,
+				21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */,
+				21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */,
+				6A60C850FE534CFCAB1903A3 /* DLBProgressBarCell.m */,
+				6A60C38C43153D30569746BC /* DLBProgressBarCell.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		21EEE93F1A41B0C2000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9401A41B0C2000600FD /* WNDCircularViewCell.h */,
+				21EEE9411A41B0C2000600FD /* WNDCircularViewCell.m */,
+				21EEE9421A41B0C2000600FD /* WNDPieChartCell.h */,
+				21EEE9431A41B0C2000600FD /* WNDPieChartCell.m */,
+				21EEE9441A41B0C2000600FD /* WNDPulseGraphCell.h */,
+				21EEE9451A41B0C2000600FD /* WNDPulseGraphCell.m */,
+				21CC053E1A5D555800B071E1 /* WNDBarGraphCell.h */,
+				21CC053F1A5D555800B071E1 /* WNDBarGraphCell.m */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21EEE94C1A41B85A000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */,
+				21CA3F701A5E7FFF00D27F5E /* WanderaBarGraph.storyboard */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21EEE94F1A41B890000600FD /* Wandera */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */,
+				21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */,
+				21CA3F6D1A5E7FE800D27F5E /* WanderaBarGraphVC.h */,
+				21CA3F6E1A5E7FE800D27F5E /* WanderaBarGraphVC.m */,
+			);
+			path = Wandera;
+			sourceTree = "<group>";
+		};
+		21FFECF51A88B4730017B2A9 /* MediaRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */,
+				21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */,
+			);
+			path = MediaRecorder;
+			sourceTree = "<group>";
+		};
+		21FFECF91A88B7020017B2A9 /* Internal alerting */ = {
+			isa = PBXGroup;
+			children = (
+				21FFECFA1A88B70F0017B2A9 /* DLBInternalError.h */,
+				21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */,
+			);
+			path = "Internal alerting";
+			sourceTree = "<group>";
+		};
+		6A60C20689F265BC274E427B /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				6A60C6E0E4AFDD27E27B3A37 /* DLBProgressBarView.m */,
+				6A60C4CC2953CFFDBFD27E48 /* DLBProgressBarView.h */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		6A60C3C4A61E6C7A496AA9E5 /* Line View */ = {
+			isa = PBXGroup;
+			children = (
+				6A60CDC06FB4DC6D456E42DD /* DLBPathRenderer.h */,
+				6A60C1D821D883B62AFAF89D /* DLBPathRenderer.m */,
+			);
+			path = "Line View";
+			sourceTree = "<group>";
+		};
+		6A60C99DC7B896882E5C2ACF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6A60CD1B0FD6469EA0DFB2CF /* StringHandling */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6A60CAE40259F9EF37705D39 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				6A60C70984E89CC2CAACEA89 /* WNDProgressBar.m */,
+				6A60C573C5833BE547A2822C /* WNDProgressBar.h */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		6A60CC11BBD1FC252BE7BAC0 /* LineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				6A60C3C4A61E6C7A496AA9E5 /* Line View */,
+				6A60CA2EADC9FA3AD86950C1 /* DLBLineGraphView.h */,
+				6A60C10AB6B3C503C1C3853D /* DLBLineGraphView.m */,
+			);
+			path = LineGraph;
+			sourceTree = "<group>";
+		};
+		6A60CD1B0FD6469EA0DFB2CF /* StringHandling */ = {
+			isa = PBXGroup;
+			children = (
+				6A60CFE35592E6E56B05DB91 /* WNDUsageDataFormatter.h */,
+				6A60C7C6BF25729D39B17000 /* WNDUsageDataFormatter.m */,
+			);
+			path = StringHandling;
+			sourceTree = "<group>";
+		};
+		6A60CDA1ECA297DABFA5EBE7 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21D095C61A30699F00BC8F73 /* DLB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21D095EA1A30699F00BC8F73 /* Build configuration list for PBXNativeTarget "DLB" */;
+			buildPhases = (
+				21D095C31A30699F00BC8F73 /* Sources */,
+				21D095C41A30699F00BC8F73 /* Frameworks */,
+				21D095C51A30699F00BC8F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLB;
+			productName = DLB;
+			productReference = 21D095C71A30699F00BC8F73 /* DLB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21D095DF1A30699F00BC8F73 /* DLBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21D095ED1A30699F00BC8F73 /* Build configuration list for PBXNativeTarget "DLBTests" */;
+			buildPhases = (
+				21D095DC1A30699F00BC8F73 /* Sources */,
+				21D095DD1A30699F00BC8F73 /* Frameworks */,
+				21D095DE1A30699F00BC8F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21D095E21A30699F00BC8F73 /* PBXTargetDependency */,
+			);
+			name = DLBTests;
+			productName = DLBTests;
+			productReference = 21D095E01A30699F00BC8F73 /* DLBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21D095BF1A30699F00BC8F73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Matic Oblak";
+				TargetAttributes = {
+					21D095C61A30699F00BC8F73 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					21D095DF1A30699F00BC8F73 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 21D095C61A30699F00BC8F73;
+					};
+				};
+			};
+			buildConfigurationList = 21D095C21A30699F00BC8F73 /* Build configuration list for PBXProject "DLB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21D095BE1A30699F00BC8F73;
+			productRefGroup = 21D095C81A30699F00BC8F73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21D095C61A30699F00BC8F73 /* DLB */,
+				21D095DF1A30699F00BC8F73 /* DLBTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21D095C51A30699F00BC8F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */,
+				21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */,
+				210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */,
+				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
+				21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */,
+				21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */,
+				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
+				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
+				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
+				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
+				21FFED011A88C44F0017B2A9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21D095DE1A30699F00BC8F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21D095C31A30699F00BC8F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FFECFF1A88C43A0017B2A9,
+				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
+				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
+				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
+				21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */,
+				2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */,
+				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
+				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
+				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
+				21CA3F751A5E9F3B00D27F5E /* WNDGraphGrid.m in Sources */,
+				2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */,
+				21FFECF81A88B47F0017B2A9,
+				21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */,
+				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
+				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
+				21EEE9461A41B0C2000600FD /* WNDCircularViewCell.m in Sources */,
+				21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */,
+				215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */,
+				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
+				21FFECFC1A88B70F0017B2A9,
+				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
+				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
+				210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */,
+				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
+				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
+				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
+				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
+				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
+				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
+				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
+				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
+				21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */,
+				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
+				21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */,
+				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
+				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,
+				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
+				215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */,
+				21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */,
+				21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */,
+				21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */,
+				21CC05401A5D555800B071E1 /* WNDBarGraphCell.m in Sources */,
+				21326E971A419233000ADCA2 /* DLBAnimations.m in Sources */,
+				6A60C3B30EC969F417489275 /* DLBProgressBarView.m in Sources */,
+				6A60CC36ABB292AA2B8AA431 /* DLBProgressBarCell.m in Sources */,
+				6A60C93A18D4569E9F5D550D /* WNDProgressBar.m in Sources */,
+				6A60C72D427F190D7C8E1B38 /* WNDUsageDataFormatter.m in Sources */,
+				6A60C441E80DF3F99B1155CD /* DLBPathRenderer.m in Sources */,
+				6A60C41869E81911D0304147 /* DLBLineGraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21D095DC1A30699F00BC8F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21D095E21A30699F00BC8F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21D095C61A30699F00BC8F73 /* DLB */;
+			targetProxy = 21D095E11A30699F00BC8F73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21D095E81A30699F00BC8F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21D095E91A30699F00BC8F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21D095EB1A30699F00BC8F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = DLB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		21D095EC1A30699F00BC8F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DLB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		21D095EE1A30699F00BC8F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DLBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLB.app/DLB";
+			};
+			name = Debug;
+		};
+		21D095EF1A30699F00BC8F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DLBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLB.app/DLB";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21D095C21A30699F00BC8F73 /* Build configuration list for PBXProject "DLB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D095E81A30699F00BC8F73 /* Debug */,
+				21D095E91A30699F00BC8F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21D095EA1A30699F00BC8F73 /* Build configuration list for PBXNativeTarget "DLB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D095EB1A30699F00BC8F73 /* Debug */,
+				21D095EC1A30699F00BC8F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21D095ED1A30699F00BC8F73 /* Build configuration list for PBXNativeTarget "DLBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D095EE1A30699F00BC8F73 /* Debug */,
+				21D095EF1A30699F00BC8F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21D095BF1A30699F00BC8F73 /* Project object */;
+}
