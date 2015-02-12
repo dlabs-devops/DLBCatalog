@@ -45,6 +45,11 @@ Pod::Spec.new do |s|
     ss.source_files = 'DLBCatalog/DLB/Components/Base/PieChart/**/*.{h,m}'
   end
 
+  s.subspec 'ProgressBar' do |ss|
+    ss.dependency 'DLBCatalog/Core'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/ProgressBar/**/*.{h,m}'
+  end
+
   s.subspec 'PulseGraph' do |ss|
     ss.dependency 'DLBCatalog/Core'
     ss.source_files = 'DLBCatalog/DLB/Components/Base/PulseGraph/**/*.{h,m}'
