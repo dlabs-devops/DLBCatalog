@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.subspec 'CircularProgress' do |ss|
     ss.dependency 'DLBCatalog/Core'
     ss.source_files = 'DLBCatalog/DLB/Components/Base/CircularProgress/**/*.{h,m}'
+    ss.resources = 'DLBCatalog/DLB/Components/Base/CircularProgress/**/*.{xib}'
   end
 
   s.subspec 'LineGraph' do |ss|
@@ -43,6 +44,7 @@ Pod::Spec.new do |s|
   s.subspec 'PieChart' do |ss|
     ss.dependency 'DLBCatalog/Core'
     ss.source_files = 'DLBCatalog/DLB/Components/Base/PieChart/**/*.{h,m}'
+    ss.resources = 'DLBCatalog/DLB/Components/Base/PieChart/**/*.{xib}'
   end
 
   s.subspec 'ProgressBar' do |ss|
