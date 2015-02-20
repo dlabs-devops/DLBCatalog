@@ -141,7 +141,7 @@
         NSInteger mainValue = [self round:current];
         CGFloat offset = mainValue-current;
         
-        BOOL shouldHideZero = fabsf((float)current) < 5.0f;
+        BOOL shouldHideZero = fabsf((float)current) < 5.0f && self.forceZero == NO;
         
         while (mainValue>10) {
             mainValue-=10;
