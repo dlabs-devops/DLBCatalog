@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'DLBCatalog'
-  s.version  = '0.1.0'
+  s.version  = '0.1.1'
   s.license  = 'Proprietary'
   s.summary  = 'A collection of proprietary UI components used in D·Labs projects.'
   s.homepage = 'https://github.com/dlabs/DLBCatalog'
