@@ -249,11 +249,11 @@
         if(component == nil)
         {
             component = [[DLBNumericCounterComponent alloc] initWithFrame:componentFrame];
-            component.textColor = self.suffixColor;
-            component.font = self.suffixFont;
             [self addSubview:component];
             [self.viewComponents addObject:component];
         }
+        component.textColor = self.suffixColor;
+        component.font = self.suffixFont;
         component.frame = componentFrame;
         component.staticString = self.suffix;
         iterator++;
@@ -279,11 +279,11 @@
         if(component == nil)
         {
             component = [[DLBNumericCounterComponent alloc] initWithFrame:componentFrame];
-            component.textColor = self.textColor;
-            component.font = self.font;
             [self addSubview:component];
             [self.viewComponents addObject:component];
         }
+        component.textColor = self.textColor;
+        component.font = self.font;
         component.forceZero = iterator == firstValueIndex;
         component.frame = componentFrame;
         component.staticString = nil;

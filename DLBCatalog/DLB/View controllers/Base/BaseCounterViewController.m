@@ -24,6 +24,8 @@
     [super viewDidLoad];
     [self.counterView layoutIfNeeded];
     self.counterView.componentAlignment = NSTextAlignmentRight;
+    self.counterView.textColor = [UIColor greenColor];
+    self.counterView.suffixColor = [UIColor redColor];
     self.counterView.suffix = @"%";
 }
 
