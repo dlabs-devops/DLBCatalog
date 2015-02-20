@@ -85,7 +85,7 @@
     self.currentProgressFrame = [self rectForValue:self.currentProgressValue inFrame:rect];
 
 
-    if(self.maxValue > self.currentProgressValue)
+    if(self.maxValue >= self.currentProgressValue)
     {
         // if progress is smaller than max draw given progress
         [self.progressColor setFill];
