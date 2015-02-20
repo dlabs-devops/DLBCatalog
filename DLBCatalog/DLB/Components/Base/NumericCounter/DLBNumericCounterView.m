@@ -257,6 +257,7 @@
     
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
+    NSInteger firstValueIndex = iterator;
     while (startf >= 1.0f || endf >= 1.0f || iterator<(NSInteger)self.viewComponents.count) {
         componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
@@ -272,6 +273,7 @@
             [self addSubview:component];
             [self.viewComponents addObject:component];
         }
+        component.forceZero = iterator == firstValueIndex;
         component.frame = componentFrame;
         component.staticString = nil;
         [component setFrom:startf to:endf scale:scale];
