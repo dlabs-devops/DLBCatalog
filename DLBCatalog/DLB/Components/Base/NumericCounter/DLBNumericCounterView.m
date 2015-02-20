@@ -215,6 +215,10 @@
 - (NSInteger)componentCountForValue:(NSInteger)value
 {
     NSInteger toReturn = self.suffix?1:0;
+    if(value == 0 && self.zeroValueOptional == NO)
+    {
+        return toReturn+1;
+    }
     while (value>0) {
         value/=10;
         toReturn++;
@@ -258,7 +262,14 @@
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
     NSInteger firstValueIndex = iterator;
-    while (startf >= 1.0f || endf >= 1.0f || iterator<(NSInteger)self.viewComponents.count) {
+    NSInteger startComponentCount = [self componentCountForValue:start];
+    NSInteger endComponentCount = [self componentCountForValue:end];
+    while (startf >= 1.0f ||
+           endf >= 1.0f ||
+           iterator < (NSInteger)self.viewComponents.count ||
+           iterator < startComponentCount ||
+           iterator < endComponentCount)
+    {
         componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                       scale:frameScale

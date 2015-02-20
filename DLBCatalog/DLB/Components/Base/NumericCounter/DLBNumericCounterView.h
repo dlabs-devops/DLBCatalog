@@ -35,6 +35,10 @@
 //
 @property (nonatomic) NSInteger currentValue;
 //
+// If true the zero value will be empty
+//
+@property (nonatomic) BOOL zeroValueOptional;
+//
 // Component width depended on the height
 // Default is 32/48
 //

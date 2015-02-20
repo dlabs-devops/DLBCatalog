@@ -24,6 +24,7 @@
     [super viewDidLoad];
     [self.counterView layoutIfNeeded];
     self.counterView.componentAlignment = NSTextAlignmentRight;
+    self.counterView.suffix = @"%";
 }
 
 
