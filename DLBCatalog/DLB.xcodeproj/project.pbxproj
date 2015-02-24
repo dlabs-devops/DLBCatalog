@@ -10,6 +10,11 @@
 		2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2105344C1A5C028200164018 /* DLBInterpolations.m */; };
 		210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210534501A5C0A6500164018 /* BaseCounterViewController.m */; };
 		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
+		2117BAA61A9C762A00711212 /* DLBStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAA51A9C762A00711212 /* DLBStarView.m */; };
+		2117BAA91A9C7EA300711212 /* DLBStarRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAA81A9C7EA300711212 /* DLBStarRatingCell.m */; };
+		2117BAAC1A9C896900711212 /* BaseStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAAB1A9C896900711212 /* BaseStarViewController.m */; };
+		2117BAAE1A9C899200711212 /* BaseStarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2117BAAD1A9C899200711212 /* BaseStarViewController.storyboard */; };
+		2117BAB11A9C9D1200711212 /* DLBInterectableStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */; };
 		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
 		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
 		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
@@ -82,6 +87,15 @@
 		2105344F1A5C0A6500164018 /* BaseCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCounterViewController.h; sourceTree = "<group>"; };
 		210534501A5C0A6500164018 /* BaseCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCounterViewController.m; sourceTree = "<group>"; };
 		210534531A5C0AA400164018 /* BaseCounter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseCounter.storyboard; sourceTree = "<group>"; };
+		2117BAA41A9C762A00711212 /* DLBStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBStarView.h; sourceTree = "<group>"; };
+		2117BAA51A9C762A00711212 /* DLBStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBStarView.m; sourceTree = "<group>"; };
+		2117BAA71A9C7EA300711212 /* DLBStarRatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBStarRatingCell.h; sourceTree = "<group>"; };
+		2117BAA81A9C7EA300711212 /* DLBStarRatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBStarRatingCell.m; sourceTree = "<group>"; };
+		2117BAAA1A9C896900711212 /* BaseStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStarViewController.h; sourceTree = "<group>"; };
+		2117BAAB1A9C896900711212 /* BaseStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStarViewController.m; sourceTree = "<group>"; };
+		2117BAAD1A9C899200711212 /* BaseStarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseStarViewController.storyboard; sourceTree = "<group>"; };
+		2117BAAF1A9C9D1200711212 /* DLBInterectableStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInterectableStarView.h; sourceTree = "<group>"; };
+		2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInterectableStarView.m; sourceTree = "<group>"; };
 		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
 		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
 		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
@@ -217,6 +231,8 @@
 				210534501A5C0A6500164018 /* BaseCounterViewController.m */,
 				21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */,
 				21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */,
+				2117BAAA1A9C896900711212 /* BaseStarViewController.h */,
+				2117BAAB1A9C896900711212 /* BaseStarViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -226,13 +242,26 @@
 			children = (
 				210534531A5C0AA400164018 /* BaseCounter.storyboard */,
 				21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */,
+				2117BAAD1A9C899200711212 /* BaseStarViewController.storyboard */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		2117BAA31A9C761C00711212 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				2117BAA41A9C762A00711212 /* DLBStarView.h */,
+				2117BAA51A9C762A00711212 /* DLBStarView.m */,
+				2117BAAF1A9C9D1200711212 /* DLBInterectableStarView.h */,
+				2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */,
+			);
+			path = StarView;
 			sourceTree = "<group>";
 		};
 		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2117BAA31A9C761C00711212 /* StarView */,
 				21FFECF51A88B4730017B2A9 /* MediaRecorder */,
 				2187BF691A43029400E3FD37 /* BarGraph */,
 				21326E681A419233000ADCA2 /* CircularProgress */,
@@ -557,6 +586,8 @@
 		21EEE9351A41B09C000600FD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2117BAA71A9C7EA300711212 /* DLBStarRatingCell.h */,
+				2117BAA81A9C7EA300711212 /* DLBStarRatingCell.m */,
 				21EEE9361A41B09C000600FD /* DLBBaseCircularViewCell.h */,
 				21EEE9371A41B09C000600FD /* DLBBaseCircularViewCell.m */,
 				21EEE9381A41B09C000600FD /* DLBPieChartCell.h */,
@@ -771,6 +802,7 @@
 			files = (
 				21EEE9231A419ECE000600FD /* Wandera.storyboard in Resources */,
 				21EEE9211A419ECE000600FD /* LaunchScreen.xib in Resources */,
+				2117BAAE1A9C899200711212 /* BaseStarViewController.storyboard in Resources */,
 				210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */,
 				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
 				21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */,
@@ -779,7 +811,6 @@
 				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
 				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
 				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
-				21FFED011A88C44F0017B2A9,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +828,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21FFECFF1A88C43A0017B2A9,
 				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
 				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
@@ -808,7 +838,6 @@
 				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
 				21CA3F751A5E9F3B00D27F5E /* WNDGraphGrid.m in Sources */,
 				2187BF6C1A4302A500E3FD37 /* DLBBarGraphView.m in Sources */,
-				21FFECF81A88B47F0017B2A9,
 				21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */,
 				21326E981A419233000ADCA2 /* DLBFloatingRange.m in Sources */,
 				21EEE9261A419EE4000600FD /* MainViewController.m in Sources */,
@@ -816,7 +845,7 @@
 				21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */,
 				215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */,
 				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
-				21FFECFC1A88B70F0017B2A9,
+				2117BAB11A9C9D1200711212 /* DLBInterectableStarView.m in Sources */,
 				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
 				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
 				210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */,
@@ -826,10 +855,13 @@
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
 				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
+				2117BAA61A9C762A00711212 /* DLBStarView.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
 				21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */,
+				2117BAAC1A9C896900711212 /* BaseStarViewController.m in Sources */,
 				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
+				2117BAA91A9C7EA300711212 /* DLBStarRatingCell.m in Sources */,
 				21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */,
 				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
 				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,

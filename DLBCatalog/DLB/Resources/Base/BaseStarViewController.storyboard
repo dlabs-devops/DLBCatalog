@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X2p-7l-dFx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Base Star View Controller-->
+        <scene sceneID="H5F-Tx-Rbr">
+            <objects>
+                <viewController id="X2p-7l-dFx" customClass="BaseStarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pBc-vM-CDE"/>
+                        <viewControllerLayoutGuide type="bottom" id="gB3-Kq-rsN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8oC-KL-AvY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyD-5b-H6B">
+                                <rect key="frame" x="40" y="153" width="110" height="40"/>
+                                <color key="backgroundColor" red="0.82752457550000003" green="0.82752457550000003" blue="0.82752457550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fci-TP-hNW"/>
+                                    <constraint firstAttribute="width" constant="110" id="fi3-lz-3GH"/>
+                                </constraints>
+                                <state key="normal" title="Star count">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="starCountPressed:" destination="X2p-7l-dFx" eventType="touchUpInside" id="oWe-1Z-Mep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f13-6H-OPI">
+                                <rect key="frame" x="158" y="153" width="110" height="40"/>
+                                <color key="backgroundColor" red="0.82752457550000003" green="0.82752457550000003" blue="0.82752457550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Pu-9t-DfC"/>
+                                    <constraint firstAttribute="width" constant="110" id="LQA-RI-eeG"/>
+                                </constraints>
+                                <state key="normal" title="Rating">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ratingPressed:" destination="X2p-7l-dFx" eventType="touchUpInside" id="ghA-oh-Vfl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wR-TF-eMV">
+                                <rect key="frame" x="279" y="51" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdi-5R-hNO" customClass="DLBInterectableStarView">
+                                <rect key="frame" x="40" y="80" width="520" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zdi-5R-hNO" secondAttribute="height" multiplier="8:1" id="ezy-C4-wsW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="ratingImage" value="star-empty"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="ratingHighlightedImage" value="star-full"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ratingSize">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3.3999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumRating">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundingValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zdi-5R-hNO" firstAttribute="top" secondItem="pBc-vM-CDE" secondAttribute="bottom" constant="60" id="A3t-hX-JFh"/>
+                            <constraint firstItem="xyD-5b-H6B" firstAttribute="top" secondItem="zdi-5R-hNO" secondAttribute="bottom" constant="8" id="EZx-In-Rha"/>
+                            <constraint firstItem="f13-6H-OPI" firstAttribute="top" secondItem="xyD-5b-H6B" secondAttribute="top" id="HZ2-Dz-Iud"/>
+                            <constraint firstItem="1wR-TF-eMV" firstAttribute="bottom" secondItem="zdi-5R-hNO" secondAttribute="top" constant="-8" id="PNw-fw-R6D"/>
+                            <constraint firstItem="f13-6H-OPI" firstAttribute="bottom" secondItem="xyD-5b-H6B" secondAttribute="bottom" id="dVr-od-CvA"/>
+                            <constraint firstAttribute="trailing" secondItem="zdi-5R-hNO" secondAttribute="trailing" constant="40" id="me8-5K-Svo"/>
+                            <constraint firstItem="xyD-5b-H6B" firstAttribute="leading" secondItem="zdi-5R-hNO" secondAttribute="leading" id="rnX-96-50k"/>
+                            <constraint firstItem="f13-6H-OPI" firstAttribute="leading" secondItem="xyD-5b-H6B" secondAttribute="trailing" constant="8" id="sFE-Jp-Mvj"/>
+                            <constraint firstItem="1wR-TF-eMV" firstAttribute="centerX" secondItem="zdi-5R-hNO" secondAttribute="centerX" id="tUW-NF-6Of"/>
+                            <constraint firstItem="zdi-5R-hNO" firstAttribute="leading" secondItem="8oC-KL-AvY" secondAttribute="leading" constant="40" id="yOl-3D-Wta"/>
+                            <constraint firstItem="f13-6H-OPI" firstAttribute="top" secondItem="xyD-5b-H6B" secondAttribute="top" id="zER-u2-bhe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ratingLabel" destination="1wR-TF-eMV" id="fmc-N4-8qH"/>
+                        <outlet property="starView" destination="zdi-5R-hNO" id="T0l-Vd-wL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nv1-ij-DJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star-empty" width="100" height="100"/>
+        <image name="star-full" width="100" height="100"/>
+    </resources>
+</document>

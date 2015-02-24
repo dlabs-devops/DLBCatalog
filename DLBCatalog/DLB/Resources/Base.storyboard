@@ -530,16 +530,16 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rw-C4-sSY" id="dai-zz-Ko3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-RZ-iOE" userLabel="Labels pannel">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-RZ-iOE" userLabel="Labels pannel">
                                                     <rect key="frame" x="8" y="31" width="375" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-HE-VXM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-HE-VXM">
                                                             <rect key="frame" x="0.0" y="21" width="375" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="IwK-oo-9EK"/>
@@ -575,7 +575,7 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-ui-mvn" userLabel="Preview view">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-ui-mvn" userLabel="Preview view">
                                                     <rect key="frame" x="405" y="8" width="187" height="83"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -683,6 +683,105 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="progressBarView" destination="wAU-rR-JxF" id="JlG-Iv-QqT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starViewCell" rowHeight="100" id="kmr-nt-Ixq" userLabel="starRatingCell" customClass="DLBStarRatingCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kmr-nt-Ixq" id="hay-6C-ImF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB1-W1-b2v" userLabel="Labels pannel">
+                                                    <rect key="frame" x="10" y="31" width="248" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcc-gW-qXp">
+                                                            <rect key="frame" x="0.0" y="21" width="248" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-A4-jo9" userLabel="Animation transitions">
+                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="tff-uB-uNK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="tff-uB-uNK"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="4WX-j1-moz"/>
+                                                        <constraint firstItem="Rcc-gW-qXp" firstAttribute="top" secondItem="D8k-A4-jo9" secondAttribute="bottom" id="EnM-7F-hXd"/>
+                                                        <constraint firstAttribute="top" secondItem="D8k-A4-jo9" secondAttribute="top" id="G9w-zu-SmA"/>
+                                                        <constraint firstItem="D8k-A4-jo9" firstAttribute="leading" secondItem="aB1-W1-b2v" secondAttribute="leading" id="VRI-B7-Vbq"/>
+                                                        <constraint firstItem="D8k-A4-jo9" firstAttribute="top" secondItem="aB1-W1-b2v" secondAttribute="top" constant="2" id="YMy-Nl-aby"/>
+                                                        <constraint firstItem="Rcc-gW-qXp" firstAttribute="leading" secondItem="aB1-W1-b2v" secondAttribute="leading" id="dC1-RH-ONA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Rcc-gW-qXp" secondAttribute="bottom" constant="2" id="jFE-A5-TN4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="D8k-A4-jo9" secondAttribute="trailing" id="r4D-oK-qFe"/>
+                                                        <constraint firstItem="Rcc-gW-qXp" firstAttribute="top" secondItem="aB1-W1-b2v" secondAttribute="top" constant="3" id="rra-5A-g9y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Rcc-gW-qXp" secondAttribute="trailing" id="sQg-Ta-XK9"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="4WX-j1-moz"/>
+                                                            <exclude reference="YMy-Nl-aby"/>
+                                                            <exclude reference="rra-5A-g9y"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-Ke-nyk">
+                                                    <rect key="frame" x="232" y="38" width="45" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="hOf-NE-0Mb"/>
+                                                        <constraint firstAttribute="height" constant="24" id="skU-v6-en6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kV-Nc-neQ" userLabel="Preview view" customClass="DLBStarView">
+                                                    <rect key="frame" x="280" y="20" width="124" height="59"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2kV-Nc-neQ" secondAttribute="height" multiplier="1:1" id="ohN-Mq-OHU"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="ohN-Mq-OHU"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="centerY" secondItem="hay-6C-ImF" secondAttribute="centerY" id="7wW-lh-GBF"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="top" secondItem="hay-6C-ImF" secondAttribute="top" constant="20" id="DbL-Hv-2pt"/>
+                                                <constraint firstAttribute="centerY" secondItem="aB1-W1-b2v" secondAttribute="centerY" id="FRG-Ga-cCB"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="bottom" secondItem="hay-6C-ImF" secondAttribute="bottom" constant="-20" id="FeL-h9-3k3"/>
+                                                <constraint firstItem="aB1-W1-b2v" firstAttribute="width" secondItem="2kV-Nc-neQ" secondAttribute="width" multiplier="2:1" id="Kyw-zu-hWF"/>
+                                                <constraint firstItem="aB1-W1-b2v" firstAttribute="leading" secondItem="hay-6C-ImF" secondAttribute="leading" constant="10" id="SvG-46-8JT"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="leading" secondItem="aB1-W1-b2v" secondAttribute="trailing" constant="22" id="WBD-j5-aku"/>
+                                                <constraint firstAttribute="centerY" secondItem="UgA-Ke-nyk" secondAttribute="centerY" id="X2M-Qj-NxU"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="leading" secondItem="UgA-Ke-nyk" secondAttribute="trailing" constant="3" id="aEx-4B-5k6"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="trailing" secondItem="hay-6C-ImF" secondAttribute="trailing" constant="-10" id="dyc-Ci-5Rb"/>
+                                                <constraint firstItem="2kV-Nc-neQ" firstAttribute="leading" secondItem="hay-6C-ImF" secondAttribute="leading" id="wfg-h6-kYg"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7wW-lh-GBF"/>
+                                                    <exclude reference="wfg-h6-kYg"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ratingLabel" destination="UgA-Ke-nyk" id="AdL-cD-P5X"/>
+                                            <outlet property="starView" destination="2kV-Nc-neQ" id="liY-CA-1TM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
