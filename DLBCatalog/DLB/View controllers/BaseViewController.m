@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
     baseComponentAnimations,
     baseComponentRecording,
     baseComponentProgressBar,
+    baseComponentStarView,
     baseComponentCount
 } eBaseComponent;
 
@@ -68,9 +69,13 @@ typedef enum : NSUInteger {
     {
         [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseCounter" bundle:nil].instantiateInitialViewController animated:YES];
     }
-    if(indexPath.row == baseComponentRecording)
+    else if(indexPath.row == baseComponentRecording)
     {
         [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseMediaRecorder" bundle:nil].instantiateInitialViewController animated:YES];
+    }
+    else if(indexPath.row == baseComponentStarView)
+    {
+        [self.navigationController pushViewController:[UIStoryboard storyboardWithName:@"BaseStarViewController" bundle:nil].instantiateInitialViewController animated:YES];
     }
 }
 
@@ -126,6 +131,12 @@ typedef enum : NSUInteger {
         case baseComponentProgressBar:
         {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"progressBarCell"];
+            toReturn = cell;
+            break;
+        }
+        case baseComponentStarView:
+        {
+            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"starViewCell"];
             toReturn = cell;
             break;
         }

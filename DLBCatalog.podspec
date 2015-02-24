@@ -41,6 +41,11 @@ Pod::Spec.new do |s|
     ss.source_files = 'DLBCatalog/DLB/Components/Base/NumericCounter/**/*.{h,m}'
   end
 
+  s.subspec 'StarView' do |ss|
+    ss.dependency 'DLBCatalog/Core'
+    ss.source_files = 'DLBCatalog/DLB/Components/Base/StarView/**/*.{h,m}'
+  end
+
   s.subspec 'PieChart' do |ss|
     ss.dependency 'DLBCatalog/Core'
     ss.source_files = 'DLBCatalog/DLB/Components/Base/PieChart/**/*.{h,m}'
