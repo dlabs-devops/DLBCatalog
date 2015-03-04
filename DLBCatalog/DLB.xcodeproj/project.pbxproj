@@ -311,16 +311,8 @@
 			children = (
 				21326E761A419233000ADCA2 /* DLBPulseGraphView.h */,
 				21326E771A419233000ADCA2 /* DLBPulseGraphView.m */,
-				21326E781A419233000ADCA2 /* untitled folder */,
 			);
 			path = PulseGraph;
-			sourceTree = "<group>";
-		};
-		21326E781A419233000ADCA2 /* untitled folder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "untitled folder";
 			sourceTree = "<group>";
 		};
 		21326E791A419233000ADCA2 /* Tools */ = {

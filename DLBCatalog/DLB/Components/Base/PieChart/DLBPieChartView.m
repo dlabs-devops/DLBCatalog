@@ -33,7 +33,11 @@
 
 - (void)awakeFromNib
 {
+#if TARGET_INTERFACE_BUILDER
+    [[NSBundle bundleForClass:[self class]] loadNibNamed:@"DLBPieChartView" owner:self options:nil];
+#else
     [[NSBundle mainBundle] loadNibNamed:@"DLBPieChartView" owner:self options:nil];
+#endif
     
     // The following is to make sure content view, extends out all the way to fill whatever our view size is even as our view's size is changed by autolayout
     [self.contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
