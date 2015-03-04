@@ -7,10 +7,10 @@
 //
 
 #import "BaseStarViewController.h"
-#import "DLBInterectableStarView.h"
+#import "DLBInteractableStarView.h"
 
 @interface BaseStarViewController ()<UIPickerViewDataSource, UIPickerViewDelegate, DLBInterectableStarViewDelegate>
-@property (weak, nonatomic) IBOutlet DLBInterectableStarView *starView;
+@property (weak, nonatomic) IBOutlet DLBInteractableStarView *starView;
 
 @property (nonatomic, strong) UIPickerView *starCountPicker;
 @property (nonatomic, strong) UIPickerView *ratingPicker;
@@ -94,7 +94,7 @@
     self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %.1f / %.1f", self.starView.rating, self.starView.maximumRating];
 }
 
-- (void)interectableStarView:(DLBInterectableStarView *)sender selectedRating:(CGFloat)rating
+- (void)interectableStarView:(DLBInteractableStarView *)sender selectedRating:(CGFloat)rating
 {
     self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %.1f / %.1f", self.starView.rating, self.starView.maximumRating];
 }

@@ -1,14 +1,14 @@
 //
-//  DLBInterectableStarView.m
+//  DLBInteractableStarView.m
 //  DLB
 //
 //  Created by Matic Oblak on 2/24/15.
 //  Copyright (c) 2015 Matic Oblak. All rights reserved.
 //
 
-#import "DLBInterectableStarView.h"
+#import "DLBInteractableStarView.h"
 
-@implementation DLBInterectableStarView
+@implementation DLBInteractableStarView
 
 - (void)awakeFromNib
 {
@@ -47,11 +47,6 @@
         toReturn = fabsf(((float)(toReturn-min)))<fabsf(((float)(toReturn-max)))?min:max;
     }
     return toReturn;
-}
-
-- (void)interectableStarView:(DLBInterectableStarView *)sender selectedRating:(CGFloat)rating
-{
-    
 }
 
 @end

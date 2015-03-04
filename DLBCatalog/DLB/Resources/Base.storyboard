@@ -113,17 +113,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9T-9M-sTb" id="YeP-oC-cDM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjC-lm-cef" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjC-lm-cef" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="251" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hME-Mp-owk">
-                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hME-Mp-owk">
+                                                            <rect key="frame" x="0.0" y="21" width="251" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pulse graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-yg-7zW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-yg-7zW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="BX5-2E-SnB"/>
                                                             </constraints>
@@ -158,11 +158,11 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruL-Fd-tv6" userLabel="Preview view">
-                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruL-Fd-tv6" userLabel="Preview view">
+                                                    <rect key="frame" x="281" y="8" width="125" height="83"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-K7-uet" userLabel="Pulse graph" customClass="DLBPulseGraphView">
-                                                            <rect key="frame" x="21" y="0.0" width="166" height="83"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-K7-uet" userLabel="Pulse graph" customClass="DLBPulseGraphView">
+                                                            <rect key="frame" x="-41" y="0.0" width="166" height="83"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="dI8-K7-uet" secondAttribute="height" multiplier="2:1" id="XxM-2e-h3g"/>
@@ -242,8 +242,8 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adb-uU-5Xt" userLabel="Preview view">
-                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adb-uU-5Xt" userLabel="Preview view">
+                                                    <rect key="frame" x="323" y="8" width="83" height="83"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-L9-2eQ" userLabel="Pie chart view" customClass="DLBPieChartView">
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
@@ -280,17 +280,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTT-zl-wnd" id="kgM-DN-Gzn">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFL-eE-DIn" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="479" height="37"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFL-eE-DIn" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="293" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV9-NN-EyU">
-                                                            <rect key="frame" x="0.0" y="21" width="479" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV9-NN-EyU">
+                                                            <rect key="frame" x="0.0" y="21" width="293" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-Un-A7l">
-                                                            <rect key="frame" x="0.0" y="0.0" width="479" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-Un-A7l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="293" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="dEm-2a-VDg"/>
                                                             </constraints>
@@ -325,8 +325,8 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOs-CG-rF7" userLabel="Preview view">
-                                                    <rect key="frame" x="509" y="8" width="83" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOs-CG-rF7" userLabel="Preview view">
+                                                    <rect key="frame" x="323" y="8" width="83" height="83"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-fr-u7e" userLabel="Bar graph view" customClass="DLBBarGraphView">
                                                             <rect key="frame" x="-83" y="0.0" width="166" height="83"/>
@@ -364,17 +364,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S64-t9-rpq" id="ngd-Zy-YZP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-uo-D1n" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-uo-D1n" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="251" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
-                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-Av-VPM">
+                                                            <rect key="frame" x="0.0" y="21" width="251" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Numeric counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numeric counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m41-bI-SYv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="H2r-e4-KgV"/>
                                                             </constraints>
@@ -409,11 +409,11 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-fC-MhR" userLabel="Preview view">
-                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-fC-MhR" userLabel="Preview view">
+                                                    <rect key="frame" x="281" y="8" width="125" height="83"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vhq-4Y-24L" userLabel="Counter" customClass="DLBNumericCounterView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="83"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhq-4Y-24L" userLabel="Counter" customClass="DLBNumericCounterView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="83"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                     </subviews>
@@ -452,17 +452,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Uw-GW-ngT" id="3hy-pw-mrT">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsW-Qz-b9N" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsW-Qz-b9N" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="251" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsd-DN-dZp">
-                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsd-DN-dZp">
+                                                            <rect key="frame" x="0.0" y="21" width="251" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Numeric counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-uC-Vq6" userLabel="Animation transitions">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation transitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-uC-Vq6" userLabel="Animation transitions">
+                                                            <rect key="frame" x="0.0" y="0.0" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="r2h-3H-iog"/>
                                                             </constraints>
@@ -497,8 +497,8 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-yC-JnL" userLabel="Preview view">
-                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-yC-JnL" userLabel="Preview view">
+                                                    <rect key="frame" x="281" y="8" width="125" height="83"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="7fL-yC-JnL" secondAttribute="height" multiplier="1:1" id="JEL-ph-mfn"/>
@@ -530,17 +530,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rw-C4-sSY" id="dai-zz-Ko3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-RZ-iOE" userLabel="Labels pannel">
-                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-RZ-iOE" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="251" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-HE-VXM">
-                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-HE-VXM">
+                                                            <rect key="frame" x="0.0" y="21" width="251" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
+                                                            <rect key="frame" x="0.0" y="0.0" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="IwK-oo-9EK"/>
                                                             </constraints>
@@ -575,8 +575,8 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-ui-mvn" userLabel="Preview view">
-                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-ui-mvn" userLabel="Preview view">
+                                                    <rect key="frame" x="281" y="8" width="125" height="83"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="lxT-ui-mvn" secondAttribute="height" multiplier="1:1" id="xfh-ww-xIS"/>

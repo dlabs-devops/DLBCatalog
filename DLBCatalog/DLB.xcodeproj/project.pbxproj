@@ -10,11 +10,15 @@
 		2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2105344C1A5C028200164018 /* DLBInterpolations.m */; };
 		210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210534501A5C0A6500164018 /* BaseCounterViewController.m */; };
 		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
+		210BEE091AA6EAE300A23B6E /* BaseMediaRecorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */; };
+		210BEE0C1AA6EB3A00A23B6E /* BaseMediarecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210BEE0B1AA6EB3A00A23B6E /* BaseMediarecorderViewController.m */; };
+		210BEE0F1AA6EB8A00A23B6E /* DLBMediaRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 210BEE0E1AA6EB8A00A23B6E /* DLBMediaRecorder.m */; };
+		210BEE121AA6EB9F00A23B6E /* DLBInternalError.m in Sources */ = {isa = PBXBuildFile; fileRef = 210BEE111AA6EB9F00A23B6E /* DLBInternalError.m */; };
+		210BEE151AA6EC1500A23B6E /* DLBInteractableStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210BEE141AA6EC1500A23B6E /* DLBInteractableStarView.m */; };
 		2117BAA61A9C762A00711212 /* DLBStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAA51A9C762A00711212 /* DLBStarView.m */; };
 		2117BAA91A9C7EA300711212 /* DLBStarRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAA81A9C7EA300711212 /* DLBStarRatingCell.m */; };
 		2117BAAC1A9C896900711212 /* BaseStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAAB1A9C896900711212 /* BaseStarViewController.m */; };
 		2117BAAE1A9C899200711212 /* BaseStarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2117BAAD1A9C899200711212 /* BaseStarViewController.storyboard */; };
-		2117BAB11A9C9D1200711212 /* DLBInterectableStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */; };
 		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
 		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
 		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
@@ -87,6 +91,14 @@
 		2105344F1A5C0A6500164018 /* BaseCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCounterViewController.h; sourceTree = "<group>"; };
 		210534501A5C0A6500164018 /* BaseCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCounterViewController.m; sourceTree = "<group>"; };
 		210534531A5C0AA400164018 /* BaseCounter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseCounter.storyboard; sourceTree = "<group>"; };
+		210BEE0A1AA6EB3A00A23B6E /* BaseMediarecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediarecorderViewController.h; sourceTree = "<group>"; };
+		210BEE0B1AA6EB3A00A23B6E /* BaseMediarecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMediarecorderViewController.m; sourceTree = "<group>"; };
+		210BEE0D1AA6EB8A00A23B6E /* DLBMediaRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBMediaRecorder.h; sourceTree = "<group>"; };
+		210BEE0E1AA6EB8A00A23B6E /* DLBMediaRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBMediaRecorder.m; sourceTree = "<group>"; };
+		210BEE101AA6EB9F00A23B6E /* DLBInternalError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInternalError.h; sourceTree = "<group>"; };
+		210BEE111AA6EB9F00A23B6E /* DLBInternalError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInternalError.m; sourceTree = "<group>"; };
+		210BEE131AA6EC1500A23B6E /* DLBInteractableStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInteractableStarView.h; sourceTree = "<group>"; };
+		210BEE141AA6EC1500A23B6E /* DLBInteractableStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInteractableStarView.m; sourceTree = "<group>"; };
 		2117BAA41A9C762A00711212 /* DLBStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBStarView.h; sourceTree = "<group>"; };
 		2117BAA51A9C762A00711212 /* DLBStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBStarView.m; sourceTree = "<group>"; };
 		2117BAA71A9C7EA300711212 /* DLBStarRatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBStarRatingCell.h; sourceTree = "<group>"; };
@@ -94,8 +106,6 @@
 		2117BAAA1A9C896900711212 /* BaseStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStarViewController.h; sourceTree = "<group>"; };
 		2117BAAB1A9C896900711212 /* BaseStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStarViewController.m; sourceTree = "<group>"; };
 		2117BAAD1A9C899200711212 /* BaseStarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseStarViewController.storyboard; sourceTree = "<group>"; };
-		2117BAAF1A9C9D1200711212 /* DLBInterectableStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInterectableStarView.h; sourceTree = "<group>"; };
-		2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInterectableStarView.m; sourceTree = "<group>"; };
 		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
 		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
 		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
@@ -185,12 +195,6 @@
 		21EEE94D1A41B86E000600FD /* WanderaPieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WanderaPieChart.storyboard; sourceTree = "<group>"; };
 		21EEE9501A41B8A1000600FD /* WanderaPieChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanderaPieChartVC.h; sourceTree = "<group>"; };
 		21EEE9511A41B8A1000600FD /* WanderaPieChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanderaPieChartVC.m; sourceTree = "<group>"; };
-		21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBMediaRecorder.h; sourceTree = "<group>"; };
-		21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBMediaRecorder.m; sourceTree = "<group>"; };
-		21FFECFA1A88B70F0017B2A9 /* DLBInternalError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBInternalError.h; sourceTree = "<group>"; };
-		21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBInternalError.m; sourceTree = "<group>"; };
-		21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediarecorderViewController.h; sourceTree = "<group>"; };
-		21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMediarecorderViewController.m; sourceTree = "<group>"; };
 		21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseMediaRecorder.storyboard; sourceTree = "<group>"; };
 		6A60C10AB6B3C503C1C3853D /* DLBLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBLineGraphView.m; sourceTree = "<group>"; };
 		6A60C1D821D883B62AFAF89D /* DLBPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPathRenderer.m; sourceTree = "<group>"; };
@@ -227,10 +231,10 @@
 		2105344E1A5C0A4600164018 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				210BEE0A1AA6EB3A00A23B6E /* BaseMediarecorderViewController.h */,
+				210BEE0B1AA6EB3A00A23B6E /* BaseMediarecorderViewController.m */,
 				2105344F1A5C0A6500164018 /* BaseCounterViewController.h */,
 				210534501A5C0A6500164018 /* BaseCounterViewController.m */,
-				21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */,
-				21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */,
 				2117BAAA1A9C896900711212 /* BaseStarViewController.h */,
 				2117BAAB1A9C896900711212 /* BaseStarViewController.m */,
 			);
@@ -250,10 +254,10 @@
 		2117BAA31A9C761C00711212 /* StarView */ = {
 			isa = PBXGroup;
 			children = (
+				210BEE131AA6EC1500A23B6E /* DLBInteractableStarView.h */,
+				210BEE141AA6EC1500A23B6E /* DLBInteractableStarView.m */,
 				2117BAA41A9C762A00711212 /* DLBStarView.h */,
 				2117BAA51A9C762A00711212 /* DLBStarView.m */,
-				2117BAAF1A9C9D1200711212 /* DLBInterectableStarView.h */,
-				2117BAB01A9C9D1200711212 /* DLBInterectableStarView.m */,
 			);
 			path = StarView;
 			sourceTree = "<group>";
@@ -636,8 +640,8 @@
 		21FFECF51A88B4730017B2A9 /* MediaRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */,
-				21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */,
+				210BEE0D1AA6EB8A00A23B6E /* DLBMediaRecorder.h */,
+				210BEE0E1AA6EB8A00A23B6E /* DLBMediaRecorder.m */,
 			);
 			path = MediaRecorder;
 			sourceTree = "<group>";
@@ -645,8 +649,8 @@
 		21FFECF91A88B7020017B2A9 /* Internal alerting */ = {
 			isa = PBXGroup;
 			children = (
-				21FFECFA1A88B70F0017B2A9 /* DLBInternalError.h */,
-				21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */,
+				210BEE101AA6EB9F00A23B6E /* DLBInternalError.h */,
+				210BEE111AA6EB9F00A23B6E /* DLBInternalError.m */,
 			);
 			path = "Internal alerting";
 			sourceTree = "<group>";
@@ -802,6 +806,7 @@
 				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
 				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
 				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
+				210BEE091AA6EAE300A23B6E /* BaseMediaRecorder.storyboard in Resources */,
 				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +830,7 @@
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
 				21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */,
 				2187BF731A43187200E3FD37 /* DLBBarGraphCell.m in Sources */,
+				210BEE0F1AA6EB8A00A23B6E /* DLBMediaRecorder.m in Sources */,
 				21326E941A419233000ADCA2 /* DLBPulseGraphView.m in Sources */,
 				21326E951A419233000ADCA2 /* DLBAnimatable.m in Sources */,
 				21326E991A419233000ADCA2 /* WNDProgressView.m in Sources */,
@@ -837,9 +843,9 @@
 				21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */,
 				215C9FB81A5A81D100D2B823 /* DLBNumericCounterView.m in Sources */,
 				21EEE9521A41B8A1000600FD /* WanderaPieChartVC.m in Sources */,
-				2117BAB11A9C9D1200711212 /* DLBInterectableStarView.m in Sources */,
 				21EEE9471A41B0C2000600FD /* WNDPieChartCell.m in Sources */,
 				21EEE93D1A41B09C000600FD /* DLBPieChartCell.m in Sources */,
+				210BEE121AA6EB9F00A23B6E /* DLBInternalError.m in Sources */,
 				210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */,
 				21EEE9481A41B0C2000600FD /* WNDPulseGraphCell.m in Sources */,
 				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
@@ -855,7 +861,9 @@
 				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
 				2117BAA91A9C7EA300711212 /* DLBStarRatingCell.m in Sources */,
 				21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */,
+				210BEE151AA6EC1500A23B6E /* DLBInteractableStarView.m in Sources */,
 				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
+				210BEE0C1AA6EB3A00A23B6E /* BaseMediarecorderViewController.m in Sources */,
 				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,
 				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
 				215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */,

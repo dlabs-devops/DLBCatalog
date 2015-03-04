@@ -1,5 +1,5 @@
 //
-//  DLBInterectableStarView.h
+//  DLBInteractableStarView.h
 //  DLB
 //
 //  Created by Matic Oblak on 2/24/15.
@@ -8,15 +8,15 @@
 
 #import "DLBStarView.h"
 
-@class DLBInterectableStarView;
+@class DLBInteractableStarView;
 
 @protocol DLBInterectableStarViewDelegate <NSObject>
 
-- (void)interectableStarView:(DLBInterectableStarView *)sender selectedRating:(CGFloat)rating;
+- (void)interectableStarView:(DLBInteractableStarView *)sender selectedRating:(CGFloat)rating;
 
 @end
 
-@interface DLBInterectableStarView : DLBStarView
+@interface DLBInteractableStarView : DLBStarView
 //
 // Selection granularity rounds the selected rating
 // For instance set to .5 so user can select values such as .0, .5, 1.0, 1.5...
