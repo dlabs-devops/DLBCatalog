@@ -125,6 +125,11 @@
         returnValue.size.width = (value / self.maxValue) * rect.size.width;
     }
 
+    // is width is 0 for some reason (self.maxValue can be 0) return 0;
+    if (isnan(returnValue.size.width))
+    {
+        returnValue.size.width = 0;
+    }
 
     return returnValue;
 }
