@@ -21,7 +21,7 @@
 // Color of progress bar if over @maxValue
 @property (nonatomic, retain) UIColor *overMaxProgressColor;
 
-@property (nonatomic, retain) UIColor *backgroundProgreesColor;
+@property (nonatomic, retain) UIColor *progressBackgroundColor;
 
 @property (nonatomic, readonly) CGRect currentProgressFrame;
 @property (nonatomic, readonly) CGFloat currentProgressValue;

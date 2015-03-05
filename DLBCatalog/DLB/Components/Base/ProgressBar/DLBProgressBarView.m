@@ -10,7 +10,6 @@
 
 @property (nonatomic, strong) DLBAnimatableFloat *animatableScale;
 @property (nonatomic) CGFloat currentScale;
-//@property (nonatomic) CGFloat progressValue;
 @property (nonatomic) CGRect currentProgressFrame;
 @property (nonatomic) CGFloat currentProgressValue;
 @property (nonatomic) BOOL animationRunning;
@@ -20,15 +19,6 @@
 
 @implementation DLBProgressBarView
 
-- (CGFloat)animationTime
-{
-    if (_animationTime == 0.0f)
-    {
-        _animationTime = 2.5f;
-    }
-
-    return _animationTime;
-}
 
 - (void)setProgressValue:(CGFloat)progress animate:(BOOL)animate withCompletion:(void(^)(void)) block
 {
@@ -78,12 +68,11 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //draw progress background color
-    [self.backgroundProgreesColor setFill];
+    [self.progressBackgroundColor setFill];
     CGContextFillRect(context, rect);
 
     // get current progress rect
     self.currentProgressFrame = [self rectForValue:self.currentProgressValue inFrame:rect];
-
 
     if(self.maxValue >= self.currentProgressValue)
     {
