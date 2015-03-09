@@ -20,11 +20,24 @@
 @property (nonatomic) CGFloat maximumValue;
 // defaults to .0f
 @property (nonatomic) CGFloat value;
-// color of inidicator
-@property (nonatomic, strong) UIColor *indicatorColor;
+// progress color
+@property (nonatomic, strong) UIColor *progressColor;
+// progress background image. @progressColor must be clear to enable background image.
+@property (nonatomic, strong) UIImage *progressBackgoundImage;
+// Line width of circle line behind progress circle
+@property (nonatomic) float backgroundCircleStrokeWidth;
+// Background color of circle line behind progress circle
+@property (nonatomic, strong) UIColor *backgroundCircleStrokeColor;
 // indicator line width
-@property (nonatomic) CGFloat indicatorLineWidth;
-
+@property (nonatomic) CGFloat progressStrokeWidth;
+// animation time
+@property (nonatomic) CGFloat animationTime;
 - (void)setValue:(CGFloat)value animated:(BOOL)animated;
+
+// called last animation frame
+- (void)valueAnimationWillEnd;
+
+// called before first animation frame
+- (void)valueAnimationWillBegin;
 
 @end

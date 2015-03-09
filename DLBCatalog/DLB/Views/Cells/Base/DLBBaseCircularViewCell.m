@@ -23,14 +23,14 @@
     [self layoutIfNeeded];
     [self.circularView layoutIfNeeded];
     [self.circularView awakeFromNib];
-    self.circularView.indicatorColor = [UIColor blueColor];
+    self.circularView.progressColor = [UIColor blueColor];
     [self.circularView layoutIfNeeded];
     [self animateCircularView];
 }
 
 - (void)animateCircularView
 {
-    self.circularView.indicatorColor = [UIColor blueColor];
+    self.circularView.progressColor = [UIColor blueColor];
     CGFloat value = (CGFloat)(rand()%100)/100.0f;
     [self.circularView setValue:value animated:YES];
     

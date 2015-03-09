@@ -23,7 +23,7 @@
     self.progressBarView.progressColor = [UIColor colorWithRed:0.42f green:0.85f blue:0.43f alpha:1.0f];
     self.progressBarView.maxProgressColor = [UIColor colorWithRed:0.93f green:0.4f blue:0.42f alpha:1];
     self.progressBarView.overMaxProgressColor = [UIColor colorWithRed:0.92f green:0.26f blue:0.28f alpha:1.0f];
-    self.progressBarView.backgroundProgreesColor = [UIColor colorWithRed:0.14f green:0.14f blue:0.16f alpha:1.0f];
+    self.progressBarView.progressBackgroundColor = [UIColor colorWithRed:0.14f green:0.14f blue:0.16f alpha:1.0f];
     self.progressBarView.backgroundColor = [UIColor clearColor];
     self.progressBarView.animationTime = 2.0f;
 

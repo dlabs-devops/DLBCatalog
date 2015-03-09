@@ -24,16 +24,16 @@
     [self layoutIfNeeded];
     [self.circularView layoutIfNeeded];
     [self.circularView awakeFromNib];
-    self.circularView.indicatorColor = [UIColor blueColor];
+    //self.circularView.progressColor = [UIColor blueColor];
     [self.circularView layoutIfNeeded];
     [self animateCircularView];
 }
 
 - (void)animateCircularView
 {
-    self.circularView.indicatorColor = [UIColor redColor];
+    //self.circularView.progressColor = [UIColor redColor];
     self.circularView.backgroundCircleStrokeColor = [[UIColor redColor] colorWithAlphaComponent:.3f];
-    self.circularView.indicatorLineWidth = 10.0f;
+    self.circularView.progressStrokeWidth = 6.0f;
     self.circularView.backgroundCircleStrokeWidth = 12.0f;
     CGFloat value = (CGFloat)(rand()%100)/100.0f;
     [self.circularView setValue:value animated:YES];

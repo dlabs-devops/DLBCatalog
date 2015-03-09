@@ -6,10 +6,13 @@
 //  Copyright (c) 2014 Matic Oblak. All rights reserved.
 //
 
+#import "DLBAnimatableFloat.h"
 #import "WNDProgressView.h"
 
 @interface WNDProgressView()
-@property (nonatomic, strong) UIImage *colorWheel;
+
+@property (nonatomic) CGFloat alphaScale;
+
 @end
 
 @implementation WNDProgressView
@@ -18,55 +21,7 @@
 {
     [super awakeFromNib];
 
-    self.colorWheel = [UIImage imageNamed:@"wandera_indicator_gradient"];
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    if (self.backgroundCircleStrokeWidth <= (CGFloat).0f)
-    {
-        self.backgroundCircleStrokeWidth = (float)self.indicatorLineWidth;
-    }
-    
-    CGFloat viewWidth = self.frame.size.width;
-    CGFloat viewHeight = self.frame.size.height;
-    CGPoint center = CGPointMake(viewWidth/2.0f , viewHeight/2.0f);
-    CGFloat startAngle = (CGFloat)(-M_PI_2);
-    CGFloat endAngle = startAngle + ((CGFloat)(M_PI*2.0)) * self.scale;
-    
-    CGFloat backgroundCircleRadius = viewWidth*0.5f - self.backgroundCircleStrokeWidth*0.5f;
-    
-    // background
-    // Create circle with bezier for background
-    UIBezierPath *backgroundCircle = [UIBezierPath bezierPath];
-    [backgroundCircle addArcWithCenter:center
-                             radius:backgroundCircleRadius
-                         startAngle:0
-                           endAngle:2.0f*(CGFloat)M_PI
-                          clockwise:YES];
-    backgroundCircle.lineWidth = self.backgroundCircleStrokeWidth;
-    [self.backgroundCircleStrokeColor setStroke];
-    [backgroundCircle stroke];
-    
-    // Create circular bezier path for moving indicator
-    UIBezierPath *indicatorPath = [UIBezierPath bezierPath];
-    [indicatorPath addArcWithCenter:center
-                          radius:backgroundCircleRadius + self.indicatorLineWidth*.5f
-                      startAngle:startAngle
-                        endAngle:endAngle
-                       clockwise:YES];
-    [indicatorPath addArcWithCenter:center
-                             radius:backgroundCircleRadius - self.indicatorLineWidth*.5f
-                         startAngle:endAngle
-                           endAngle:startAngle
-                          clockwise:NO];
-    indicatorPath.usesEvenOddFillRule = YES;
-    [indicatorPath fill];
-    // clip to indicator bezier path
-    [indicatorPath addClip];
-    
-    // draw image
-    [self.colorWheel drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
+    self.progressBackgoundImage = [UIImage imageNamed:@"wandera_indicator_gradient"];
 }
 
 - (CGFloat)scale
@@ -79,6 +34,40 @@
     {
         return .0f;
     }
+}
+
+- (void)valueAnimationWillBegin
+{
+    self.progressColor = [[UIColor colorWithRed:0.93f green:0.25f blue:0.26f alpha:1.0f] colorWithAlphaComponent:0.0f];
+}
+
+- (void)valueAnimationWillEnd
+{
+    NSLog(@"valueAnimationWillEnd: (%f, %f)", self.value, self.maximumValue);
+    if (self.value < self.maximumValue)
+    {
+        self.progressColor = [[UIColor colorWithRed:0.93f green:0.25f blue:0.26f alpha:1.0f] colorWithAlphaComponent:0.0f];
+        return;
+    }
+
+    // begin animating fade in progress color if scale is over 1.0f
+    self.progressColor = [[UIColor colorWithRed:0.93f green:0.25f blue:0.26f alpha:1.0f] colorWithAlphaComponent:0.0f];
+    DLBAnimatableFloat *animatableColorScale = [[DLBAnimatableFloat alloc] initWithStartValue:self.alphaScale];
+    animatableColorScale.animationStyle = DLBAnimationStyleEaseIn;
+    [animatableColorScale animateTo:1.0f withDuration:0.15f onFrameBlock:^(BOOL willEnd) {
+        self.alphaScale = animatableColorScale.floatValue;
+        self.progressColor = [self.progressColor colorWithAlphaComponent:self.alphaScale];
+        [self setNeedsDisplay];
+        if(willEnd)
+        {
+
+        }
+    }];
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    [super drawRect:rect];
 }
 
 

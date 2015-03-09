@@ -241,7 +241,7 @@
     
     if(self.suffix)
     {
-        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
+        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                       scale:frameScale
                                             excludeZeroRect:YES];
@@ -270,7 +270,7 @@
            iterator < startComponentCount ||
            iterator < endComponentCount)
     {
-        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:start]]
+        componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                       scale:frameScale
                                             excludeZeroRect:YES];

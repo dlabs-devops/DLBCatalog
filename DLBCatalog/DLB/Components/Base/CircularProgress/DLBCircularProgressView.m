@@ -9,6 +9,8 @@
 #import "DLBCircularProgressView.h"
 #import "DLBAnimations.h"
 
+#define fequal(a,b) (fabs((a) - (b)) < FLT_EPSILON)
+
 @interface DLBCircularProgressView ()
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (nonatomic, readonly) CGFloat scale;
@@ -33,18 +35,18 @@
 #else
     [[NSBundle mainBundle] loadNibNamed:@"DLBCircularProgressView" owner:self options:nil];
 #endif
-    
+
     // The following is to make sure content view, extends out all the way to fill whatever our view size is even as our view's size is changed by autolayout
     [self.contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview: self.contentView];
-    
+
     [[self class] addEdgeConstraint:NSLayoutAttributeLeft superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeRight superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeTop superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeBottom superview:self subview:self.contentView];
-    
+
     [self resetToDefaults];
-    
+
     [self layoutIfNeeded];
 }
 
@@ -71,13 +73,23 @@
     }
 }
 
+- (CGFloat)animationTime
+{
+    if (fequal(_animationTime, 0))
+    {
+        _animationTime = 0.5f;
+    }
+
+    return _animationTime;
+}
+
 - (void)resetToDefaults
 {
     self.minimumValue = .0f;
     self.maximumValue = 1.0f;
     self.value = .0f;
-    self.indicatorColor = [UIColor whiteColor];
-    self.indicatorLineWidth = 6.0f;
+    self.progressColor = [UIColor clearColor];
+    self.progressStrokeWidth = 6.0f;
     self.backgroundColor = [UIColor clearColor];
 }
 
@@ -99,13 +111,22 @@
 {
     if(animated)
     {
+        if (self.animatableScale)
+        {
+            [self.animatableScale invalidateAnimation];
+            self.animatableScale = nil;
+        }
+
         self.animatableScale = [[DLBAnimatableFloat alloc] initWithStartValue:self.value];
         self.animatableScale.animationStyle = DLBAnimationStyleEaseInOut;
-        [self.animatableScale animateTo:value withDuration:.5 onFrameBlock:^(BOOL willEnd) {
+        [self.animatableScale animateTo:value withDuration:self.animationTime onFrameBlock:^(BOOL willEnd) {
             self.value = self.animatableScale.floatValue;
             if(willEnd)
             {
-                self.animatableScale = nil;
+                if ([self respondsToSelector:@selector(valueAnimationWillEnd)])
+                {
+                    [self valueAnimationWillEnd];
+                }
             }
         }];
     }
@@ -116,23 +137,61 @@
     }
 }
 
+- (void)valueAnimationWillEnd
+{
+
+}
+
 - (void)drawRect:(CGRect)rect
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGFloat border = self.indicatorLineWidth*.5f;
-    // background
-    CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
-    CGContextFillRect(context, CGRectMake(.0f, .0f, self.frame.size.width, self.frame.size.height));
-    
-    CGContextSetLineWidth(context, self.indicatorLineWidth);
+    if (self.backgroundCircleStrokeWidth <= (CGFloat).0f)
+    {
+        self.backgroundCircleStrokeWidth = (float)self.progressStrokeWidth;
+    }
+
+    CGFloat viewWidth = self.frame.size.width;
+    CGFloat viewHeight = self.frame.size.height;
+    CGPoint center = CGPointMake(viewWidth/2.0f , viewHeight/2.0f);
     CGFloat startAngle = (CGFloat)(-M_PI_2);
-    CGFloat endAngle = startAngle + ((CGFloat)(M_PI*2.0))*self.scale;
-    // draw full circle
-    CGContextSetStrokeColorWithColor(context, [self indicatorColor].CGColor);
-    CGContextSetLineWidth(context, self.indicatorLineWidth);
-    CGContextMoveToPoint(context, self.frame.size.width*.5f, .0f);
-    CGContextAddArc(context, self.frame.size.width*.5f, self.frame.size.height*.5f, self.frame.size.width*.5f-border, startAngle, endAngle, 0);
-    CGContextStrokePath(context);
+    CGFloat endAngle = startAngle + ((CGFloat)(M_PI*2.0)) * self.scale;
+
+    CGFloat backgroundCircleRadius = viewWidth*0.5f - self.backgroundCircleStrokeWidth*0.5f;
+
+    // background
+    // Create circle with bezier for background
+    UIBezierPath *backgroundCircle = [UIBezierPath bezierPath];
+    [backgroundCircle addArcWithCenter:center
+                                radius:backgroundCircleRadius
+                            startAngle:0
+                              endAngle:2.0f*(CGFloat)M_PI
+                             clockwise:YES];
+    backgroundCircle.lineWidth = self.backgroundCircleStrokeWidth;
+    [self.backgroundCircleStrokeColor setStroke];
+    [backgroundCircle stroke];
+
+    // Create circular bezier path for moving indicator
+    UIBezierPath *indicatorPath = [UIBezierPath bezierPath];
+    [indicatorPath addArcWithCenter:center
+                             radius:backgroundCircleRadius + self.progressStrokeWidth*.5f
+                         startAngle:startAngle
+                           endAngle:endAngle
+                          clockwise:YES];
+    [indicatorPath addArcWithCenter:center
+                             radius:backgroundCircleRadius - self.progressStrokeWidth*.5f
+                         startAngle:endAngle
+                           endAngle:startAngle
+                          clockwise:NO];
+    indicatorPath.usesEvenOddFillRule = YES;
+    [indicatorPath fill];
+    // clip to indicator bezier path
+    [indicatorPath addClip];
+
+    // draw image
+    [self.progressBackgoundImage drawInRect:CGRectMake(0, 0, viewWidth, viewHeight)];
+
+    // draw image
+    [self.progressColor setFill];
+    CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
 }
 
 @end
