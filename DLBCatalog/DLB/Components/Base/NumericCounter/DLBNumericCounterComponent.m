@@ -25,6 +25,7 @@
         _topLabel = [[UILabel alloc] initWithFrame:[self rectForTopLabel]];
         _topLabel.adjustsFontSizeToFitWidth = YES;
         _topLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+        _topLabel.textAlignment = NSTextAlignmentCenter;
         _topLabel.text = [self textForValue:self.mainValue+1];
         _topLabel.font = self.font;
         _topLabel.textColor = self.textColor;
@@ -40,6 +41,7 @@
         _mainLabel = [[UILabel alloc] initWithFrame:[self rectForMainLabel]];
         _mainLabel.adjustsFontSizeToFitWidth = YES;
         _mainLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+        _mainLabel.textAlignment = NSTextAlignmentCenter;
         _mainLabel.text = [self textForValue:self.mainValue];
         _mainLabel.font = self.font;
         _mainLabel.textColor = self.textColor;
@@ -55,6 +57,7 @@
         _bottomLabel = [[UILabel alloc] initWithFrame:[self rectForBottomLabel]];
         _bottomLabel.adjustsFontSizeToFitWidth = YES;
         _bottomLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+        _bottomLabel.textAlignment = NSTextAlignmentCenter;
         _bottomLabel.text = [self textForValue:self.mainValue-1];
         _bottomLabel.font = self.font;
         _bottomLabel.textColor = self.textColor;
@@ -137,21 +140,21 @@
     else
     {
         CGFloat current = (NSInteger)start + scale*((NSInteger)end-(NSInteger)start);
-        
+
         NSInteger mainValue = [self round:current];
         CGFloat offset = mainValue-current;
-        
+
         BOOL shouldHideZero = fabsf((float)current) < 5.0f && self.forceZero == NO;
-        
+
         while (mainValue>10) {
             mainValue-=10;
         }
         while (mainValue<0) {
             mainValue+=10;
         }
-        
+
         self.allowZero = !shouldHideZero;
-        
+
         self.mainValue = mainValue;
         self.offsetScale = offset;
     }

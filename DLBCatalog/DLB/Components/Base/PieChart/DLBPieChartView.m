@@ -38,16 +38,16 @@
 #else
     [[NSBundle mainBundle] loadNibNamed:@"DLBPieChartView" owner:self options:nil];
 #endif
-    
+
     // The following is to make sure content view, extends out all the way to fill whatever our view size is even as our view's size is changed by autolayout
     [self.contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview: self.contentView];
-    
+
     [[self class] addEdgeConstraint:NSLayoutAttributeLeft superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeRight superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeTop superview:self subview:self.contentView];
     [[self class] addEdgeConstraint:NSLayoutAttributeBottom superview:self subview:self.contentView];
-    
+
     [self layoutIfNeeded];
 }
 
@@ -62,10 +62,16 @@
                                                            constant:0]];
 }
 
-- (void)animateGraph
+- (NSMutableArray *)chartNodes
 {
-    
+    if (!_chartNodes)
+    {
+        _chartNodes = [NSMutableArray arrayWithCapacity:5];
+    }
+
+    return _chartNodes;
 }
+
 
 - (float)radius
 {
@@ -93,10 +99,12 @@
 
 - (void)setChartSectors:(NSArray *)graphSectors animated:(BOOL)animate{
 
-    if (!self.chartNodes)
+    // if array (@graphsSectors) is empty clear graph
+    if (!graphSectors || graphSectors.count == 0)
     {
-        self.chartNodes = [NSMutableArray arrayWithCapacity:5];
+        [self clearAllNodes];
     }
+
 
     // create, update, insert new graph nodes
     for (int i = 0; i < (int)graphSectors.count; i++)
@@ -104,7 +112,7 @@
         DLBPieChartSector *loopSector = graphSectors[i];
         [self updateNodeAt:i withSector:loopSector];
     }
-    
+
     // Remove marked nodes
     [self.chartNodes enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(DLBPieChartNode *obj, NSUInteger idx, BOOL *removeOnNextUpdate)
     {
@@ -113,7 +121,7 @@
             [self.chartNodes removeObject:obj];
         }
     }];
-    
+
     // If number of graph sectors is greater than number of chart nodes than
     // mark nodes at the end of array. Mark nodes will be deleted next update
     // Move them at the beginning of the array so that other nodes are drawn over
@@ -124,13 +132,13 @@
         [self.chartNodes removeObject:loopNode];
         [self.chartNodes insertObject:loopNode atIndex:0];
     }
-    
-    // calcuate chart sum
+
+    // calculate chart sum
     [self calculateChartSumValue];
-    
+
     // refresh nodes with new angles
     [self refreshNodes];
-    
+
     // start animation
     if(animate)
     {
@@ -170,11 +178,11 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
+
     float viewWidth = (float)self.frame.size.width;
     float viewHeight = (float)self.frame.size.height;
     CGPoint center = CGPointMake(viewWidth/2.0f, viewHeight/2.0f);
-    
+
     //draw shadow on inner and outer circle
     CGContextSaveGState(context);
     UIBezierPath *backgroundCircle = [UIBezierPath bezierPath];
@@ -188,7 +196,7 @@
                             startAngle:0.0f
                               endAngle:(CGFloat)(2.0 * M_PI)
                              clockwise:YES];
-    
+
     backgroundCircle.usesEvenOddFillRule = YES;
     if(self.shadowWidth > .0f)
     {
@@ -196,10 +204,10 @@
     }
     [backgroundCircle fill];
     CGContextRestoreGState(context);
-    
+
     // clip to indicator bezier path
     [backgroundCircle addClip];
-    
+
     // loop through sectors and draw them
     for (DLBPieChartNode *loopNode in self.chartNodes)
     {
@@ -225,11 +233,11 @@
         float startAngle = [self interpolationFormStartAngle:(node.currentStartAngle)
                                                   toEndAngle:node.newStartAngle
                                                    withScale:self.scale];
-        
+
         float endAngle = [self interpolationFormStartAngle:node.currentEndAngle
                                                 toEndAngle:node.newEndAngle
                                                  withScale:self.scale];
-        
+
         [self drawSectorWithStarAngle:startAngle
                              endAngle:endAngle
                             fillColor:node.pieChartSector.sectorColor
@@ -244,12 +252,12 @@
     CGPoint center = CGPointMake(viewWidth/2.0f, viewHeight/2.0f);
 
     UIBezierPath *sectorPath = [UIBezierPath bezierPath];
-    [sectorPath moveToPoint:center];    
+    [sectorPath moveToPoint:center];
     [sectorPath addArcWithCenter:center
-                             radius:self.radius
-                         startAngle:startAngle
-                           endAngle:endAngle
-                          clockwise:YES];
+                          radius:self.radius
+                      startAngle:startAngle
+                        endAngle:endAngle
+                       clockwise:YES];
     [sectorPath closePath];
     [color setFill];
     [sectorPath fill];
@@ -260,19 +268,19 @@
     // check if exists
     DLBPieChartNode *matchingNode = nil;
     int matchingNodeIndex = -1;
-    
+
     // check if node with given sector already exists
     for (int i = 0; i < (int)self.chartNodes.count; i++)
     {
         DLBPieChartNode *loopNode = self.chartNodes[i];
-        
+
         if (loopNode.pieChartSector == sector)
         {
             matchingNode = loopNode;
             matchingNodeIndex = i;
         }
     }
-    
+
     // update node's position if it exists and if has new position
     if (matchingNode)
     {
@@ -315,6 +323,11 @@
     return startAngle + (endAngle - startAngle)*scale;
 }
 
+- (void)clearAllNodes
+{
+    [self.chartNodes removeAllObjects];
+}
+
 - (void)refreshNodes
 {
     float loopAngle = 0;
@@ -322,7 +335,7 @@
     {
         DLBPieChartNode *loopNode = self.chartNodes[i];
         DLBPieChartNode *precedingNode = nil;
-        
+
         // find preceding node
         if (i == 0)
         {
@@ -332,12 +345,12 @@
         {
             precedingNode = self.chartNodes[i-1];
         }
-        
+
         if (!loopNode.removeOnNextUpdate)
         {
             // calculate chart relative node angle
             float nodeAngle = (loopNode.pieChartSector.sectorValue / self.sectorValuesSum)*(float)(2.0 * M_PI);
-        
+
             // update current node's angles
             if (loopNode.newThisUpdate)
             {
@@ -356,9 +369,9 @@
                 loopNode.currentStartAngle = loopNode.newStartAngle;
                 loopNode.currentEndAngle = loopNode.newEndAngle;
             }
-            
+
             loopNode.newThisUpdate = NO;
-            
+
             // update new angles
             loopNode.newStartAngle = loopAngle;
             loopNode.newEndAngle = loopAngle + nodeAngle;

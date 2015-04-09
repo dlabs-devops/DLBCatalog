@@ -43,19 +43,17 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = self.bounds;
-    gradientLayer.colors = [NSArray arrayWithObjects:
-                            (id)[UIColor clearColor].CGColor,
-                            (id)[UIColor whiteColor].CGColor,
-                            (id)[UIColor whiteColor].CGColor,
-                            (id)[UIColor clearColor].CGColor,
-                            nil];  
+    gradientLayer.colors = @[(id) [UIColor clearColor].CGColor,
+            (id) [UIColor whiteColor].CGColor,
+            (id) [UIColor whiteColor].CGColor,
+            (id) [UIColor clearColor].CGColor];
     gradientLayer.locations = @[@.0,
-                                @.3,
-                                @.7,
-                                @1.0];
+            @.3,
+            @.7,
+            @1.0];
     self.layer.mask = gradientLayer;
 }
 
@@ -136,7 +134,7 @@
             }
         }];
     }
-    
+
 }
 
 - (UIColor *)textColor
@@ -182,33 +180,33 @@
             NSInteger middle = elementCount/2+1;
             NSInteger offsetCount = middle-(index+1);
             return CGRectMake(self.frame.size.width*.5f+componentWidth*(-.5f+offsetCount),
-                              .0f,
-                              componentWidth,
-                              self.frame.size.height);
+                    .0f,
+                    componentWidth,
+                    self.frame.size.height);
         }
         else
         {
             NSInteger middle = elementCount/2;
             NSInteger offsetCount = middle-(index+1);
             return CGRectMake(self.frame.size.width*.5f+componentWidth*(offsetCount),
-                              .0f,
-                              componentWidth,
-                              self.frame.size.height);
+                    .0f,
+                    componentWidth,
+                    self.frame.size.height);
         }
     }
     else if(self.componentAlignment == NSTextAlignmentLeft)
     {
         return CGRectMake(componentWidth*(elementCount-index-1),
-                          .0f,
-                          componentWidth,
-                          self.frame.size.height);
+                .0f,
+                componentWidth,
+                self.frame.size.height);
     }
     else
     {
         return CGRectMake(self.frame.size.width-componentWidth*(1.0f+index),
-                          .0f,
-                          componentWidth,
-                          self.frame.size.height);
+                .0f,
+                componentWidth,
+                self.frame.size.height);
     }
 }
 
@@ -229,16 +227,16 @@
 - (void)repositionViewsForScale:(CGFloat)scale from:(NSInteger)start to:(NSInteger)end
 {
     NSInteger iterator = 0;
-    
+
     CGRect componentFrame = CGRectZero;
-    
+
     CGFloat frameScale = .0f;
     static const CGFloat frameScaleTreshold = .8f;
     if(scale > frameScaleTreshold)
     {
         frameScale = (scale-frameScaleTreshold)/(1.0f-frameScaleTreshold);
     }
-    
+
     if(self.suffix)
     {
         componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
@@ -258,17 +256,17 @@
         component.staticString = self.suffix;
         iterator++;
     }
-    
+
     CGFloat startf = (CGFloat)start;
     CGFloat endf = (CGFloat)end;
     NSInteger firstValueIndex = iterator;
     NSInteger startComponentCount = [self componentCountForValue:start];
     NSInteger endComponentCount = [self componentCountForValue:end];
     while (startf >= 1.0f ||
-           endf >= 1.0f ||
-           iterator < (NSInteger)self.viewComponents.count ||
-           iterator < startComponentCount ||
-           iterator < endComponentCount)
+            endf >= 1.0f ||
+            iterator < (NSInteger)self.viewComponents.count ||
+            iterator < startComponentCount ||
+            iterator < endComponentCount)
     {
         componentFrame = [DLBInterpolations interpolateRect:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
                                                        with:[self frameForIndex:iterator elementCount:[self componentCountForValue:end]]
