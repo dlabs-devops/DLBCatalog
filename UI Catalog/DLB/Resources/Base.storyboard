@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LCx-MB-C3I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LCx-MB-C3I">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -524,7 +524,82 @@
                                             <outlet property="previewView" destination="7fL-yC-JnL" id="Hhz-is-vAK"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recordingCell" rowHeight="100" id="7rw-C4-sSY" userLabel="Recording cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recordingCell" rowHeight="100" id="du3-oN-ZYR" userLabel="Recording cell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="du3-oN-ZYR" id="hqK-aa-7LX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-o7-CpN" userLabel="Labels pannel">
+                                                    <rect key="frame" x="8" y="31" width="375" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Matic Oblak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-x6-Y3m">
+                                                            <rect key="frame" x="0.0" y="21" width="375" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EiP-9f-483" userLabel="Animation transitions">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="cWF-1P-mq3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="cWF-1P-mq3"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="EiP-9f-483" firstAttribute="leading" secondItem="1w7-o7-CpN" secondAttribute="leading" id="Iqz-Lk-PWR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9DJ-x6-Y3m" secondAttribute="bottom" constant="2" id="XLs-LB-bk9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9DJ-x6-Y3m" secondAttribute="trailing" id="XjM-QZ-uOW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EiP-9f-483" secondAttribute="trailing" id="Y6f-kc-V0h"/>
+                                                        <constraint firstAttribute="height" constant="50" id="aau-I2-bxo"/>
+                                                        <constraint firstItem="9DJ-x6-Y3m" firstAttribute="top" secondItem="EiP-9f-483" secondAttribute="bottom" id="cuK-cl-Ok2"/>
+                                                        <constraint firstAttribute="top" secondItem="EiP-9f-483" secondAttribute="top" id="dkF-kb-29a"/>
+                                                        <constraint firstItem="9DJ-x6-Y3m" firstAttribute="top" secondItem="1w7-o7-CpN" secondAttribute="top" constant="3" id="hAu-hX-XLJ"/>
+                                                        <constraint firstItem="EiP-9f-483" firstAttribute="top" secondItem="1w7-o7-CpN" secondAttribute="top" constant="2" id="qKC-HJ-4pm"/>
+                                                        <constraint firstItem="9DJ-x6-Y3m" firstAttribute="leading" secondItem="1w7-o7-CpN" secondAttribute="leading" id="sl3-MM-IK5"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="aau-I2-bxo"/>
+                                                            <exclude reference="qKC-HJ-4pm"/>
+                                                            <exclude reference="hAu-hX-XLJ"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-xT-Wj5" userLabel="Preview view">
+                                                    <rect key="frame" x="405" y="8" width="187" height="83"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="h5i-xT-Wj5" secondAttribute="height" multiplier="1:1" id="YbN-wn-FZr"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="YbN-wn-FZr"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="h5i-xT-Wj5" secondAttribute="bottom" id="27g-Zz-j2Y"/>
+                                                <constraint firstItem="h5i-xT-Wj5" firstAttribute="leading" secondItem="1w7-o7-CpN" secondAttribute="trailing" constant="22" id="2Nu-Y7-cCZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="h5i-xT-Wj5" secondAttribute="trailing" id="434-Fe-rI2"/>
+                                                <constraint firstItem="1w7-o7-CpN" firstAttribute="leading" secondItem="hqK-aa-7LX" secondAttribute="leadingMargin" id="G7r-RQ-76m"/>
+                                                <constraint firstItem="1w7-o7-CpN" firstAttribute="width" secondItem="h5i-xT-Wj5" secondAttribute="width" multiplier="2:1" id="Kk9-NE-wdE"/>
+                                                <constraint firstItem="h5i-xT-Wj5" firstAttribute="top" secondItem="hqK-aa-7LX" secondAttribute="topMargin" id="U9E-NI-wBM"/>
+                                                <constraint firstAttribute="centerY" secondItem="1w7-o7-CpN" secondAttribute="centerY" id="d06-Ns-66F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cropCell" rowHeight="100" id="7rw-C4-sSY" userLabel="Crop cell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rw-C4-sSY" id="dai-zz-Ko3">
@@ -539,7 +614,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media recorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image crop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-IC-Vdk" userLabel="Animation transitions">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="IwK-oo-9EK"/>

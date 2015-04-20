@@ -10,6 +10,8 @@
 		2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2105344C1A5C028200164018 /* DLBInterpolations.m */; };
 		210534511A5C0A6500164018 /* BaseCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210534501A5C0A6500164018 /* BaseCounterViewController.m */; };
 		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
+		210C16B31AE50ED300387A4A /* ImageCrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210C16B21AE50ED300387A4A /* ImageCrop.storyboard */; };
+		210C16B61AE50EF500387A4A /* DLBImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C16B51AE50EF500387A4A /* DLBImageCropViewController.m */; };
 		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
 		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
 		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
@@ -80,6 +82,9 @@
 		2105344F1A5C0A6500164018 /* BaseCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCounterViewController.h; sourceTree = "<group>"; };
 		210534501A5C0A6500164018 /* BaseCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCounterViewController.m; sourceTree = "<group>"; };
 		210534531A5C0AA400164018 /* BaseCounter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseCounter.storyboard; sourceTree = "<group>"; };
+		210C16B21AE50ED300387A4A /* ImageCrop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCrop.storyboard; sourceTree = "<group>"; };
+		210C16B41AE50EF500387A4A /* DLBImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBImageCropViewController.h; sourceTree = "<group>"; };
+		210C16B51AE50EF500387A4A /* DLBImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBImageCropViewController.m; sourceTree = "<group>"; };
 		21326E691A419233000ADCA2 /* DLBCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBCircularProgressView.h; sourceTree = "<group>"; };
 		21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBCircularProgressView.m; sourceTree = "<group>"; };
 		21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLBCircularProgressView.xib; sourceTree = "<group>"; };
@@ -216,9 +221,28 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		210C16B01AE50EA400387A4A /* Image crop */ = {
+			isa = PBXGroup;
+			children = (
+				210C16B21AE50ED300387A4A /* ImageCrop.storyboard */,
+				210C16B11AE50EB800387A4A /* Square crop */,
+			);
+			path = "Image crop";
+			sourceTree = "<group>";
+		};
+		210C16B11AE50EB800387A4A /* Square crop */ = {
+			isa = PBXGroup;
+			children = (
+				210C16B41AE50EF500387A4A /* DLBImageCropViewController.h */,
+				210C16B51AE50EF500387A4A /* DLBImageCropViewController.m */,
+			);
+			path = "Square crop";
+			sourceTree = "<group>";
+		};
 		21326E671A419233000ADCA2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				210C16B01AE50EA400387A4A /* Image crop */,
 				21FFECF51A88B4730017B2A9 /* Media recorder */,
 				2187BF691A43029400E3FD37 /* Bar graph */,
 				21326E681A419233000ADCA2 /* Circular progress view */,
@@ -693,6 +717,7 @@
 				21EEE9191A419E7F000600FD /* Images.xcassets in Resources */,
 				21CA3F711A5E7FFF00D27F5E /* WanderaBarGraph.storyboard in Resources */,
 				21EEE94E1A41B86E000600FD /* WanderaPieChart.storyboard in Resources */,
+				210C16B31AE50ED300387A4A /* ImageCrop.storyboard in Resources */,
 				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
 				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
 				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
@@ -742,6 +767,7 @@
 				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
+				210C16B61AE50EF500387A4A /* DLBImageCropViewController.m in Sources */,
 				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
