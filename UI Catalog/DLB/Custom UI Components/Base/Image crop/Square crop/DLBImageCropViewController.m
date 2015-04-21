@@ -37,6 +37,9 @@
         controller.delegate = self;
         [self presentViewController:controller animated:YES completion:nil];
     }
+    
+    self.overlay.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.overlay.layer.borderWidth = 1.0f;
 }
 
 - (void)setupScrollView
