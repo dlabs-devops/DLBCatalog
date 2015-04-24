@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Matic Oblak. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class DLBImageCropViewController;
 
@@ -20,5 +20,6 @@
 
 @property (nonatomic, strong) UIImage *inputImage;
 @property (nonatomic, weak) id<DLBImageCropViewControllerDelegate> delegate;
+@property (nonatomic, strong) UIImage *overlayImage;
 
 @end
