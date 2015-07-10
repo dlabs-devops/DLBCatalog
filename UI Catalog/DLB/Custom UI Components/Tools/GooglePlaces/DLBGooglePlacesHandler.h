@@ -42,9 +42,8 @@
 @property (nonatomic, readonly) NSArray *photoIDs;
 @property (nonatomic, readonly) NSNumber *rating;
 
+- (void)fetchFirstImage:(void (^)(UIImage *image))callback;
 
 - (instancetype)initWithDescriptor:(NSDictionary *)descriptor;
-
-- (void)fetchFirstImage:(void (^)(UIImage *image))callback;
 
 @end

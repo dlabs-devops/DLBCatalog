@@ -51,9 +51,6 @@
     DLBGooglePlacesHandler *places = [[DLBGooglePlacesHandler alloc] init];
     places.apiKey = @"AIzaSyDdsH_ImFrIh-J4ukmIXm7TbblogxF3HEc";
     places.searchString = self.textField.text;
-    places.latitude = @(46.0556);
-    places.longitude = @(14.5083);
-    places.maximumRadius = @(100);
     [places fetchPlaces:^(NSInteger placesFound, NSError *error) {
         self.currentPlaces = places.responses;
     }];
