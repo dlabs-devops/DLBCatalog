@@ -43,6 +43,7 @@
 		21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
+		21E39C6C1AEF9DF1006717F9 /* DLBVideoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E39C6B1AEF9DF1006717F9 /* DLBVideoConverter.m */; };
 		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
 		21EEE9191A419E7F000600FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9121A419E7F000600FD /* Images.xcassets */; };
 		21EEE9201A419ECE000600FD /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE91C1A419ECE000600FD /* Base.storyboard */; };
@@ -146,6 +147,8 @@
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
+		21E39C6A1AEF9DF1006717F9 /* DLBVideoConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBVideoConverter.h; sourceTree = "<group>"; };
+		21E39C6B1AEF9DF1006717F9 /* DLBVideoConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBVideoConverter.m; sourceTree = "<group>"; };
 		21EEE90F1A419E7F000600FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21EEE9101A419E7F000600FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		21EEE9121A419E7F000600FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 			children = (
 				21FFECF61A88B47F0017B2A9 /* DLBMediaRecorder.h */,
 				21FFECF71A88B47F0017B2A9 /* DLBMediaRecorder.m */,
+				21E39C6A1AEF9DF1006717F9 /* DLBVideoConverter.h */,
+				21E39C6B1AEF9DF1006717F9 /* DLBVideoConverter.m */,
 			);
 			path = "Media recorder";
 			sourceTree = "<group>";
@@ -767,6 +772,7 @@
 				215C9FBB1A5AAAC500D2B823 /* DLBNumericCounterComponent.m in Sources */,
 				21326E9A1A419233000ADCA2 /* WNDPieChart.m in Sources */,
 				21326E931A419233000ADCA2 /* DLBPieChartNode.m in Sources */,
+				21E39C6C1AEF9DF1006717F9 /* DLBVideoConverter.m in Sources */,
 				210C16B61AE50EF500387A4A /* DLBImageCropViewController.m in Sources */,
 				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,

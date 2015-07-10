@@ -31,6 +31,7 @@
 {
     if((self = [super init]))
     {
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         self.allowSoundRecording = YES;
         self.outputVideoOrientation = AVCaptureVideoOrientationLandscapeRight;
         self.previewVideoOrientation = AVCaptureVideoOrientationPortrait;
