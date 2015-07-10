@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
     baseComponentAnimations,
     baseComponentRecording,
     baseComponentImageCrop,
+    baseComponentGooglePlacesAPI,
     baseComponentCount
 } eBaseComponent;
 
@@ -76,6 +77,10 @@ typedef enum : NSUInteger {
     {
         [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"ImageCrop" bundle:nil] instantiateViewControllerWithIdentifier:@"square"] animated:YES];
     }
+    else if(indexPath.row == baseComponentGooglePlacesAPI)
+    {
+        [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"BaseGoogleAPI" bundle:nil] instantiateInitialViewController] animated:YES];
+    }
 }
 
 
@@ -132,6 +137,12 @@ typedef enum : NSUInteger {
             UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cropCell"];
             toReturn = cell;
             break;
+        }
+        case baseComponentGooglePlacesAPI:
+        {
+            UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+            cell.textLabel.text = @"Google places";
+            return cell;
         }
         default:
             break;

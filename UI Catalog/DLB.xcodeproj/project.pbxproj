@@ -43,6 +43,11 @@
 		21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
+		21E28A531B4FC93A006E8688 /* DLBGooglePlacesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A521B4FC93A006E8688 /* DLBGooglePlacesHandler.m */; };
+		21E28A571B4FCA03006E8688 /* DLBBackgroundDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A561B4FCA03006E8688 /* DLBBackgroundDispatch.m */; };
+		21E28A5A1B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A591B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m */; };
+		21E28A5C1B4FEFFE006E8688 /* BaseGoogleAPI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E28A5B1B4FEFFE006E8688 /* BaseGoogleAPI.storyboard */; };
+		21E28A5F1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A5E1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m */; };
 		21E39C6C1AEF9DF1006717F9 /* DLBVideoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E39C6B1AEF9DF1006717F9 /* DLBVideoConverter.m */; };
 		21EEE9181A419E7F000600FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9101A419E7F000600FD /* AppDelegate.m */; };
 		21EEE9191A419E7F000600FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9121A419E7F000600FD /* Images.xcassets */; };
@@ -147,6 +152,15 @@
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
+		21E28A511B4FC93A006E8688 /* DLBGooglePlacesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBGooglePlacesHandler.h; sourceTree = "<group>"; };
+		21E28A521B4FC93A006E8688 /* DLBGooglePlacesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBGooglePlacesHandler.m; sourceTree = "<group>"; };
+		21E28A551B4FCA03006E8688 /* DLBBackgroundDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBackgroundDispatch.h; sourceTree = "<group>"; };
+		21E28A561B4FCA03006E8688 /* DLBBackgroundDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBBackgroundDispatch.m; sourceTree = "<group>"; };
+		21E28A581B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGooglePlacesSearchViewController.h; sourceTree = "<group>"; };
+		21E28A591B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGooglePlacesSearchViewController.m; sourceTree = "<group>"; };
+		21E28A5B1B4FEFFE006E8688 /* BaseGoogleAPI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseGoogleAPI.storyboard; sourceTree = "<group>"; };
+		21E28A5D1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBGogglePlaceTableViewCell.h; sourceTree = "<group>"; };
+		21E28A5E1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBGogglePlaceTableViewCell.m; sourceTree = "<group>"; };
 		21E39C6A1AEF9DF1006717F9 /* DLBVideoConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBVideoConverter.h; sourceTree = "<group>"; };
 		21E39C6B1AEF9DF1006717F9 /* DLBVideoConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBVideoConverter.m; sourceTree = "<group>"; };
 		21EEE90F1A419E7F000600FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +225,8 @@
 				210534501A5C0A6500164018 /* BaseCounterViewController.m */,
 				21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */,
 				21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */,
+				21E28A581B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.h */,
+				21E28A591B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -220,6 +236,7 @@
 			children = (
 				210534531A5C0AA400164018 /* BaseCounter.storyboard */,
 				21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */,
+				21E28A5B1B4FEFFE006E8688 /* BaseGoogleAPI.storyboard */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -308,6 +325,8 @@
 		21326E791A419233000ADCA2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				21E28A541B4FC9F5006E8688 /* Multithreading */,
+				21E28A501B4FC926006E8688 /* GooglePlaces */,
 				21FFECF91A88B7020017B2A9 /* Internal alerting */,
 				21CC05471A5D65B900B071E1 /* Date */,
 				21326E7A1A419233000ADCA2 /* Animations */,
@@ -507,6 +526,24 @@
 			path = "Custom UI Components";
 			sourceTree = "<group>";
 		};
+		21E28A501B4FC926006E8688 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				21E28A511B4FC93A006E8688 /* DLBGooglePlacesHandler.h */,
+				21E28A521B4FC93A006E8688 /* DLBGooglePlacesHandler.m */,
+			);
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		21E28A541B4FC9F5006E8688 /* Multithreading */ = {
+			isa = PBXGroup;
+			children = (
+				21E28A551B4FCA03006E8688 /* DLBBackgroundDispatch.h */,
+				21E28A561B4FCA03006E8688 /* DLBBackgroundDispatch.m */,
+			);
+			path = Multithreading;
+			sourceTree = "<group>";
+		};
 		21EEE90E1A419E7F000600FD /* Application delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +614,8 @@
 				215C9FB31A5A80AF00D2B823 /* DLBNumericCounterCell.m */,
 				21CA2F371A666FD200B3B49C /* DLBAnimationsCell.h */,
 				21CA2F381A666FD200B3B49C /* DLBAnimationsCell.m */,
+				21E28A5D1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.h */,
+				21E28A5E1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -726,6 +765,7 @@
 				21EEE9201A419ECE000600FD /* Base.storyboard in Resources */,
 				21EEE9221A419ECE000600FD /* Main.storyboard in Resources */,
 				21326E921A419233000ADCA2 /* DLBPieChartView.xib in Resources */,
+				21E28A5C1B4FEFFE006E8688 /* BaseGoogleAPI.storyboard in Resources */,
 				21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */,
 				21FFED011A88C44F0017B2A9 /* BaseMediaRecorder.storyboard in Resources */,
 			);
@@ -747,6 +787,7 @@
 			files = (
 				21FFECFF1A88C43A0017B2A9 /* BaseMediarecorderViewController.m in Sources */,
 				21326E961A419233000ADCA2 /* DLBAnimatableFloat.m in Sources */,
+				21E28A531B4FC93A006E8688 /* DLBGooglePlacesHandler.m in Sources */,
 				21EEE9291A41A164000600FD /* BaseViewController.m in Sources */,
 				21326E911A419233000ADCA2 /* DLBPieChartView.m in Sources */,
 				21CA2F391A666FD200B3B49C /* DLBAnimationsCell.m in Sources */,
@@ -775,12 +816,15 @@
 				21E39C6C1AEF9DF1006717F9 /* DLBVideoConverter.m in Sources */,
 				210C16B61AE50EF500387A4A /* DLBImageCropViewController.m in Sources */,
 				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
+				21E28A5F1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
+				21E28A571B4FCA03006E8688 /* DLBBackgroundDispatch.m in Sources */,
 				21CC053D1A5D54A100B071E1 /* WNDBarGraphView.m in Sources */,
 				21EEE93E1A41B09C000600FD /* DLBPulseGraphCell.m in Sources */,
 				21CC05461A5D625B00B071E1 /* WNDBarGraphTools.m in Sources */,
+				21E28A5A1B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m in Sources */,
 				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
 				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,
 				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
