@@ -8,15 +8,20 @@
 
 #import "BaseMediarecorderViewController.h"
 #import "DLBMediaRecorder.h"
+#import "DLBVideoConverter.h"
 @import MediaPlayer;
 
-@interface BaseMediarecorderViewController ()<DLBMediaRecorderDelegate>
+@interface BaseMediarecorderViewController ()<DLBMediaRecorderDelegate, DLBVideoConverterDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *videoPannel;
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIButton *frontBackButton;
 @property (weak, nonatomic) IBOutlet UIButton *torchOnButton;
+
+@property (nonatomic, strong) DLBVideoConverter *converter;
+
+@property (nonatomic) BOOL convertVideo;
 
 @property (nonatomic, strong) DLBMediaRecorder *recorder;
 
@@ -34,6 +39,8 @@
     self.recorder.sessionAttachedView = self.videoPannel;
     [self.recorder initializeRecorder];
     [self refreshButtons];
+    
+    self.convertVideo = YES;
 }
 
 - (void)refreshButtons
@@ -79,6 +86,25 @@
 {
     NSLog(@"Finished recording %@", didSucceed?@"successfully":@"failed");
     [self refreshButtons];
+    
+    
+    if(self.convertVideo)
+    {
+        NSLog(@"Starting to resample");
+        DLBVideoConverter *converter = [[DLBVideoConverter alloc] init];
+        converter.inputURL = [NSURL fileURLWithPath:path];
+        converter.outputURL = [NSURL fileURLWithPath:[[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"mp4"]];
+        converter.outputVideoSize = CGSizeMake(360.0f, 640.0f); // 360,640
+        self.converter = converter;
+        converter.delegate = self;
+        [converter resampleVideo];
+    }
+}
+
+- (void)videoConverter:(DLBVideoConverter *)sender finishedConversionTo:(NSURL *)outputPath
+{
+    MPMoviePlayerViewController *controller = [[MPMoviePlayerViewController alloc] initWithContentURL:outputPath];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)viewDidLayoutSubviews
