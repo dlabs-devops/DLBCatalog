@@ -43,6 +43,7 @@
 		21CC054A1A5D65C300B071E1 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; };
 		21D095CD1A30699F00BC8F73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095CC1A30699F00BC8F73 /* main.m */; };
 		21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D095E61A30699F00BC8F73 /* DLBTests.m */; };
+		21E204661B9440DD007FC7F6 /* DLBPostponedOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E204651B9440DD007FC7F6 /* DLBPostponedOperation.m */; };
 		21E28A531B4FC93A006E8688 /* DLBGooglePlacesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A521B4FC93A006E8688 /* DLBGooglePlacesHandler.m */; };
 		21E28A571B4FCA03006E8688 /* DLBBackgroundDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A561B4FCA03006E8688 /* DLBBackgroundDispatch.m */; };
 		21E28A5A1B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E28A591B4FEFE5006E8688 /* BaseGooglePlacesSearchViewController.m */; };
@@ -152,6 +153,8 @@
 		21D095E01A30699F00BC8F73 /* DLBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D095E51A30699F00BC8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D095E61A30699F00BC8F73 /* DLBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBTests.m; sourceTree = "<group>"; };
+		21E204641B9440DD007FC7F6 /* DLBPostponedOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBPostponedOperation.h; sourceTree = "<group>"; };
+		21E204651B9440DD007FC7F6 /* DLBPostponedOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBPostponedOperation.m; sourceTree = "<group>"; };
 		21E28A511B4FC93A006E8688 /* DLBGooglePlacesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBGooglePlacesHandler.h; sourceTree = "<group>"; };
 		21E28A521B4FC93A006E8688 /* DLBGooglePlacesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBGooglePlacesHandler.m; sourceTree = "<group>"; };
 		21E28A551B4FCA03006E8688 /* DLBBackgroundDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBBackgroundDispatch.h; sourceTree = "<group>"; };
@@ -325,6 +328,7 @@
 		21326E791A419233000ADCA2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				21E204631B9440DD007FC7F6 /* Postponed operation */,
 				21E28A541B4FC9F5006E8688 /* Multithreading */,
 				21E28A501B4FC926006E8688 /* GooglePlaces */,
 				21FFECF91A88B7020017B2A9 /* Internal alerting */,
@@ -524,6 +528,15 @@
 				21326E841A419233000ADCA2 /* Wandera */,
 			);
 			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		21E204631B9440DD007FC7F6 /* Postponed operation */ = {
+			isa = PBXGroup;
+			children = (
+				21E204641B9440DD007FC7F6 /* DLBPostponedOperation.h */,
+				21E204651B9440DD007FC7F6 /* DLBPostponedOperation.m */,
+			);
+			path = "Postponed operation";
 			sourceTree = "<group>";
 		};
 		21E28A501B4FC926006E8688 /* GooglePlaces */ = {
@@ -818,6 +831,7 @@
 				21CA3F6F1A5E7FE800D27F5E /* WanderaBarGraphVC.m in Sources */,
 				21E28A5F1B4FF1A4006E8688 /* DLBGogglePlaceTableViewCell.m in Sources */,
 				2187BF701A43033D00E3FD37 /* DLBBarGraphNode.m in Sources */,
+				21E204661B9440DD007FC7F6 /* DLBPostponedOperation.m in Sources */,
 				21D095CD1A30699F00BC8F73 /* main.m in Sources */,
 				21EEE93C1A41B09C000600FD /* DLBBaseCircularViewCell.m in Sources */,
 				21E28A571B4FCA03006E8688 /* DLBBackgroundDispatch.m in Sources */,
