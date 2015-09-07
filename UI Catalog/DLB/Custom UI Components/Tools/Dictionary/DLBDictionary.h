@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, DLBDictionaryMode)
+{
+    DLBDictionaryDefault,
+    DLBDictionaryNoNSNull,
+    DLBDictionaryForceNSNull
+};
+
 @interface DLBDictionary : NSObject
 
+@property (nonatomic) DLBDictionaryMode mode;
 @property (nonatomic, readonly) NSDictionary *dictionary;
+
+- (instancetype)initWithMode:(DLBDictionaryMode)mode;
+- (instancetype)initWithMode:(DLBDictionaryMode)mode dictionary:(NSDictionary *)dictionary;
 
 - (void)setObject:(id)object forKey:(id<NSCopying>)key;
 - (id)objectForKey:(id<NSCopying>)key;
