@@ -71,6 +71,7 @@
 		21FFECFC1A88B70F0017B2A9 /* DLBInternalError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FFECFB1A88B70F0017B2A9 /* DLBInternalError.m */; };
 		21FFECFF1A88C43A0017B2A9 /* BaseMediarecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */; };
 		21FFED011A88C44F0017B2A9 /* BaseMediaRecorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */; };
+		6C691F3F1B9D7BFA0052AB39 /* DLBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C691F3E1B9D7BFA0052AB39 /* DLBDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,8 @@
 		21FFECFD1A88C43A0017B2A9 /* BaseMediarecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediarecorderViewController.h; sourceTree = "<group>"; };
 		21FFECFE1A88C43A0017B2A9 /* BaseMediarecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMediarecorderViewController.m; sourceTree = "<group>"; };
 		21FFED001A88C44F0017B2A9 /* BaseMediaRecorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseMediaRecorder.storyboard; sourceTree = "<group>"; };
+		6C691F3E1B9D7BFA0052AB39 /* DLBDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBDictionary.m; sourceTree = "<group>"; };
+		6C691F401B9D7C0D0052AB39 /* DLBDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DLBDictionary.h; path = "../../../../../../../../dlabs/Projects/DLBCatalog/UI Catalog/DLB/Custom UI Components/Tools/Dictionary/DLBDictionary.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,13 +331,14 @@
 		21326E791A419233000ADCA2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				21E204631B9440DD007FC7F6 /* Postponed operation */,
-				21E28A541B4FC9F5006E8688 /* Multithreading */,
-				21E28A501B4FC926006E8688 /* GooglePlaces */,
-				21FFECF91A88B7020017B2A9 /* Internal alerting */,
-				21CC05471A5D65B900B071E1 /* Date */,
 				21326E7A1A419233000ADCA2 /* Animations */,
 				21326E811A419233000ADCA2 /* Components */,
+				21CC05471A5D65B900B071E1 /* Date */,
+				6C691F3D1B9D7BD40052AB39 /* Dictionary */,
+				21E28A501B4FC926006E8688 /* GooglePlaces */,
+				21FFECF91A88B7020017B2A9 /* Internal alerting */,
+				21E28A541B4FC9F5006E8688 /* Multithreading */,
+				21E204631B9440DD007FC7F6 /* Postponed operation */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -688,6 +692,15 @@
 			path = "Internal alerting";
 			sourceTree = "<group>";
 		};
+		6C691F3D1B9D7BD40052AB39 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				6C691F401B9D7C0D0052AB39 /* DLBDictionary.h */,
+				6C691F3E1B9D7BFA0052AB39 /* DLBDictionary.m */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -842,6 +855,7 @@
 				21CC05431A5D61AD00B071E1 /* WNDBarGraphDataObject.m in Sources */,
 				2105344D1A5C028200164018 /* DLBInterpolations.m in Sources */,
 				21EEE94B1A41B1C0000600FD /* WanderaViewController.m in Sources */,
+				6C691F3F1B9D7BFA0052AB39 /* DLBDictionary.m in Sources */,
 				215C9FB41A5A80AF00D2B823 /* DLBNumericCounterCell.m in Sources */,
 				21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */,
 				21326E9B1A419233000ADCA2 /* WNDPulseGraphView.m in Sources */,
