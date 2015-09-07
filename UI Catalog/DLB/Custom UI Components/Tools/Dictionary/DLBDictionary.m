@@ -16,6 +16,8 @@
 
 @implementation DLBDictionary
 
+#pragma mark - Initialization
+
 - (instancetype)initWithMode:(DLBDictionaryMode)mode
 {
     self = [super init];
@@ -39,6 +41,13 @@
     }
     
     return self;
+}
+
+#pragma mark - Overridden methods
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ %p> %@", [[self class] description], self, self.internalDictionary.description];
 }
 
 #pragma mark - Setters and getters
