@@ -115,6 +115,26 @@
     return [self dateComponentsBetweenDate:fromDateTime andDate:toDateTime forCalendarUnit:NSCalendarUnitYear].year;
 }
 
+/*
+ Will return string depending on the time as follows:
+ - if end date is leesr then start date: NULL
+ - if interval is less then 3min:        Just now
+ - if interval is less then 30min:       {X} minutes ago
+ - if interval is less then an hour:     Less then an hour ago
+ - if interval is less then 2h:          About an hour ago
+ - if interval is less then 9h:          {X} hours ago
+ - if number of days equals zero:        Today
+ - if number of days equals 1:           Yesterday
+ - if number of days is less then 11:    {X} days ago
+ - if number of months equals zero:      This month
+ - if number of months equals 1:         Last month
+ - if number of months is less then 11:  {X} months ago
+ - if number of years equals zero:       This year
+ - if number of years equals 1:          Last year
+ - if number of years is less then 11:   {X} years ago
+
+ Note that number of UNITS depends on the user calendar and is not bound to the interval itself.
+ */
 + (NSString *)durationStringFrom:(NSDate *)startDate to:(NSDate *)endDate
 {
     NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
