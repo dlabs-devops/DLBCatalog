@@ -27,4 +27,6 @@
 //
 + (NSDate *)beginningOfTheMonth:(NSDate *)date;
 
++ (NSString *)durationStringFrom:(NSDate *)startDate to:(NSDate *)endDate;
+
 @end

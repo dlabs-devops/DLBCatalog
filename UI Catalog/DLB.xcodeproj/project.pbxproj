@@ -12,6 +12,7 @@
 		210534541A5C0AA400164018 /* BaseCounter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210534531A5C0AA400164018 /* BaseCounter.storyboard */; };
 		210C16B31AE50ED300387A4A /* ImageCrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210C16B21AE50ED300387A4A /* ImageCrop.storyboard */; };
 		210C16B61AE50EF500387A4A /* DLBImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C16B51AE50EF500387A4A /* DLBImageCropViewController.m */; };
+		2113ACE81BC53258004AE056 /* DLBDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC05491A5D65C300B071E1 /* DLBDateTools.m */; settings = {ASSET_TAGS = (); }; };
 		21326E8E1A419233000ADCA2 /* DLBCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6A1A419233000ADCA2 /* DLBCircularProgressView.m */; };
 		21326E8F1A419233000ADCA2 /* DLBCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21326E6B1A419233000ADCA2 /* DLBCircularProgressView.xib */; };
 		21326E901A419233000ADCA2 /* DLBPieChartSector.m in Sources */ = {isa = PBXBuildFile; fileRef = 21326E6E1A419233000ADCA2 /* DLBPieChartSector.m */; };
@@ -869,6 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2113ACE81BC53258004AE056 /* DLBDateTools.m in Sources */,
 				21D095E71A30699F00BC8F73 /* DLBTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -987,7 +989,6 @@
 		21D095EE1A30699F00BC8F73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1006,7 +1007,6 @@
 		21D095EF1A30699F00BC8F73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
