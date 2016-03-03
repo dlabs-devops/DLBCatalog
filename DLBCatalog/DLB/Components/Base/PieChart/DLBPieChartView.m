@@ -286,8 +286,19 @@
     {
         if ((matchingNodeIndex != index))
         {
-            [self.chartNodes removeObjectAtIndex:matchingNodeIndex];
-            [self.chartNodes insertObject:matchingNode atIndex:index];
+            if (matchingNodeIndex < self.chartNodes.count)
+            {
+                [self.chartNodes removeObjectAtIndex:matchingNodeIndex];
+            }
+            
+            // This is a last line of defense to prevent the component from crashing
+            // It's a bug that was disocvered in Wandera but there is no clear way to reproduce it
+            // Somehow it happens when there is only one sector in the chart and this code wants to reposition it
+            // This will probably not prevent the chart from looking wrong, but it should prevent it from crashing
+            if (index <= self.chartNodes.count)
+            {
+                [self.chartNodes insertObject:matchingNode atIndex:index];
+            }
         }
     }
     else
